@@ -1,0 +1,47 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>5880</ScriptId>
+				<FolderId>251</FolderId>
+				<ScriptName>Install Powerchute Personal Edition</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfPauLWXY9Sr/IrtN7O6N0b2d3P919tLP7aPcgffnF47te28evp3Wxan8yr5uiWgJo+IF+//m6mB3dn+4/2N05n2znD+if3d383nZ2MH2wvbOze//+bGfnwc7OgXmfX3h81x/Kb5z8PwC6Dc7aAAAA</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo/vT/Qe7O+eT7fwB/bO7m9/bzg6mD7Z3dnbv35/t7DzY2TkwUPgFxlk/aPwRvG7zlR3F8bRVBPQ3/fzZesl/n83wnfeXP8jdzqD3On/f6/y93/n7vkePqm6Pdghf/NTPTqplWyzXOT63v+t3XzbPi0XBr5hf9Zuz5SxfthkPhr71//RJ4qiwgSx7G8hybwNdQDP97ectffYONtDndXXeXmV1/vsevzz5fV+evDz9/e+Nd8a740VTxCl39LuXbXM5nRX17x5vv/dBlN3tU/b/vZTd/XQDZYki+bt8mt79Rcv0bpHeRLZvlkH3/r9Exvv7PzTFdu/ngC7mbzVg/w85nVgzzwYAAA==</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>5c4710fb-e7fb-11e3-a8c7-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>251</FolderID>
+					<ParentID>1</ParentID>
+					<Name>APC</Name>
+					<GUID>a79701f7-a4b6-45be-8077-7eaad9660ec6</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>1</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Software</Name>
+					<GUID>31866f37-8f0a-47b9-b1fd-11bd855f8391</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

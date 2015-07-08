@@ -1,0 +1,47 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>5763</ScriptId>
+				<FolderId>63</FolderId>
+				<ScriptName>Java - Add Site Exception </ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>2,4,</Permission>
+				<EditPermission>1,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvZmv62aWXY/S72TLdVZfp3v3Runezu5+eu/R7v1H9x6kL794fNd74/HraV2s2p/M66aolgAdfqDff74uZkcP7++ePzh4MN0+2N+/t727m9/bnuSz6fbOzu79+7OdnQc7OwfmfX7h8V1/QL9x8v8AQLyuQOAAAAA=</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo4f3d88fHDyYbh/s79/b3t3N721P8tl0e2dn9/792c7Og52dAwOFX2Cc9YPGH8HrNl/ZURxPW0VAf9PPn62X/PfZ7IjAen/5g9ztDHrvaOfxXf3N//xep91+5+/7Hl2qugUU/qmfnVTLtliuc3xuf9fvvmyeF4uCXzG/6jdny1m+bDMeFH3r/+mTxlFjA3n2NpBn99OHwwQ6yqfzKv3d101er+rqvCjz310ptNuh3O8+rZZNVebL9WKS16bVzyM67u1sIOPuENWaeV6Wdd6sy3aAZkce8bXFvdtQ0VJx9/9LVLwFN87bdtU8unt3PcnqZpwv8/rimjjvMh9Pq0X6Cy/aQ/w//ej39Aj3e/6+x6sVlN3v+7yaZuXz6ur3fb1e/r7fyS6z3/dpviqr6wWN5/dt8um6Ltrr3zd/N81XQGHcFG3efPRDZPq9/7dN171NTL9ptr4i+qfLqk3L6uIin6XFchynY4ci70uxnws1Yf5W8/r/ADg9ZSFtBwAA</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>951f787c-8443-11e3-bedc-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>63</FolderID>
+					<ParentID>1</ParentID>
+					<Name>Java</Name>
+					<GUID>175ffaf5-2972-46df-bfa3-1a2f9e47a355</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>1</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Software</Name>
+					<GUID>31866f37-8f0a-47b9-b1fd-11bd855f8391</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

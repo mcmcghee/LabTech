@@ -1,0 +1,47 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>5665</ScriptId>
+				<FolderId>196</FolderId>
+				<ScriptName>Deploy SYDI</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>2,4,</Permission>
+				<EditPermission>1,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>1</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfPauLWXY9Sl9Ul/liktfpzu4o3dvZvZfef3Tv4NHubvryi8d3vRcev57Wxar9ybxuimoJyOEH+v3n62J2tLe/c/DpzoP72/v39na3d3fze9uT3f3J9s7O7v37s52dBzs7B+Z9fuHxXX88v3Hy/wCJkX6o3wAAAA==</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo739nYNPdx7c396/t7e7vbub39ue7O5Ptnd2du/fn+3sPNjZOTBQ+AXGWT9o/BG8bvOVHcXxtFUE9Df9/Nl6yX+fzfCd95c/yN3OoPc6f9/r/L3f+fu+R4+qbo92CF/81M9OqmVbLNc5Pre/63dfNs+LRcGvmF/1m7PlLF+2GQ+GvvX/9EniqLCBLHubyLK7P0yYo9+9bJvL6ayof/fft7meFdtNXl/mtf/7+HLSPL6rzQMqAm39LaCm/fze/3+punewgajKzD4Vt/fG98Y/KFYDlIxPQ+elDpmVfLcl7+7/b8j7pqrK5vddL4ky4/xdfjNJu00/jJB73zQh934WCfl1pP8GXh2S+r2vJfX3vmlq7v4sUnPv4QZiPq2ulmWVzdJnWVHms3H6RfY2TzMaw2VRr5u750WdX2Vlmc6zJp3k+TKdVsvz4mJd57N0VVervC6vx3GibzBYtyHy/jdN5J9Vlt1E5W/Ykt///xRhPr2dKFt1l26W73R7NtDi9/1Z4cJPv2li38ICmb/VPf5/AONaAmEtCwAA</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>24086075-4321-11e3-b14b-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>196</FolderID>
+					<ParentID>114</ParentID>
+					<Name>SYDI</Name>
+					<GUID>367bf7dd-376d-47fb-a16b-9b18bc2f1c36</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>114</FolderID>
+					<ParentID>0</ParentID>
+					<Name>NOC</Name>
+					<GUID>102c0cd7-aca9-4b74-be81-1aec0b327823</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

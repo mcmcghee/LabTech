@@ -1,0 +1,47 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6076</ScriptId>
+				<FolderId>125</FolderId>
+				<ScriptName>CleanUp! - Disk Clean</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvVnnzSy7HqXfWS/zdO/eKN3b2b2fPni0c+/R/Yfpyy8e3/VaP349rYtV+5N53RTVEmDDD/T7z9fF7OjedDJ9uDPJt3cfzmbbu7v5/e2DT+/tb+8Q/PuznZ0HOzsH5n1+4fFdfzC/cfL/AD77Nd3cAAAA</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo3vTyfThziTf3n04m23v7ub3tw8+vbe/vbOze//+bGfnwc7OgYHCLzDO+kHjj+B1m6/sKI6nrSKgv+nnz9ZL/vtsdkRgvb/8Qe52Br3X+fte5+/9zt/3PXpUdXu0Q/jip352Ui3bYrnO8bn9Xb/7snleLAp+xfyq35wtZ/myzXgw9K3/p08SR4UNZNnbQJa9DXQ5+qotyqIt8ub3PSnzbPnVSn6uV+P8Xf74rrYKaHf0u5dtczmdFfXvHmm89yPCDhB2qrSq84ubCdtvPEjYWxF29/9LhN399OEGyhJJ0mKxotGkJ49+3+8Wy1l11fy+z9+8vpzehsbTatlUZb5cLyZ5/bt/I8Td+/8PcXsU9SQ83T5et9Wr9fKHSNp7/18i7d7OBso+GKBanOJfrcZlNSD6R+6be0e/cXJ7Yu7/f4mYuw/2NlDzdV7m0zY9XWRFmZ7X1SL9qoEjczXP6zx9QX5NWhZv8/Tj3/P5m1dfvXjy+3z1+vTV7/lxfA4+0Bu4//8lsu7tb6Dq7978orLOm3XZGuntcaswZ/rq9OWXr96kX75ISeoXqzV5kUsi+u+eHr+hT8qCkOe/Bzj49yQW/j2/Fg9/+nNAbPO3utj/D5V3vwVxCwAA</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>3cbc90be-19dd-11e5-8634-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>125</FolderID>
+					<ParentID>1</ParentID>
+					<Name>Misc</Name>
+					<GUID>84af12e2-f3f1-4469-b022-183b2536bd88</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>1</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Software</Name>
+					<GUID>31866f37-8f0a-47b9-b1fd-11bd855f8391</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

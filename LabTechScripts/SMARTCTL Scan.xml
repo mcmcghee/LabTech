@@ -1,0 +1,68 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>5389</ScriptId>
+				<FolderId>118</FolderId>
+				<ScriptName>SMARTCTL Scan</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>2,4,</Permission>
+				<EditPermission>1,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvZmv62aWXY/SZ/mkXmf1dbq7P0r3dnbvpQ8f7d57tHc/ffnF47veK49fT+ti1f5kXjdFtQTs8AP9/vN1MTs635lln376INuePMin27u7+d725ODTB9s7O7v37892dh7s7ByY9/mFx3f9Ef3Gyf8DWTGEwuEAAAA=</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo/OdWfbppw+y7cmDfLq9u5vvbU8OPn2wvbOze//+bGfnwc7OgYHCLzDO+kHjj+B1m6/sKI6nrSKgv+nnz9ZL/vtsdvTw/uO73p/+KHePPt2d5XsPdrPtbC8/B1r3tif5bNpBSxv7r+4d/e7TssiXbTH73bXBXtDg3tE9/fxe8Pk+kNXf/M/ve8St6vZohwaPn/rZSUVdLdc5Pre/63dfNs+LRcGvmF/1m7PljFDMmDL0rf+nT19H0g003ttA43u7G2hsxtshYIfj7nX+3u/8/Q3QZ/fBzxmB9g42EEiZ/Pf9dlbPrrI6/32bRVa307Yc5+/yIe4r2+ZyOivq3z3Weu/oN/4A0u7+f4q0u59uIO2zL1+ld5+lH7XV23zZfLaXzvKyWDSf3U0/Sn/3z9OzF+nWxx8N0DLd3m6m2fKjj++kT79MBxsV6fZxuv3t9O4sv7xLMH/hRXsYa739u38+bt+1PyvCsPf/rRnb3d8wZTHSNbNsmHbANaqA9+IK+AZa3nt/Wm5WvLs/i6Tc2xmi5O0V7xFR92tRav+bptTPKtPtPfxwUr2nWN7/pgn0c8ZKD25vhjrC2hXKr8tsnw7Qcvf/Nypu8o2quE20fPD/G768pdwS102+FtcdfNOU+lllup8DFffwmybQzxkrvZ+K84W1r+K+HrPt7nyDOu6HwG5fQ8dNf2g6bvdrRDH/L+XMW0ou8d3065Hqa4QPP7+03O7/94KCb0bN+fLaV3Nfk92G4ob//7hysx+emvv/T4xxS9Elvpt9PVINhRBfm1Q/q2z3gWrua6m5//8EBu+n5nx57au5r8luB/8/V3PTZlHsjHZ+eKru/z+xxm1VHZPYUPH9qIX+v1lq/axy38+Bttv7/0+E8D7ari+2XfH8EK4bCiX+/6X0dn9oSm/v60Ye/+9j0ltKsbCfafye1PrRksRNFPr/T7zw/krPF9uo0vuaXPf/xrWJYaI+3ETULvHqvFnTRxv03S8s28NVnWPZ+/ekxZ3fk/6Z4J8p/pn9nr+nWBP9uft7ovldbR+fivfl6K8RtPxcmpxPN1D/vFjOmrZO775L704fffT6i+NXb9LqMq+zstye51nZztMmL8+3s6bJm2ZBKKZt3rSpTNOj9Nnx2fPTp7/rR+l7z+OH6pWD95+Fn0PNe/BNisCHku5nJa752SLd1zHxR797M8/LUgj5uw8p4Hk+fXueFWX+9eLtezvfNAf+bFq2B5vI2CdFl6APB4io8h8noJ2e/c2E/P9WXLTJg18Ub/PF71ksW+K+orlu2nzRjKfVYoCqom/fQKE+Y+qn1TL93an9at3m9TJb5L97mrX0SVnQYPjvgXn43dersspm+eycwJhG78nPH7YqE5mGvZ/Nafg6amH300+NE9fTBkr04msqg288bPpZNUebfIJZXqYnj37fYpm3q/Xk9726uqqrqv19n2eTN/l0/vu+ylc0zub3Zd49efP89w35dcv+Wcx+9zvbbNDG83ZR/qyYsnvfePz1s6k67m1SHb97TIK7DPyzNy8f5hPfu//4/0PzsDkO3vnZ4dSvsRj04VGD+ftp1mZHv3Hy/wBcCl+OpDEAAA==</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>f0da667a-b7ec-11e2-b867-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ExtraDataField>
+			<NewDataSet>
+				<Table>
+					<ID>916</ID>
+					<Form>3</Form>
+					<Name>Disable SmartCTL</Name>
+					<Sort>0</Sort>
+					<NoBreak>0</NoBreak>
+					<FType>1</FType>
+					<Section>Hardware</Section>
+					<UnEditable>0</UnEditable>
+					<Collapsed>0</Collapsed>
+					<Fill></Fill>
+					<LtGuid>61de271a-a2ef-11e3-bedc-00155d007008</LtGuid>
+					<IsPassword>false</IsPassword>
+					<IsEncrypted>false</IsEncrypted>
+					<IsHidden>false</IsHidden>
+					<IsRestricted>false</IsRestricted>
+				</Table>
+			</NewDataSet>
+		</ExtraDataField>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>118</FolderID>
+					<ParentID>114</ParentID>
+					<Name>Hardware</Name>
+					<GUID>e82ac5d5-ba0d-419f-8414-0c264cdde180</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>114</FolderID>
+					<ParentID>0</ParentID>
+					<Name>NOC</Name>
+					<GUID>102c0cd7-aca9-4b74-be81-1aec0b327823</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

@@ -1,0 +1,68 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>5919</ScriptId>
+				<FolderId>263</FolderId>
+				<ScriptName>Enable Remote Administration</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffVEtZ9n1KD1eX6ybNt27P0r3dnb30weP9g4e0c+XXzy+6zV//HpaF6v2J/O6Kaol4IYf6Pefr4vZ0WR2/3z/3qe723vThzvbu7v5/vbDhzv3tnd2du/fn+3sPNjZOTDv8wuP7/qj+Y2T/wcLvYCc3QAAAA==</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo8ns/vn+vU93t/emD3e2d3fz/e2HD3fube/s7N6/P9vZebCzc2Cg8AuMs37Q+CN43eYrO4rjaasI6G/6+bP1kv8+m+E77y9/kLudQe91/r7X+Xu/8/d9jx5V3R7tEL74qZ+dVMu2WK5zfG5/1+++bJ4Xi4JfMb/qN2fLWb5sMx4Mfev/6ZPEUWEDWfY2kWXv4TBhjh59t1g+eHxX//o5JtLu3s8dle5tpFJVzqbVYpEtZz8rtNr9AFr9HNDq0w2kWuZtM0/Pizq/ysoybfKW/l9fFtM8rfNF1ebZbFEs03yZTcr8Z4WYe+9PzP/XSueb+vr4IiuWPyuEuvf+hLpBQnd/Fil1sLOBUPn+vfOHk/Nss9WJ0fDo9yTBXq3JDBaz31Ob7IVkxbD0t/ch7/77k3czH8ap+81QdzMf7vys8N/9b5pAP6uCutlA/KyZ0U//P0Wkmy1DNru0xiGwEvW6zNOLulqvPvvoqljOqqsmJYObXeQLQjYtlk1brxcG73TralHc+Shd5ldqSz67zpuflRl48P/uGQhnYG+TljR6rKsCf/dmnpdlnTfrsv3dB3SgfPu1FOHB/5cIeIOc/6wa5If/nyLUNyTr4hWm7BYWJOOM6g9FsHd3/r9E7yHJ/oYke+9rifbu14hcfu5I+GCTcgzJ0CXkwQDxXlTMzDBV7XSetvM8bVb5tDgv8llKSMKvzOKkjUSV+5uJ/f+pyOb/c/767teIhzaT9xYOu/lb03f/D3DNkdPNEwAA</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>bd5f4361-2c90-11e4-9903-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ExtraDataField>
+			<NewDataSet>
+				<Table>
+					<ID>988</ID>
+					<Form>1</Form>
+					<Name>Remote Administration Enabled</Name>
+					<Sort>0</Sort>
+					<NoBreak>0</NoBreak>
+					<FType>1</FType>
+					<Section>OS Tweaks</Section>
+					<UnEditable>0</UnEditable>
+					<Collapsed>0</Collapsed>
+					<Fill></Fill>
+					<LtGuid>e43f9bfa-2c90-11e4-9903-00155d007008</LtGuid>
+					<IsPassword>false</IsPassword>
+					<IsEncrypted>false</IsEncrypted>
+					<IsHidden>false</IsHidden>
+					<IsRestricted>false</IsRestricted>
+				</Table>
+			</NewDataSet>
+		</ExtraDataField>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>263</FolderID>
+					<ParentID>114</ParentID>
+					<Name>Remoting</Name>
+					<GUID>9e139c3a-1724-43dd-a4d8-1bc8d26b2525</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>114</FolderID>
+					<ParentID>0</ParentID>
+					<Name>NOC</Name>
+					<GUID>102c0cd7-aca9-4b74-be81-1aec0b327823</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

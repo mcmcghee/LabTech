@@ -1,0 +1,47 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6040</ScriptId>
+				<FolderId>135</FolderId>
+				<ScriptName>Email Office 2013 License Info</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>2,4,</Permission>
+				<EditPermission>1,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfPauLWXY9So/XF+umTXc/HaV7O7v30oePdncf7d1PX37x+K7X/PHraV2s2p/M66aoloAbfqDff74uZkd792Z7n54/3N2ePbx/f3t3N9/fPrg3mW7v7Ozevz/b2Xmws3Ng3ucXHt/1R/MbJ/8PYk+INN0AAAA=</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo717s71Pzx/ubs8e3r+/vbub728f3JtMt3d2du/fn+3sPNjZOTBQ+AXGWT9o/BG8bvOVHcXxtFUE9Df9/Nl6yX+fzfCd95c/yN3OoPc6f9/r/L3f+fu+R4+qbo92CF/81M9OqmVbLNc5Pre/63dfNs+LRcGvmF/1m7PlLF+2GQ+GvvX/9EniqLCBLHsbyHJvA11AM/3t5y19dnf3NxDoo5NHv+/LurqgP9JnRZk3v+8XxbSumuq8Tb88Py+m+e8rP3bv/75fvn75cvyTT15/FCcqRqG/BcQ9+l339It770XlXaHy/0eo/OkGIk8bhpnevbusyuqiSr8W1dO7s4ZQXzc/Kzy9N0Dt3f83Untv5/1l/uh3b+Z5WdZ5sy7b332AVeXbr8Wu9/4/xa4blUKXO9Otdwef3rkFj/5sKIY+pff/P0XpD1MMtyb9z7J6uP/+6uHg54zmP8vq4euZs0//P8W1D/Y2kPB1XubTNj1dZEWZntfVIv2qgZt9Nc/rPH1BXndaFm/z9OPf8/mbV1+9ePL7fPX69NXv+fHXY8wbyPrg/0tk3dukdX/35hd12K/LoiL06d7O7r30Of22bPL0vKrT331aLVZrinSWRPrfPT1+Q5+UBQ2B/x7g5V9YtoerOv+FF+3h7ynd/p746K5+ht8ndXrX/B423Qvafi15OPj/0sTt7j3cMHM7Pyuc/fDngEDmb422/x/YHSlgfA8AAA==</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>23d26f91-d955-11e4-83bc-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>135</FolderID>
+					<ParentID>114</ParentID>
+					<Name>Utilities</Name>
+					<GUID>c60fb9e5-94b8-4660-ba55-5faad981195f</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>114</FolderID>
+					<ParentID>0</ParentID>
+					<Name>NOC</Name>
+					<GUID>102c0cd7-aca9-4b74-be81-1aec0b327823</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

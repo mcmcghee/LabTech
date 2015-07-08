@@ -1,0 +1,89 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>5905</ScriptId>
+				<FolderId>257</FolderId>
+				<ScriptName>Get SMTP Domain</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvV4vZ9n1KP3OurxO93ZG9P/d/XR379HewaOdB+nxF4/veq0fv57Wxar9ybxuimoJsOEH+v3n62J29GAymx3M7n+6vXOefbq9u5vvb2fZp7vbOzu79+/PdnYe7OwcmPf5hcd3/cH8xsn/A21azJDcAAAA</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+XxezoweT2exgdv/T7Z3z7NPt3d18fzvLPt3d3tnZvX9/trPzYGfnwEDhFxhn/aDxR/C6zVd2FMfTVhHQ3/TzZ+sl/302w3feX/4gdzuD3uv8fa/z937n7/sePaq6PdohfPFTPzuplm2xXOf43P6u333ZPC8WBb9iftVvzpazfNlmPBj61v/TJ4mjwgay7G0iy6fDdDk6r+r07nn60brJJ9n07S9KZ3lZLJrPPkvb6m2+bD7b+yj93d+lxTLd+gO++8XZyfj09z5N774gvmlW2TR/9Pv+vnVVtb/vF8W0rprqvD07e325l77M2nl6dta8XrSr13l9mdev85bIcpF+nrfp0/w8W5ft02qREdy7l1m5ztPf72fS82I5Sz/67KM/4E46q9LfM5/OK+r78V1F9ed4Aj/9OZvAvZ0NE7j7OEqfo9+9medlWecNUfp3VxruhTQ7mvEM6Jf33ouAu980AXd/Fgm4u/dwAwUf0c8m/1lhs73/T1Hpm9ITV4timq7qaraetunVPK/z9KOfzJczAlEWb/P049/dqovf/eM0I6GHPkk/Sz+2n6en76bzbHmRp6I+Pv4ovSDNoVbn50Zn3Hv/yfyhKP0frs64lCn4Wkpj//9LFHywiYIhFbp0PBig3cF4Zxwn3NEjw/B75CFpm/2NxLz/856Yu98cMT/9/zAxvxli7n1zxHzw856Y9745Yh78PCfm7v6tlObuzq2o+fD/h9R8T2reRmvekppo9vOdOW+jN29Lzq8RVP3/jZy30Zy3JefXiL7+v0jOYXLev53qvHc7cv5/Kv7ZHPIbBvpmA8Td/0/FN7v3NiZFIo7KN0yt/08FMLv37m+g1vFstv3y9etltqIEiE1ijA0Nx19ky+wiXxBq45fVFWVDEWePj2eLYnmIlOj28XSar9p8pjnRn0m/i7TJL/7dfv+xfPLmepWn2/kvSj8+Xrfzqi4wxsv843Q7W85SNJOcqrR5U6/zj38JQaGsTZ5N5+kvRhNOsvySn525/P9U/PT1ciMrTNwtEiQfklT9xiOnn9V84c9VVnX34P9TZLqtnt39mlbpJmr9fyrm+Wb1LIvr+PV6tSICjG79wikm4/8Xihmq7v87k///WsW8941HZt+gxunL0M+VYt77xiOun1Uy3VoxmwDpG6bW/6cCqoNNsvngwc7O/v40297d+3Syvbub729n2ae72zs7u/fvzyiC2Nk5GBDf33NaFoRxMfs9B8T2y2VTtLldEPx68vuNR2b7P4uk3tu59z428FYm7eezDfwagSYY5v+Ngnbvfr57b3f2cHtnku1C0Ha3JztZvn1+f3ea5bv79z99MBCt3yxog4b0PWXta8SCP4fk/rlIFO19o3HezzqFNtvJlz977sTB+3PSz52B3H2wu8lCDkmleKVDMjkuq+ntpPCoaKhtVmrr+yElv/EY8GfTMdu4shAOs0tO46l16bhtoocOFa2A72/kxHs73zT97n1z9OvRb6NGe523hO5Fqsa8rdIOC36zMnzvG4+cfjZl+OfM9nbm4P0s7r1vPOz6WfVub8OdX2RFmb7Oa1pHBItKDPCzw6D/n4/CnI35WYzCnkPpflgQdu//U0HYz4VfeO9rRCofrCzN30+zNjv6jZP/BwKnD4ZOMgAA</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>7bdd8d56-0fa6-11e4-aa61-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ExtraDataField>
+			<NewDataSet>
+				<Table>
+					<ID>976</ID>
+					<Form>3</Form>
+					<Name>Mail Server</Name>
+					<Sort>0</Sort>
+					<NoBreak>0</NoBreak>
+					<FType>0</FType>
+					<Section>WWW Information</Section>
+					<UnEditable>0</UnEditable>
+					<Collapsed>0</Collapsed>
+					<Fill></Fill>
+					<LtGuid>770044ca-126b-11e4-aa61-00155d007008</LtGuid>
+					<IsPassword>false</IsPassword>
+					<IsEncrypted>false</IsEncrypted>
+					<IsHidden>false</IsHidden>
+					<IsRestricted>false</IsRestricted>
+				</Table>
+			</NewDataSet>
+		</ExtraDataField>
+		<ExtraDataField>
+			<NewDataSet>
+				<Table>
+					<ID>167</ID>
+					<Form>3</Form>
+					<Name>Domain Name</Name>
+					<Sort>1</Sort>
+					<NoBreak>0</NoBreak>
+					<FType>0</FType>
+					<Section>WWW Information</Section>
+					<UnEditable>0</UnEditable>
+					<Collapsed>0</Collapsed>
+					<Fill></Fill>
+					<LtGuid>35e131d9-0ba1-11e1-b0ae-f51cae145677</LtGuid>
+					<IsPassword>false</IsPassword>
+					<IsEncrypted>false</IsEncrypted>
+					<IsHidden>false</IsHidden>
+					<IsRestricted>false</IsRestricted>
+				</Table>
+			</NewDataSet>
+		</ExtraDataField>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>257</FolderID>
+					<ParentID>109</ParentID>
+					<Name>Documentation</Name>
+					<GUID>5b010fee-cb13-43c0-92ee-799131fa0c66</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>109</FolderID>
+					<ParentID>0</ParentID>
+					<Name>_System Automation</Name>
+					<GUID>68c423ca-41a6-4fae-a052-08a4fd27ea53</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

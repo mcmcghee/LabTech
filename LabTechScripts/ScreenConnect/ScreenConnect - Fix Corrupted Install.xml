@@ -1,0 +1,47 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6065</ScriptId>
+				<FolderId>265</FolderId>
+				<ScriptName>ScreenConnect - Fix Corrupted Install</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvZmv62aWXY/SL7LrdOfBKN3b2b2f7j/aufdodz99+cXju17rx6+ndbFqfzKvm6JaAmz4gX7/+bqYHeWf5p9OptMH2+f7s73t3d18f/vg03v72zsE//5sZ+fBzs6BeZ9feHzXH8xvnPw/zu+9jNwAAAA=</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo/zT/NPJdPpg+3x/tre9u5vvbx98em9/e2dn9/792c7Og52dAwOFX2Cc9YPGH8HrNl/ZURxPW0VAf9PPn62X/PfZDN95f/mD3O0Meq/z973O3/udv+979Kjq9miH8MVP/eykWrbFcp3jc/u7fvdl87xYFPyK+VW/OVvO8mWb8WDoW/9PnySOChvIsreBLPc20AU0099+3tJnd3d/A4FOHv2+L+vqgn5PnxVl3qRb7w4+vfP7Uld5vqTBLPNpm56UBeGWbhHnH9x/cH+S55/e35vu7t35fU/LplhWdT4OXhjLC6/z+rKY5uP8XR6fBoxbfwumw35+7+g3Tm4/LbvvPy0H/x+Zlv9vTsje+0/Ig5+7Cfl0w3w003SWl2RM0o9uORMf/axonnvvT9GfO82zt/P+mvnod2/meVnWebMu298dbSLcKN9+LZbc//8SAXcf7G2g4GtiSOLA00VWlOl5XS3Srxo4O1fzvM7TF+T7pGXxNk8//j2fv3n11Ysnv89Xr09f/Z4f/6zw5f3/L5F1b5Pm/d2bX9Thvi6Hvj5JT6q6Xq/a9BU3TKtl+rtPq8VqTc7mkuj+u6dZS5+wauC/B/j495SOfs+vxcmf/n+J5Pc3KNcbnNf3ZcUHPwd0MX9rkPL/ABZU/EqzDAAA</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>e6e6bcc7-f4d2-11e4-8634-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>265</FolderID>
+					<ParentID>1</ParentID>
+					<Name>ScreenConnect</Name>
+					<GUID>4e365a05-7ba0-4d6b-9d2b-3b6fdec935b1</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>1</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Software</Name>
+					<GUID>31866f37-8f0a-47b9-b1fd-11bd855f8391</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

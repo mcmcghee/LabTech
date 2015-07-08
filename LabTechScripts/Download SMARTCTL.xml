@@ -1,0 +1,91 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>5913</ScriptId>
+				<FolderId>118</FolderId>
+				<ScriptName>Download SMARTCTL</ScriptName>
+				<ScriptNotes>Downloads SMARTCTL to %ltsvc%. When present, Labtech will use it to monitor SMART statistics.
+
+Written by Mike McGhee</ScriptNotes>
+				<Permission>2,4,</Permission>
+				<EditPermission>1,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvZmv62aWXY/SZ/mkXmf1dbq7P0r3dnbvpQ8f7d57tHc/ffnF47veK49fT+ti1f5kXjdFtQTs8AP9/vN1MTuaZrv75wcP8u29h/ez7d3dfH97cv9gur2zs3v//mxn58HOzoF5n194fNcf0W+c/D8jNe+s4QAAAA==</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo2m2u39+8CDf3nt4P9ve3c33tyf3D6bbOzu79+/PdnYe7OwcGCj8AuOsHzT+CF63+cqO4njaKgL6m37+bL3kv89mRw/vP77r/emPcvfo091ZvvdgN9vO9vJzoHVve5LPumhpY//VvaPffVoW+bItZr+7NtgLGtw7uqef3ws+3wey+pv/+X2PuFXdHu3Q4PFTPzupqKvlOsfn9nf97svmebEo+BXzq35ztpwRihlThr71//Tp60i6gcZ7G2h8b3cDjc14OwTscNy9zt/7nb+/AfrsPvg5I9Duzr1NFHqwe35/9uk9CMdkUDiiXPh7TqvFak3SWsx+z4APHR82i6xu47x4A41335/GP3c8+GBnA4V9GnRJuDdAN8O3XfnduZX87n3TtNv9WaTd7u7+BuL97mXbXE5nRf27/75Mx2lbjvN3+QA5DXm65Hz0tLpallU2y2dfixnvfdME/dlkxr2DDfRUo/b7fjurZ1dZnd+GqpvnoENrUO49KLv//pS9QZX+fOfV++9P0Z87Xt3de7iBoIZE36z1/vT9CfRzyXL3NlGozyzfLK0evD+tdh7f/TlipoNNVvhn188ZsNc3UPfgm6buzyoj/hyI6sP3J9CHO9rmbw1f/x+mmFd4zQ4AAA==</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>ca14f87e-295a-11e4-b58c-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ExtraDataField>
+			<NewDataSet>
+				<Table>
+					<ID>916</ID>
+					<Form>3</Form>
+					<Name>Disable SmartCTL</Name>
+					<Sort>0</Sort>
+					<NoBreak>0</NoBreak>
+					<FType>1</FType>
+					<Section>Hardware</Section>
+					<UnEditable>0</UnEditable>
+					<Collapsed>0</Collapsed>
+					<Fill></Fill>
+					<LtGuid>61de271a-a2ef-11e3-bedc-00155d007008</LtGuid>
+					<IsPassword>false</IsPassword>
+					<IsEncrypted>false</IsEncrypted>
+					<IsHidden>false</IsHidden>
+					<IsRestricted>false</IsRestricted>
+				</Table>
+			</NewDataSet>
+		</ExtraDataField>
+		<ExtraDataField>
+			<NewDataSet>
+				<Table>
+					<ID>982</ID>
+					<Form>1</Form>
+					<Name>SMARTCTL Downloaded</Name>
+					<Sort>0</Sort>
+					<NoBreak>0</NoBreak>
+					<FType>1</FType>
+					<Section>Tools</Section>
+					<UnEditable>0</UnEditable>
+					<Collapsed>0</Collapsed>
+					<Fill></Fill>
+					<LtGuid>171f5d63-295b-11e4-b58c-00155d007008</LtGuid>
+					<IsPassword>false</IsPassword>
+					<IsEncrypted>false</IsEncrypted>
+					<IsHidden>false</IsHidden>
+					<IsRestricted>false</IsRestricted>
+				</Table>
+			</NewDataSet>
+		</ExtraDataField>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>118</FolderID>
+					<ParentID>114</ParentID>
+					<Name>Hardware</Name>
+					<GUID>e82ac5d5-ba0d-419f-8414-0c264cdde180</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>114</FolderID>
+					<ParentID>0</ParentID>
+					<Name>NOC</Name>
+					<GUID>102c0cd7-aca9-4b74-be81-1aec0b327823</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

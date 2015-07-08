@@ -1,0 +1,47 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>5987</ScriptId>
+				<FolderId>290</FolderId>
+				<ScriptName>Edit Hosts File</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffVEtZ9n1KH2aT/PFJK/Tvb1Rurezu5/ee7Rz79Hubvryi8d3vRcev57Wxar9ybxuimoJyOEH+v3n62J2tLP34MFkZ5ZtHzw8v7e9u5vvbz98uHNve2dn9/792c7Og52dA/M+v/D4rj+e3zj5fwA8KuNU3wAAAA==</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo529Bw8mO7Ns++Dh+b3t3d18f/vhw5172zs7u/fvz3Z2HuzsHBgo/ALjrB80/ghet/nKjuJ42ioC+pt+/my95L/PZvjO+8sf5G5n0Hudv+91/t7v/H3fo0dVt0c7hC9+6mcn1bItluscn9vf9bsvm+fFouBXzK/6zdlyli/bjAdD3/p/+iRxVNhAlr0NZNk7GKbL0ZuqKpvfd141bTPO3+WP7+rnAbWOfveybS6ns6L+3XtN937+EHL30w2EjJEozWaz9Dyb5pOqejueVov0ulq360nOv2eL7AfVkn+d1llx0ZRF0/KfV1dX4+A1fOC/ir/t6/JnB8Tu3oPxDv23G5/RD+T/3Z+DaTN/q577fwBFlJ6W9gQAAA==</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>0277b0da-89f3-11e4-9903-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>290</FolderID>
+					<ParentID>92</ParentID>
+					<Name>Seymour</Name>
+					<GUID>bc765270-f69b-4fc4-93dc-db2f24f80aad</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>92</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Client Specific Scripts</Name>
+					<GUID>8d543fe6-ca79-4343-b1cc-8e7f223dbcc2</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

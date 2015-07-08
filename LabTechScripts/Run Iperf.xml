@@ -1,0 +1,37 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>5806</ScriptId>
+				<FolderId>47</FolderId>
+				<ScriptName>Run Iperf</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>2,4,</Permission>
+				<EditPermission>1,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffVEtZ9n1KD1e1UWZ7h2M0r2d3f304NG9/Uf7u+nLLx7f9Vo/fj2ti1X7k3ndFNUSYMMP9PvP18Xs6P5+NtmbZDvb0/Pdyfbubn5ve5LPpts7O7v37892dh7s7ByY9/mFx3f9wfzGyf8DT6aL49wAAAA=</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5nVzVOeLqs2n1WK1pr+L2aigH1lbVMvm8V2vnb75eVlNstIDJV3+JDWhV452H98NPwhafb4uZkf397PJ3iTb2Z6e7062d3fze9uTfDbd3tnZvX9/trPzYGfnwEDhF3hk+kHjj/N1m68sYsfTVhHQ3/TzZ+sl/302w3feXz4pdjuk2ev8fa/z937n7/sePaq6PdohfPFTPzuplm2xXOf43P6u333ZPC8WBb9iftVvzpazfNnyVOBb/0+fJI4KG8iyt4EsezvDdAHN9LeAPke/u+OY312b7IUkO5qu65owdg213b3/H5PyYAMp31RV2fy+xSqvz8f5u3yIsGXbXE5nRf2795p2CJzefS9C7n7ThNz9WSTk7v0NhOySaICS20aBdRnT8PT7MeLe/5fo9/VkuqymWZnNZnXeNENS3eT1JQnz6mvR8N7/l2i4+2BvAxFfnz4/PXmTvjj+4jR99urLL1Kj55r0u98+fXWannz5xcuv3py+Onuafpb+nl0z+3vG5+D97E6PvvvfNH33fhbp+/V4tPlFJbHnumyHGHSWN+2SvJavxaD3/39PwEFO7JnvD7Pbn37TlPz5arcfDBPy6xHyZ1Vn7u6/h+Eet+/aAXIa9v1mbPfBN03Dn01m3L33jZDwA03Jw/8vkezraUIX6Q7pwFXWGCfy/Rhud+eHQb5viny79x5uoN+jer38WWGx3W88JPlZ5bFNNGJZTMEu6e+Jfw1DfcME+8ZjkJ9Ngu1++h56LN2epr+niS1+z1940R7i/z80bbf7/6nIZE8zWXF1t/OzQ6FvPLa497NIod2dTSTaJKLv63n4NmJ/MwW/8eDiZ1N6H2wyqd6Yu+S7N0A+w5Vd8nnW5Qby/X8qooCq3mwthmOJW0vqAKG+8Yjh5yyIfXDbYMvZhS7fSbLg6zlxB980IX82Oe7r+cC9JL1Ri99wOmD3/1PxxM+h9GIab0uo2xHqZ9MTuSFHmpf5tE1PF1lRpud1tUi/apAgvZrndZ6+oCRdWhZv8/Tj3/P5m1dfvXjy+3z1+vTV7/nxzw5d/78VbGxMo/RyoF2xFpda2jRCebtgh9zo7562Vfp7mkzp75lmLX1fFjQW/nZABfzCsj1c1Tkc899TYP+e+Oiufva19MLez0VIY/5+Kgvn/w98bkoYRx8AAA==</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>54ab2ba0-cf1b-11e3-bedc-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters>remotecomputerid,iterations</Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>47</FolderID>
+					<ParentID>0</ParentID>
+					<Name>System Commands</Name>
+					<GUID>4dda34c8-62ed-4e04-9982-84f338f72d3a</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

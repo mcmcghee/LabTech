@@ -1,0 +1,47 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>5255</ScriptId>
+				<FolderId>116</FolderId>
+				<ScriptName>Export AD Users</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>2,4,</Permission>
+				<EditPermission>1,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvZmv62aWXY/SZ/mkXmf1dbq7P0r3dnbvpQ8f7d57tHc/ffnF47veK49fT+ti1f5kXjdFtQTs8AP9/vN1MTva29+fHTyYZtsH59N8e3c339s+yO492N7Z2b1/f7az82Bn58C8zy88vuuP6DdO/h/15bAU4QAAAA==</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo739/dnBg2m2fXA+zbd3d/O97YPs3oPtnZ3d+/dnOzsPdnYODBR+gXHWDxp/BK/bfGVHcTxtFQH9TT9/tl7y32czfOf95Q9y9+jh47v6m//5XocY9zp/73f+vu/Rparbox3CGz/1s5Nq2RbLdY7P7e/63ZfN82JR8CvmV/3mbDnLl23Gg6Jv/T990jhqbCDP3gby3NtEn90f0Wf3/v4GAp08+n0bYdHff1VdEffP87L8WSHa7nsSjSi1+/Dnjmp7n26g2rS5nOXp9nk6jZHv9/3dp9VitSYNtCRF9Lv//uuGvhjTO+l2k4bfpdt1+tHWL8wWq8OtavLT+bQ9ydr8oqqvP8Nbd7ZWdfXu+ng2q/OmyZvPvnXnzkfpdpl+9PTFSNuXWdOY3/Xd0XQ5apajtmjLfNTmZb6aV8v8xXoxyevRRXGZL19Q56NZ0azK7Fp+z1dZ3S6ImCMgmC2vR2HXo0VWlC+K6VvgzX+Mrub58qTOqdPZRz8rLLP3/y2WOdjEMe/FKD8r1Lz3/y1q7j3cQM6dnxUK7f9cUMj8rY7O/wPDPJHd9wgAAA==</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>244d87ca-8fce-11e2-8a37-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>116</FolderID>
+					<ParentID>8</ParentID>
+					<Name>Active Directory</Name>
+					<GUID>a4a804a8-c72d-4ed1-affe-618687cab9a0</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>8</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Maintenance</Name>
+					<GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

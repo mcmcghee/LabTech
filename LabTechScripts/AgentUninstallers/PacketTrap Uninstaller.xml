@@ -1,0 +1,47 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>5444</ScriptId>
+				<FolderId>147</FolderId>
+				<ScriptName>PacketTrap Uninstaller</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>2,4,</Permission>
+				<EditPermission>1,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvZmv62aWXY/S76yXebq3M6L/795LDx7t7zy6/yB9+cXju17zx6+ndbFqfzKvm6JaAm74gX7/+bqYHe08yB5+uv/pp9uzh/l0e3c339uePHw4297Z2b1/f7az82Bn58C8zy88vuuP5jdO/h85vRd/3QAAAA==</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo50H2cNP9z/9dHv2MJ9u7+7me9uThw9n2zs7u/fvz3Z2HuzsHBgo/ALjrB80/ghet/nKjuJ42ioC+pt+/my95L/PZkef7j2+6/3pj3L36CfWedOmL7Pp27x9U2er9IvXL9Pji3zZPr6rTfwX9jpkutf5e7/z932PYlXdHu3QiPBTPzuplm2xXOf43P6u333ZPC8WBb9iftVvzpYzwi/j4dK3/p8+0RydNhBubwPhdvc+3UC5L5ri9F0+Hefv8vTu7/2Lj3ee7h7vPdvbfrp/73h7/2R/f/vh/eOH2093dw6OTz89OHjw6bNfkt79Rcv01ekXX/7k6WfHz5//iMT394cp3Bnn+9KlS5fd/y/RZXfv4QbW2/lZYZy9nwMCmb9VS/8/RES50rQFAAA=</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>07a96466-d9ec-11e2-b99d-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>147</FolderID>
+					<ParentID>114</ParentID>
+					<Name>Agent Uninstallers</Name>
+					<GUID>7b181040-4b64-4a5f-b6f6-30bc97afbfa0</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>114</FolderID>
+					<ParentID>0</ParentID>
+					<Name>NOC</Name>
+					<GUID>102c0cd7-aca9-4b74-be81-1aec0b327823</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

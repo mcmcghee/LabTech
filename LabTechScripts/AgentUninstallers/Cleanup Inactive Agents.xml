@@ -1,0 +1,89 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6029</ScriptId>
+				<FolderId>216</FolderId>
+				<ScriptName>Cleanup Inactive Agents</ScriptName>
+				<ScriptNotes></ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvV4vZ9n1KH1RXeaLSV6new9G6d7O7m5679Hu/qP9g/T4i8d3vRcev57Wxar9ybxuimoJyOEH+v3n62J2tH9wMM0mO+fbuwfZp9u7u/nu9sNpfrD96f7Og/N7Wf5wZ7pv3ucXHt/1x/MbJ/8PWnOwn98AAAA=</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo/2Dg2k22Tnf3j3IPt3e3c13tx9O84PtT/d3Hpzfy/KHO9N9A4VfYJz1g8Yfwes2X9lRHE9bRUB/08+frZf899kM33l/+YPc7Qx6r/P3vc7f+52/73v0qOr2aIfwxU/97KRatsVyneNz+7t+92XzvFgU/Ir5Vb85W87yZZvxYOhb/0+fJI4KG8iyt4ks+58OE+aoyct82qbTarFagxXGf4D5tZj9Ael5XS3cd+nVPK9zv+3zrGkx4mza/gHpLyzbw/Tp8ZvT3//46dOtF9XV1p1Revbizemrnzx+nm4/3KEvf587j+9qz8GEHE33dh7MHjy4B7a5P8g22vj/a3Nn/lYZ/X8AKUxPorIDAAA=</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>488cab0f-18a6-11e1-9ce8-6407f3ae90c4</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<PackedScript>
+			<NewDataSet>
+				<Table>
+					<ScriptId>6030</ScriptId>
+					<FolderId>216</FolderId>
+					<ScriptName>!Delete Computer from LabTech</ScriptName>
+					<ScriptNotes></ScriptNotes>
+					<Permission>0,</Permission>
+					<EditPermission>0,</EditPermission>
+					<ComputerScript>1</ComputerScript>
+					<LocationScript>0</LocationScript>
+					<MaintenanceScript>0</MaintenanceScript>
+					<FunctionScript>1</FunctionScript>
+					<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvEOtd+/ufXp3b2d3N93debTzkP6Xvvzi8V2vyePX07pYtT+Z101RLQEr/EC//3xdzI6mezsPZg8e3NvePcjub+/u5rvbD6f5wfan+zsPzu9l+cOd6b55n194fNcfwW+c/D/aYPhN0QAAAA==</LicenseData>
+					<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo+nezoPZgwf3tncPsvvbu7v57vbDaX6w/en+zoPze1n+cGe6b6DwC4yzftD4I3jd5is7iuNpqwjob/r5s/WS/z6b4TvvL3+Qu51B73X+vtf5e7/z932PHlXdHu0Qvvipn51Uy7ZYrnN8bn/X775snheLgl8xv+o3Z8tZvmwzHgx96//pk8RRYQNZ9jaQ5dMHw3Q5mmZlmTar3/9pXhInnFSL1ZoYYut3b35ROdU/itnvPvr4eN1WC0IO7a/TOl9Ul/ksnVynJ2WeLder9GyZUQ+XeXp8QcNoxqmBlV5lTVqdn5fFMk/PqzpdVHWetvNsmT7cSWfZdfPxncd3FZ3/r0+S+VuF8f8Bhjag4psDAAA=</ScriptData>
+					<ScriptVersion>1</ScriptVersion>
+					<ScriptGuid>c207d773-18a5-11e1-9ce8-6407f3ae90c4</ScriptGuid>
+					<ScriptFlags>0</ScriptFlags>
+					<Parameters></Parameters>
+				</Table>
+			</NewDataSet>
+			<ScriptFolder>
+				<NewDataSet>
+					<Table>
+						<FolderID>216</FolderID>
+						<ParentID>109</ParentID>
+						<Name>Agent Maintenance</Name>
+						<GUID>8563676e-b548-4a89-b885-71c9c124e2fa</GUID>
+					</Table>
+				</NewDataSet>
+			</ScriptFolder>
+			<ScriptFolder>
+				<NewDataSet>
+					<Table>
+						<FolderID>109</FolderID>
+						<ParentID>0</ParentID>
+						<Name>_System Automation</Name>
+						<GUID>68c423ca-41a6-4fae-a052-08a4fd27ea53</GUID>
+					</Table>
+				</NewDataSet>
+			</ScriptFolder>
+		</PackedScript>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>216</FolderID>
+					<ParentID>109</ParentID>
+					<Name>Agent Maintenance</Name>
+					<GUID>8563676e-b548-4a89-b885-71c9c124e2fa</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>109</FolderID>
+					<ParentID>0</ParentID>
+					<Name>_System Automation</Name>
+					<GUID>68c423ca-41a6-4fae-a052-08a4fd27ea53</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

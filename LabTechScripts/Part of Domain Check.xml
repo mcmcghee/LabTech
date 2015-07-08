@@ -1,0 +1,89 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>5898</ScriptId>
+				<FolderId>216</FolderId>
+				<ScriptName>Part of Domain Check*</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvZmv62aWXY/S76zL63T3wSjd29ndT3f3Ht178Gjv0/TlF4/veu0fv57Wxar9ybxuimoJwOEH+v3n62J29PDB+YPd+/d3t3dmk93t3d18fzvLPqU/d+jT2c7Og52dA/M+v/D4rj+c3zj5fwDqwVo+3gAAAA==</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo4cPzh/s3r+/u70zm+xu7+7m+9tZ9in9uUOfznZ2HuzsHBgo/ALjrB80/ghet/nKjuJ42ioC+pt+/my95L/PZvjO+8sf5G5n0Hudv+91/t7v/H3fo0dVt0c7hC9+6mcn1bItluscn9vf9bsvm+fFouBXzK/6zdlyli/bjAdD3/p/+iRxVNhAlr0NZNnbGabL0S4RTX8NCHT0+vT56cmb9A94Wi2yYvkHpM9efflF+gdMq8VqDY75A9Lvfvv01Wl6oh+cPU0/S39383Ux+90V7F5I56PmF5Uzhqjf3/v/L90fbKJ7lw5d8h8M0G/cpxvodvToqQ9tfyMVd3/eU7Gspln5DVBy7+c9Jb/75avf6/NXX371coia363qtxd1tV7diqD3ft4T9NtffnH6frQcouX+/5doufvpBlqeV3V69zz9aN3kk2z69hels7wsFs1nn6Vt9TZfNp/tfZT+7u/SYplu/QFXi2KaWjN13bT5Ir3I23SV1W11LlOS3r3MynWe/n4/k54Xy1n60Wcf/QF30lmV/p75dF4RqPicfaDTcP//S/Ox2WkY4OnfvZnnZVnnzbpshxwA+fZrWf9Pv2kC7v4sEnCjcgiI0KXi3gDl3rz6KqoZ3tNmPfimqfizyYbfPBWfHT9//Q0p2IP/L1Hy6wm06MshWZ5dTef59O3XEuaH3zTxfs6EOaTCbfnwm3OcxKff+f8SPfcfbKDn7+miyN9zgKj3Boj61TKblDl5BeQhEIBFsczT4tzFpUvKd/zuadbSJ2VBQ5O/iyb96YqazvBilgrPj9OXZZ41ecqTm35EPbRpdZ6Kpv0oJZfEfmbVxkfpmkhWp+08tz5IWldAKZsMhW4v2TMRuOkJ9/YsK8p8disltPuNR3N7P4sTv7v3cMPM7/ys+F2733iU9rMpGrv3NlEoNPRCp2+MTv+fCr4ONqnkh/cfnO8/eJghB7k3mIOMqpaI9ulqGWMt38/g7X7j8djPKhv+XAjqNx4h/ayqss2C2nUlv2FSebHQN0OqnztZnUynJJf/75LVbzxI+v+drB580xS6hayav5/KUtf/Az0YVNn5GgAA</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>97f71551-0db1-11e4-aa61-00155d007008</ScriptGuid>
+				<ScriptFlags>1</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ExtraDataField>
+			<NewDataSet>
+				<Table>
+					<ID>968</ID>
+					<Form>1</Form>
+					<Name>Part of Domain</Name>
+					<Sort>20</Sort>
+					<NoBreak>0</NoBreak>
+					<FType>1</FType>
+					<Section>Computer Role</Section>
+					<UnEditable>0</UnEditable>
+					<Collapsed>0</Collapsed>
+					<Fill></Fill>
+					<LtGuid>957f479a-0db2-11e4-aa61-00155d007008</LtGuid>
+					<IsPassword>false</IsPassword>
+					<IsEncrypted>false</IsEncrypted>
+					<IsHidden>false</IsHidden>
+					<IsRestricted>false</IsRestricted>
+				</Table>
+			</NewDataSet>
+		</ExtraDataField>
+		<ExtraDataField>
+			<NewDataSet>
+				<Table>
+					<ID>969</ID>
+					<Form>1</Form>
+					<Name>Part of Workgroup</Name>
+					<Sort>20</Sort>
+					<NoBreak>0</NoBreak>
+					<FType>1</FType>
+					<Section>Computer Role</Section>
+					<UnEditable>0</UnEditable>
+					<Collapsed>0</Collapsed>
+					<Fill></Fill>
+					<LtGuid>9bcc001a-0db2-11e4-aa61-00155d007008</LtGuid>
+					<IsPassword>false</IsPassword>
+					<IsEncrypted>false</IsEncrypted>
+					<IsHidden>false</IsHidden>
+					<IsRestricted>false</IsRestricted>
+				</Table>
+			</NewDataSet>
+		</ExtraDataField>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>216</FolderID>
+					<ParentID>109</ParentID>
+					<Name>Agent Maintenance</Name>
+					<GUID>8563676e-b548-4a89-b885-71c9c124e2fa</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>109</FolderID>
+					<ParentID>0</ParentID>
+					<Name>_System Automation</Name>
+					<GUID>68c423ca-41a6-4fae-a052-08a4fd27ea53</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>
