@@ -1,0 +1,579 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>5905</ScriptId>
+        <FolderId>257</FolderId>
+        <ScriptName>Get SMTP Domain</ScriptName>
+        <ScriptNotes>Written by Mike McGhee</ScriptNotes>
+        <Permission>0,</Permission>
+        <EditPermission>0,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Sunday, July 20, 2014 12:28:07 AM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>7bdd8d56-0fa6-11e4-aa61-00155d007008</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>7bdd8d56-0fa6-11e4-aa61-00155d007008</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>for /f "usebackq delims== tokens=2" %x in (`WMIC.EXE /Namespace:\\root\MicrosoftIISv2 Path IIsSmtpServerSetting Get DefaultDomain /value ^| find "="`) do @echo %x</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>6</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2>%shellresult%</Param2>
+    <Param3>domain</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>6</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>:Parse</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>6</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>for /f "usebackq delims== tokens=2" %x in (`wmic product where "Vendor like '%Microsoft%' and Name = 'Microsoft Exchange Server'" get Version /value ^| find "="`) do @echo %x</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>3</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2>%shellresult%</Param2>
+    <Param3>version</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>4</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>version</Param1>
+    <Param2>8</Param2>
+    <Param3>8.0.</Param3>
+    <Param4>:Exchange2007</Param4>
+    <Param5 />
+    <Sort>5</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>version</Param1>
+    <Param2>8</Param2>
+    <Param3>8.1.</Param3>
+    <Param4>:Exchange2007</Param4>
+    <Param5 />
+    <Sort>6</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>version</Param1>
+    <Param2>8</Param2>
+    <Param3>8.2.</Param3>
+    <Param4>:Exchange2007</Param4>
+    <Param5 />
+    <Sort>7</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>version</Param1>
+    <Param2>8</Param2>
+    <Param3>8.3.</Param3>
+    <Param4>:Exchange2007</Param4>
+    <Param5 />
+    <Sort>8</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>version</Param1>
+    <Param2>8</Param2>
+    <Param3>14.0.</Param3>
+    <Param4>:Exchange2010</Param4>
+    <Param5 />
+    <Sort>9</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>version</Param1>
+    <Param2>8</Param2>
+    <Param3>14.1.</Param3>
+    <Param4>:Exchange2010</Param4>
+    <Param5 />
+    <Sort>10</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>version</Param1>
+    <Param2>8</Param2>
+    <Param3>14.2.</Param3>
+    <Param4>:Exchange2010</Param4>
+    <Param5 />
+    <Sort>11</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>version</Param1>
+    <Param2>8</Param2>
+    <Param3>14.3.</Param3>
+    <Param4>:Exchange2010</Param4>
+    <Param5 />
+    <Sort>12</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>version</Param1>
+    <Param2>8</Param2>
+    <Param3>15.0.</Param3>
+    <Param4>:Exchange2013</Param4>
+    <Param5 />
+    <Sort>13</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>14</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:Exchange2007</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>15</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>135</FunctionId>
+    <Param1>Add-PSSnapin Microsoft.Exchange.Management.PowerShell.Admin; Get-AcceptedDomain | Where{$_.DomainType -eq 'Authoritative' -and $_.Default -eq 'True'} | foreach { $_.Name }</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>16</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2>%powershellresult%</Param2>
+    <Param3>domain</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>17</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>:Parse</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>18</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:Exchange2010</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>19</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>135</FunctionId>
+    <Param1>Add-PSSnapin Microsoft.Exchange.Management.Powershell.Support,Microsoft.Exchange.Management.Powershell.E2010; Get-AcceptedDomain | Where{$_.DomainType -eq 'Authoritative' -and $_.Default -eq 'True'} | foreach { $_.Name }</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>20</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2>%powershellresult%</Param2>
+    <Param3>domain</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>21</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>:Parse</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>22</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:Exchange2013</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>23</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>80</FunctionId>
+    <Param1>770044ca-126b-11e4-aa61-00155d007008</Param1>
+    <Param2>@clientid@</Param2>
+    <Param3>Onsite Exchange</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>24</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>4</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>203</FunctionId>
+    <Param1>Add-PSSnapin Microsoft.Exchange.Management.Powershell.Support,Microsoft.Exchange.Management.Powershell.E2010; Get-AcceptedDomain | Where{$_.DomainType -eq 'Authoritative' -and $_.Default -eq 'True'} | foreach { $_.Name }</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>25</Sort>
+    <Continue>0</Continue>
+    <OsLimit>24</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>80</FunctionId>
+    <Param1>35e131d9-0ba1-11e1-b0ae-f51cae145677</Param1>
+    <Param2>@clientid@</Param2>
+    <Param3>%powershellresult%</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>26</Sort>
+    <Continue>0</Continue>
+    <OsLimit>24</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>27</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:Parse</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>28</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>171</FunctionId>
+    <Param1>7</Param1>
+    <Param2>@domain@</Param2>
+    <Param3>.loc</Param3>
+    <Param4 />
+    <Param5>islocal</Param5>
+    <Sort>29</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>islocal</Param1>
+    <Param2>3</Param2>
+    <Param3>-1</Param3>
+    <Param4>0</Param4>
+    <Param5 />
+    <Sort>30</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>3</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Setting Domain to @domain@</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>31</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>80</FunctionId>
+    <Param1>35e131d9-0ba1-11e1-b0ae-f51cae145677</Param1>
+    <Param2>@clientid@</Param2>
+    <Param3>@domain@</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>32</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>4</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Setting Mail Server to Onsite</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>33</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>80</FunctionId>
+    <Param1>770044ca-126b-11e4-aa61-00155d007008</Param1>
+    <Param2>@clientid@</Param2>
+    <Param3>Local Exchange</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>34</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>4</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>35</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>7bdd8d56-0fa6-11e4-aa61-00155d007008</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <ExtraDataField>
+      <NewDataSet>
+        <Table>
+          <ID>976</ID>
+          <Form>3</Form>
+          <Name>Mail Server</Name>
+          <Sort>0</Sort>
+          <NoBreak>0</NoBreak>
+          <FType>0</FType>
+          <Section>WWW Information</Section>
+          <UnEditable>0</UnEditable>
+          <Collapsed>0</Collapsed>
+          <Fill>
+          </Fill>
+          <LtGuid>770044ca-126b-11e4-aa61-00155d007008</LtGuid>
+          <IsPassword>false</IsPassword>
+          <IsEncrypted>false</IsEncrypted>
+          <IsHidden>false</IsHidden>
+          <IsRestricted>false</IsRestricted>
+        </Table>
+      </NewDataSet>
+    </ExtraDataField>
+    <ExtraDataField>
+      <NewDataSet>
+        <Table>
+          <ID>167</ID>
+          <Form>3</Form>
+          <Name>Domain Name</Name>
+          <Sort>1</Sort>
+          <NoBreak>0</NoBreak>
+          <FType>0</FType>
+          <Section>WWW Information</Section>
+          <UnEditable>0</UnEditable>
+          <Collapsed>0</Collapsed>
+          <Fill>
+          </Fill>
+          <LtGuid>35e131d9-0ba1-11e1-b0ae-f51cae145677</LtGuid>
+          <IsPassword>false</IsPassword>
+          <IsEncrypted>false</IsEncrypted>
+          <IsHidden>false</IsHidden>
+          <IsRestricted>false</IsRestricted>
+        </Table>
+      </NewDataSet>
+    </ExtraDataField>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>257</FolderID>
+          <ParentID>109</ParentID>
+          <Name>Documentation</Name>
+          <GUID>5b010fee-cb13-43c0-92ee-799131fa0c66</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>109</FolderID>
+          <ParentID>0</ParentID>
+          <Name>_System Automation</Name>
+          <GUID>68c423ca-41a6-4fae-a052-08a4fd27ea53</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

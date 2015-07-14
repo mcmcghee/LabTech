@@ -1,0 +1,475 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>5221</ScriptId>
+        <FolderId>116</FolderId>
+        <ScriptName>Active Directory Health Check</ScriptName>
+        <ScriptNotes>Written by Mike McGhee</ScriptNotes>
+        <Permission>2,4,</Permission>
+        <EditPermission>1,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Thursday, February 14, 2013 9:13:25 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>fd040914-76f3-11e2-a132-5e33e3dba090</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>fd040914-76f3-11e2-a132-5e33e3dba090</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1>9</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>31</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>17</FunctionId>
+    <Param1>ebdb21e9-57fc-11e1-a7a2-4df1d143dd8c</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>19</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>154</FunctionId>
+    <Param1>C:\scripts_powershell</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>19</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>28</FunctionId>
+    <Param1>Scripts\Active Directory\AD_Health.ps1</Param1>
+    <Param2>C:/scripts_powershell/AD_Health.ps1</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>3</Sort>
+    <Continue>0</Continue>
+    <OsLimit>19</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>28</FunctionId>
+    <Param1>Scripts\Active Directory\DC_Info.ps1</Param1>
+    <Param2>C:/scripts_powershell/DC_Info.ps1</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>4</Sort>
+    <Continue>0</Continue>
+    <OsLimit>19</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>203</FunctionId>
+    <Param1>C:\scripts_powershell\AD_Health.ps1</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>5</Sort>
+    <Continue>0</Continue>
+    <OsLimit>19</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>7</Param1>
+    <Param2>C:\scripts_powershell\adhealth.log</Param2>
+    <Param3>adhealth</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>6</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2>1667</Param2>
+    <Param3>computerid</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>7</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>del C:\inetpub\wwwroot\LabTech\Reports\ADHEALTH\%computername%(%computerid%)-adhealth.html</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>8</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>90</FunctionId>
+    <Param1>C:\inetpub\wwwroot\LabTech\Reports\ADHEALTH\%computername%(%computerid%)-adhealth.html</Param1>
+    <Param2>&lt;pre&gt;@adhealth@&lt;/pre&gt;</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>9</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>10</Sort>
+    <Continue>0</Continue>
+    <OsLimit>19</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>fd040914-76f3-11e2-a132-5e33e3dba090</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <PackedScript>
+      <NewDataSet>
+        <Table>
+          <ScriptId>5120</ScriptId>
+          <FolderId>215</FolderId>
+          <ScriptName>Enable Powershell Remote Execution - Permanent</ScriptName>
+          <ScriptNotes>This script will call the 'Enable Powershell Remoting - Temp' script and have it skip the disable step, leaving remoting enabled.</ScriptNotes>
+          <Permission>2,4,</Permission>
+          <EditPermission>1,</EditPermission>
+          <ComputerScript>1</ComputerScript>
+          <LocationScript>0</LocationScript>
+          <MaintenanceScript>0</MaintenanceScript>
+          <FunctionScript>0</FunctionScript>
+          <LicenseData>H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffTefLfNmll2P0mf5pF5n9XW6e3+U7u3s7qX3H+3vPdrfSV9+8fiu987j19O6WLU/mddNUS0BPPxAv/98XcyO8slssrebP9y+/+B8ur27m+9uZw+yve392fnubHf/3mx2MDXv8wuP7/pD+o2T/ycAAP//dRkO3OIAAAA=</LicenseData>
+          <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo3wym+zt5g+37z84n27v7ua729mDbG97f3a+O9vdvzebHUwNFH6BcdYPGn8Er9t8ZUdxPG0VAf1NP3+2XvLfZzN85/3lD3K3M+i9zt/3On/vd/6+79GjqtujHcIXP/Wzk2rZFst1js/t7/rdl83zYlHwK+ZX/eZsOcuXbcaDoW/9P32SOCpsIMveBrLs7QzTBTTT3wL62M/3QjodvX5brJ4WTTYp8+8Wy1dfaLN7//8l3+6DDeR7uDOZzs7P7xGzE8cPMXuMwh/IgbuOhD80Epq/VdP8P7FlTdV4BAAA</ScriptData>
+          <ScriptVersion>1</ScriptVersion>
+          <ScriptGuid>ebdb21e9-57fc-11e1-a7a2-4df1d143dd8c</ScriptGuid>
+          <ScriptFlags>0</ScriptFlags>
+          <Parameters>
+          </Parameters>
+        </Table>
+      </NewDataSet>
+      <PackedScript>
+        <NewDataSet>
+          <Table>
+            <ScriptId>5121</ScriptId>
+            <FolderId>215</FolderId>
+            <ScriptName>Enable Powershell Remote Execution - Temp</ScriptName>
+            <ScriptNotes>This script sets the remote execution for PowerShell scripts to be enabled for purposes of runnng scripts remotely on other clients. This requires PS 2.0</ScriptNotes>
+            <Permission>2,4,</Permission>
+            <EditPermission>1,</EditPermission>
+            <ComputerScript>1</ComputerScript>
+            <LocationScript>0</LocationScript>
+            <MaintenanceScript>0</MaintenanceScript>
+            <FunctionScript>1</FunctionScript>
+            <LicenseData>H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffTefLfNmll2P0mf5pF5n9XW6e3+U7u3s7qUHj/b2H91/mL784vFd753Hr6d1sWp/Mq+boloCePiBfv/5upgdPdyZTGfn5/e27z/IH27v7ua729mDbG97f3a+O9vdvzebHUzN+/zC47v+kH7j5P8JAAD//+D8nZniAAAA</LicenseData>
+            <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo4c7k+ns/Pze9v0H+cPt3d18dzt7kO1t78/Od2e7+/dms4OpgcIvMM76QeOP4HWbr+wojqetIqC/6efP1kv++2x2tP/4rveXP8jdo2//Xs+/+H1ff/nszXePX53+vl8U07pqqvP2931ZXeX163lelr/vrvfH6fKiWObeBzrex3cVng997+iBfr4XfH7vaG+8o9/cC77Z70zCfY/eVd0e0Vv8Uz87qZZtsVzn+Nz+rt992TwvFgW/Yn7Vb86Ws3zZZkws+tb/0ye5o/IGsu9tIPvuvYcbCP+IKFecX7/O68u8/vJ1nIAdctzr/P3/K3LtbaLWUxLHaZvP0ixdVsv0u8VyVl016Zevx6n0ls7yprhYUou2Suv1Mq2WtpXQeJymp+8KGvRF2vAr458Vmu++P813P/05I/ruJqp3RvqhlNn7ximz+7NImduyo2Gy71b120YQIU77fxlT3vsapD/4/zpT3ooy+984ZX42mfIGk3K6nP0QrMr99yfZz51VuYFiJ/NseZGfvsunazT4oprlPys0+/T/UzR7sIFk5/u7D/fv755vfzp5eA9u7N72ZDa7t71zsLOz9+BBdrCT3/tZIeGD9yXhTST8uRXUHxbnHXzTZPtZ5bybyJZNytwFH6/yRQXb+bNCuIf/XyLc3s69DYQTum2/fG0Ilm6fV/X0Z4fhdne+acJ9TUG9FeEe7Gyg2+++Aqs1YLU6b9Zl+7sPxLkPB+JccvZefZFm9HY2u06LJm3yNl2v4rHv0aPX82pdzp6uax73k5wpks+0+f5msn+NwOPnjuwbvWsn4Kll2KussXTMmZ1nPzuu8u7XCFM203HvZ5GOG+M3tjM/VJ25+zUCjZ814t1MvM3WZrM0fsOE+xpxyM+dtdmoNF+/LVZPiwZcx+pvQGUaJ7GrMncHlWPemrm4nUL8xuOU/1cpxDkpxEmeL3+WteE3Hrj88LThz702/MZDlp9V4t2gDXvi9w0T6+CbJtbPmQZU7fcFodzmzYD++3RA/+0M6T+FenxOC1NP8zK7vp0W/MbDmJ9VLbiJrMYy9ChpSNYhZXweOnS9gSuB0DdLvp9DER7ioG9WkPf+PxWIbMx17U4f3t+7v/eQlmzPdweXbKNM+XvOhNgLYb7fM86i70vabzw2+Vkl7Y05sJ9da9wl3jcem/xsGpgbiPcqb9qq/iGkD/f+PxWYbJTm/ODBzsPd2T4y1/s/zMz13v+nIpGbxfaHx3wfFH38bDDfva8bwr2ZU/ZvkU3nxTJPZ1XepMuqpSDuMk+96I5W7xp6O91LiyUtJpc/a3HdN+7W3IKw5u+nWZsd/cbJ/wPqKyDPnyUAAA==</ScriptData>
+            <ScriptVersion>1</ScriptVersion>
+            <ScriptGuid>90bcdff3-57e9-11e1-a7a2-4df1d143dd8c</ScriptGuid>
+            <ScriptFlags>0</ScriptFlags>
+            <Parameters>
+            </Parameters>
+          </Table>
+        </NewDataSet>
+        <PackedScript>
+          <NewDataSet>
+            <Table>
+              <ScriptId>5231</ScriptId>
+              <FolderId>215</FolderId>
+              <ScriptName>Set Powershell Execution Policy</ScriptName>
+              <ScriptNotes>Determines and stores the original powershell execution policy, then sets the policy to unrestricted. Run the Reset Powershell Execution Policy script to restore the original policyg.</ScriptNotes>
+              <Permission>2,4,</Permission>
+              <EditPermission>1,</EditPermission>
+              <ComputerScript>1</ComputerScript>
+              <LocationScript>0</LocationScript>
+              <MaintenanceScript>0</MaintenanceScript>
+              <FunctionScript>1</FunctionScript>
+              <LicenseData>H4sIAAAAAAAEAFWPzQqDMBCE74W+Qx7A4MZYrbLk0r9LC6WW3qNZIReVmEB9+6K0YE/DzPANDF5tQ91IR+21wuc0kBIYL4qP0B360HlyCjBeOTy9B+tmhlSlfXBGTxE7U+2CdhODJGIJCMkElGlRQsbuN4xXDFaNs4N/kRtt383j/8G3vwRrVJuKIt2Jlmd1IbkQlPDaGMlhD5Dkud4DyR+/ABivL203H7rtpkHiAAAA</LicenseData>
+              <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo/P93Yf793fPtz+dPLy3vbub721PZrN72zsHOzt7Dx5kBzv5PQOFX2Cc9YPGH8HrNl/ZURxPW0VAf9PPn62X/PfZDN95f/mD3O0Meq/z973O3/udv+979Kjq9miH8MVP/eykWrbFcp3jc/u7fvdl87xYFPyK+VW/OVvO8mWb8WDoW/9PnySOChvIsreJLPceDhPm6BHNZHF+fTxbFMuTOgcOBTHA47v6/c8x2XYf/NzR7cEGsk12Pz3Yn+3sbj+YPNgTLn+4f/6pcvnsfGc3e/izQsPdHg0/lIa7P4s0fLCzgYa/p8dvv2ecWEcH+vleSLSjS3Btkc/063shDY8enS5nGxl7fyOR996fyJvl+2eTxnu7939oiu/eN02YvZ9Fwtyg+G5ikW9Wbvffn3K31H0/B6R73VZ1/mVdXBTLrHxZlcX0+meFaPf/v0W03Q0eyNG3f6/nX/y+r7989ua7x69Of98vimldNdV5+/u+rK7y+vU8L8vfd/f35Z9ns8Z9P/a+P32XT9cAvonk0DUxldkl/dEjgfIVkeO8WFpVulkzfvqNz8jPqmrcZH52Buj3szZRXRu2aioVody0X/ntO0ZtSFZ0Zh584zPzs6qb9zYqmOfVxQ9BvRz8f4tkm3VyXJq/WYI9/MYJ9nMm/UZLdqW/S8CfXaHd/QZCov/3sOAPR2phZf+/xIWbSGbIla5gPBoYj9TyVSqMlV5lTfp7DvLdQOT0oUT+GiHQ/3t1I7n6PyyXdfdrhEgf5rP+bBLuZJ4tL/Jb+Z0fSrf/bwVIezv3NtDtdd5ud4iWfrWs86ati2n7s2Scd7/5aOlnUy/eLLI/ROb75sOan03mC0nXI91T5PQppZGfrOuaMPjZJNw3H3X8rBLu/5MR+uu2KMv3C9N3v/nQ5mdTF/y/PU6fiiB9Ix7/Nx5D/ew6VjfG6T/7Sgbc8Q0z888qyW4Tp0dl+hsm2//H4qSfnWj9GxTdvf93xkRfkw9/OKL7zUdDP5s8uHG58gZe6rLm3gBLrvtxQIcNjY4Q//d2Bn/vmw+ffjZ15Ear8iwrynyWtlU6ZQpsSo6M0zfz3CRKCs6TxGfpZydNsvfNx1z33pfs70P2H+JS8d43H1P9bJLmVlY7lMhvmJW++VDqZ1NVbpRgNSwbs5o/B8L6zQdFP5s68uYEiQT6P5RAH9P9DdPuFoG++ftp1mZHv3Hy/wAqE+yx6igAAA==</ScriptData>
+              <ScriptVersion>1</ScriptVersion>
+              <ScriptGuid>f419451f-6b93-11e2-bdd3-0800277a80e3</ScriptGuid>
+              <ScriptFlags>0</ScriptFlags>
+              <Parameters>
+              </Parameters>
+            </Table>
+          </NewDataSet>
+          <PackedScript>
+            <NewDataSet>
+              <Table>
+                <ScriptId>5282</ScriptId>
+                <FolderId>50</FolderId>
+                <ScriptName>Verify Location Admin Credentials</ScriptName>
+                <ScriptNotes>Verifies the "Login to use for Administrator Access" on the Deployment &amp; Defaults tab has valid credentials on the Password tab. Script outputs the @Credentials@ replacement variable with the results of the verification process.</ScriptNotes>
+                <Permission>0,</Permission>
+                <EditPermission>0,</EditPermission>
+                <ComputerScript>1</ComputerScript>
+                <LocationScript>0</LocationScript>
+                <MaintenanceScript>0</MaintenanceScript>
+                <FunctionScript>0</FunctionScript>
+                <LicenseData>H4sIAAAAAAAEAFWPTQqDMBSE94XeIQcwJC8Vo/IIlP5t2k0r3UcTaTZRooF6+6K0YFfDzPANDF5dY/1gj3rUCquptwqQLYr36A9d9KMNiiNbOTy9exdmxqrqFcNg9JSQs61D1GEiAhIiOOwIQClkmWZkf0O2YvDRBNePTxsG1/l5/D/49pfojKohy1PDgcpaCgpgBS3SNqM851xI03LQxY9fAGTrS9vNB2RUizXiAAAA</LicenseData>
+                <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo8nupwf7s53d7QeTB3vbu7v53vbD/fNPt3cOdnb2HszOd3azhwYKv8A46weNP4LXbb6yozietoqA/qafP1sv+e+zGb7z/vIHudsZ9F7n73udv/c7f9/36FHV7dEO4Yuf+tlJtWyL5TrH5/Z3/e7L5nmxKPgV86t+c7ac5cs248HQt/6fPkkcFTaQZW8TWe49HCbM0aNXeVsX+WX+vLq4yGdny6+avH58V7/9+Uu0vZ0NRPtusZxVV036er1a0ZDSN1VVNnGiHT36ffLmu/PqeHF21mj7fKZt9z6IoLtC0Pch6L2NBN37WSTo3sEGeqrw/75fvv59lbS/98vt3+vJwb2DnQcPt5VqTOTt0xdfjfN3+QCxf/eybS6ns6L+3d8T0IfNxN7ATOx+3ZnY/1mcid3d/Q1T8bUp2J2KnThljx6dLZs2K8vX1Xl7ldXm9XvvRfB73zTr/2wSfG+T/n2WFWU+S9sqJVovyyqbpbek+zg9fVe0xfIibRit8c+K1t7/pin96c8ipXc3ktpw5DdLoPv/nyLQZl8gLprfLL0+/abp9bMpuruffqOqMr37i755mhItH3zT9udnkwfvbzA/37CffvBN89rPJl3+v+ByPvz/EkFvaXcLUXrG7IYU/uEY2d2vERtZukbpevCzSNefCyu7+40HOz+rFNpsZjeI5zdMtaHA5GtT7WczRNzd22RtP/rdV3V1Qb+ek+A2v/vvG4jp73s1r7JFARv70c8OJYcijq9tYr8xtyVKyY38d7qc/dCyPrvfeADxc8eCwmQ/O2T6GmHEzs8df23Wbz9U/voa8cRmwu383BHOUW3KnR/PFsXyJrJ9PbINhQz/ryTbRs8YrkGMsY5enz4/PXmTron1lrTQkT579eUXaamkbdIyPXvx4vRV+p0vz16kq6xprqqalkdW6Zcv0nJsPihm6Wfpyv/z+MVT+t7AKWaf/e7u9999IOllWmTehL5fxmv3a8QymyfsZ1WP7uxtmLHfMyDH7zkwfVvf+/1+39/37vd+3+//zO/7yS8s28NfeNEefvbo8KPR7/Gt3/P7v3h/dG/vl9z53QbovcrqJp99A1T/GgHPD5vqnphsUi6iidOzZQpd/Cj93Zt5XpZ13qzL9ndPU6NyUtY5j9LfM0LCgZn6QA0O4f7/Do3fx/RNs5KpeVLnwKbIhiL2D6Xg1wiOfu6U+Q0UpJXl4vz6Z51kXyMy+rkj2YNN9s+T4wFNejCgJTfJeEdP0rxkZTHrT8v+ZjJ/jYWanzvZ/lkis6Sahuh6trwEZaGU35u6XyO2+rmj7mYnboCmXy2zSZkjTXfJeiFlJi2ats7aqk6njmKjdDrPp2/TabVYrdu8tp5e+tHTfFVW1wtqmP7CbLE6TJ/m5xnNY/NR2mYTl+KTcZkUX3ca+7Pzfr7E3s9SiPezM1s3pBDIm3jFsvCzpJ6/8aju5zAc3ijh3zDdvvGw7v91GsEjYUrCTb/m9Al+bee5J/QvTUTHQp7Scma6rNqUp2Ioq/+Ni/zBNz0dETb+xqbj51jkv/FQ62eVVjc4sXFn6Zul2L2db5pi/68WdnYAinz2syWs977xKOqHw4A/F8J67xsPn35WWW+TrP6eHt/8nj87xPrGg6CfTcbaGATdqNIGgyAjvUNhECVOhiL/zUHQvW88CPrZpO7Pwtr5zfz3jQcen/5sUujGBNsPJ0N07xsPQXZuppr5+2nWZke/cfL/AAi5aYfbMQAA</ScriptData>
+                <ScriptVersion>1</ScriptVersion>
+                <ScriptGuid>b1684d01-7b72-11e2-94f6-080027df01a9</ScriptGuid>
+                <ScriptFlags>0</ScriptFlags>
+                <Parameters>
+                </Parameters>
+              </Table>
+            </NewDataSet>
+            <ScriptFolder>
+              <NewDataSet>
+                <Table>
+                  <FolderID>50</FolderID>
+                  <ParentID>109</ParentID>
+                  <Name>Functions</Name>
+                  <GUID>5e052966-d1b5-4c3f-899d-9ff09f989e7c</GUID>
+                </Table>
+              </NewDataSet>
+            </ScriptFolder>
+            <ScriptFolder>
+              <NewDataSet>
+                <Table>
+                  <FolderID>109</FolderID>
+                  <ParentID>0</ParentID>
+                  <Name>_System Automation</Name>
+                  <GUID>68c423ca-41a6-4fae-a052-08a4fd27ea53</GUID>
+                </Table>
+              </NewDataSet>
+            </ScriptFolder>
+          </PackedScript>
+          <ScriptFolder>
+            <NewDataSet>
+              <Table>
+                <FolderID>215</FolderID>
+                <ParentID>8</ParentID>
+                <Name>Powershell</Name>
+                <GUID>302327af-4469-4f04-9a5e-cbae58bb40ed</GUID>
+              </Table>
+            </NewDataSet>
+          </ScriptFolder>
+          <ScriptFolder>
+            <NewDataSet>
+              <Table>
+                <FolderID>8</FolderID>
+                <ParentID>0</ParentID>
+                <Name>Maintenance</Name>
+                <GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+              </Table>
+            </NewDataSet>
+          </ScriptFolder>
+        </PackedScript>
+        <PackedScript>
+          <NewDataSet>
+            <Table>
+              <ScriptId>5116</ScriptId>
+              <FolderId>215</FolderId>
+              <ScriptName>Disable Powershell Remote Execution</ScriptName>
+              <ScriptNotes>This script disables the remote execution for PowerShell scripts to be enabled for purposes of runnng scripts remotely on other clients. This requires PS 2.0
+
+WARNING: Disabling the session configurations does not undo all the changes made by the Enable-PSRemoting or Enable-PSSessionConfiguration cmdlet. You might have to manually undo the changes by following these steps.
+    1. Delete the listener that accepts requests on any IP address.
+    2. Disable the firewall exceptions for WS-Management communications: "Windows Remote Management (HTTP-In) port 5985
+    3. Stop and disable the WinRM service.
+    4. Restore the value of the DWORD value of the HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\ LocalAccountTokenFilterPolicy to 0, which restricts remote access to members of the Administrators group on the computer.
+</ScriptNotes>
+              <Permission>2,4,</Permission>
+              <EditPermission>1,</EditPermission>
+              <ComputerScript>1</ComputerScript>
+              <LocationScript>0</LocationScript>
+              <MaintenanceScript>0</MaintenanceScript>
+              <FunctionScript>1</FunctionScript>
+              <LicenseData>H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffTefLfNmll2P0mf5pF5n9XW6e3+U7u3s7qUHj/b2H91/mL784vFd753Hr6d1sWp/Mq+boloCePiBfv/5upgd7U4f3t+7v/dw+/6D893t3d18dzt7kO1t78/Od2e7+/dms4OpeZ9feHzXH9JvnPw/AQAA//9GdMiD4gAAAA==</LicenseData>
+              <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo93pw/t79/cebt9/cL67vbub725nD7K97f3Z+e5sd//ebHYwNVD4BcZZP2j8Ebxu85UdxfG0VQT0N/382XrJf5/NjvYf3/X+8ge5e/Tt3+v5F7/v6y+fvfnu8avT3/eLYlpXTXXe/r4vq6u8fj3Py/L33fX+OF1eFMvc+0DH+/iuwvOh7x090M/3gs/vHe2Nd/Sbe8E3+51JuO/Ru6rbI3qLf+pnJ9WyLZbrHJ/b3/W7L5vnxaLgV8yv+s3ZcpYv24yJRd/6f/okd1TeQPa9DWTfvfdwA+EfEeWK8+vXeX2Z11++jhOwQ457nb///0Wu/YNhcnUGeivCbCDM7jdNmN2fRcLsbWKjp6Snpm0+S7N0WS3T7xbLWXXVpF++HqfSWzrLm+JiSS3aKq3Xy9RrJcw3TtPTdwUN+iJt+JXxzwoz7r0/zXc//Tkj+u4mqn/D3HjvG6fM3s8iZW7LjobJvlvVbxtBhDjth8iUtyH9/tcg/cHPC6a8/41T5meTKW+wtafL2Q/B3H76/iT7OTS3myl2Ms+WF/npu3y6RoMvqln+s0KzBz97NPtZoNmDDSQ73999uH9/93z708nDe/Dv97Yns9m97Z2DnZ29Bw+yg5383s8KCQ++aRL+rKqwGwX1h8V5D79psv0cSiuR7WnRZJMyd5HZq3xRwan7WSHe7v8HQgvPZdm5t8lnEcptv3xtSJZun1f19GeH7Xb//xN7OF5LLeWKJp0JPWc/O2HE7teII/5fSj9Kubw4e/H5o1Q4EORr53na5A1SKum0Wp4XF+ua0SKyVnlDMV6brsmvTjMiOhpPWVs26SKb5enkmj87XXb5uardh68F/IkPPZ0uZmXejtPfp1qni+Ji3qbz7DJHyLjIlmvq7Fq69buk3s6rsqyuFPGGUAd5fpbm/b2jpP/Xzjt+3x2nT3Miec4kLQui3DKv6Y+sTbPpNKeUX1rnv2idN/QLTVC2vE7PXqbZbFbT/P0skfhrREP/Lybx3lgFS2h8XtT5FcQmfwfyskyRmk+/+3r7i2yZXeQLwpOEbrFYL4upCN2j9CMTxrIs5anXdOvbb9683D5b3vkoXRHV0vsPD+7/7MzL14jF/l88L/coNdVWK2LpmbEVPEFE6VdfkParL4tp/g1weIyS33iI9nNKyf0xsWXTVrUQ8Ol3v3z1NL3MynWeVuf8kaT3KaF/ldW5l95Xrv59T9Z1TchrFp/y+mUxLfLm9319TQpp8fumz6tpVh5Pp9V62b6p3ubLZ0VJCyPc7hrmYWeUXs2L6ZyUVdPWxZTVFksKtFjTsAnJFxMspihOx7NFsSSFR6anok8v6mq9gopj21ItVmvq4Gdp+r/xaPNnc/r/X+fzf+OB5s9uxLSReio3P/th5u7/t+LMTRmO/ODBzsPd2T4yHPs/zAzH3jcebf7cyu0Pjfn2vvFg80OZ797XtXdv5gWinOmc1p9dLMRRiheHqiFL99JiSYsO5c9aGPqNc+QtCGv+fpq12dFvnPw/5+f5YuAgAAA=</ScriptData>
+              <ScriptVersion>1</ScriptVersion>
+              <ScriptGuid>1c952529-57f1-11e1-a7a2-4df1d143dd8c</ScriptGuid>
+              <ScriptFlags>0</ScriptFlags>
+              <Parameters>
+              </Parameters>
+            </Table>
+          </NewDataSet>
+          <PackedScript>
+            <NewDataSet>
+              <Table>
+                <ScriptId>5230</ScriptId>
+                <FolderId>215</FolderId>
+                <ScriptName>Reset Powershell Execution Policy</ScriptName>
+                <ScriptNotes>Restores the  powershell execution policy to the setting recorded by the Set PowerShell Policy script.</ScriptNotes>
+                <Permission>2,4,</Permission>
+                <EditPermission>1,</EditPermission>
+                <ComputerScript>1</ComputerScript>
+                <LocationScript>0</LocationScript>
+                <MaintenanceScript>0</MaintenanceScript>
+                <FunctionScript>1</FunctionScript>
+                <LicenseData>H4sIAAAAAAAEAFWPywqDMBRE94X+Qz7AkJfVKJdA6WvTbtrSfTR3kU2UaKD+fVFasKthZjgDA1ffYhjwaEdr4Dn1aASwReGewqFLYcRoOLCVg9O793Fm0DxScHbKyBmbmGycCFcZkVwooupdUUtN9jdgKwAebfT9+MI4+C7My//Bt78k7wzqklfC5bRoqpwKgZI2zinKNeeyLK3mqH78AgBb/9luPrWGKRffAAAA</LicenseData>
+                <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo/zgwc7D3dn+9qeTh/vbu7v53vZkNru3vXOws7P34EF2sJPfM1D4BcZZP2j8Ebxu85UdxfG0VQT0N/382XrJf5/N8J33lz/I3c6g9zp/3+v8vd/5+75Hj6puj3YIX/zUz06qZVss1zk+t7/rd182z4tFwa+YX/Wbs+UsX7YZD4a+9f/0SeKosIEse5vIcu/hMGGOHtFMFufXL6uymF5/N2te5+3ju/rdzzHJdh/8nNHswc4Gkq2aqi4uimVW5u/y6RptVky+OOGAqP62kYBHj06Xs8HZ2B+kLqi6+41Td/dnkbp7mxjyzTxPadjpy+qKdMw8L8v01JA5FcKkDXebLtZNm07ytF4v6cd5VefpNCvLYnmRtvOi0WbjnxV+3vvGKb73s0nx3fs/NOV47/9TlLlBO24SyW+Wofa/Ltl+ThTkDWR7lTctiaMVXKHezwrd7v9/im57O/c20I14a7tDs/T3HDQ3v+fPCj0//cbp+bNpSm4W3x8iKz74xkl3G1b8WSLdU0QGi2KZn6zrmhD6WaTbwf+36La7IdA4+vbv9fyL3/f1l8/efPf41env+0UxraumOm9/X3ZnXsOd+X13f1/+eTZr3Pdj7/tbsSqkSn/bSPqjRwLlKyLHOc3m7Fb+5MNvfEZ+NpXA3iZv3XjfXfr9rE1UZ0IoXJiKBMWjhXvvJSq7/TjqQ2fmZ9W72ujqP3peXfzsaxeI6zfMzD+rJNusluPS/A1T7JsPbn7OxN+oya74dyn4syu1P5sx0TdP0BtY8Icjtd98PPSzyoObKKbUSlcupWG5KhW2Sild8XsO8dzPjqO/+81HTj+HepE8/R+ix7r7zUdJt3BZzd9PJdX//wACXvCe+RcAAA==</ScriptData>
+                <ScriptVersion>1</ScriptVersion>
+                <ScriptGuid>e87091d4-6b94-11e2-bdd3-0800277a80e3</ScriptGuid>
+                <ScriptFlags>0</ScriptFlags>
+                <Parameters>
+                </Parameters>
+              </Table>
+            </NewDataSet>
+            <ScriptFolder>
+              <NewDataSet>
+                <Table>
+                  <FolderID>215</FolderID>
+                  <ParentID>8</ParentID>
+                  <Name>Powershell</Name>
+                  <GUID>302327af-4469-4f04-9a5e-cbae58bb40ed</GUID>
+                </Table>
+              </NewDataSet>
+            </ScriptFolder>
+            <ScriptFolder>
+              <NewDataSet>
+                <Table>
+                  <FolderID>8</FolderID>
+                  <ParentID>0</ParentID>
+                  <Name>Maintenance</Name>
+                  <GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+                </Table>
+              </NewDataSet>
+            </ScriptFolder>
+          </PackedScript>
+          <ScriptFolder>
+            <NewDataSet>
+              <Table>
+                <FolderID>215</FolderID>
+                <ParentID>8</ParentID>
+                <Name>Powershell</Name>
+                <GUID>302327af-4469-4f04-9a5e-cbae58bb40ed</GUID>
+              </Table>
+            </NewDataSet>
+          </ScriptFolder>
+          <ScriptFolder>
+            <NewDataSet>
+              <Table>
+                <FolderID>8</FolderID>
+                <ParentID>0</ParentID>
+                <Name>Maintenance</Name>
+                <GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+              </Table>
+            </NewDataSet>
+          </ScriptFolder>
+        </PackedScript>
+        <ScriptFolder>
+          <NewDataSet>
+            <Table>
+              <FolderID>215</FolderID>
+              <ParentID>8</ParentID>
+              <Name>Powershell</Name>
+              <GUID>302327af-4469-4f04-9a5e-cbae58bb40ed</GUID>
+            </Table>
+          </NewDataSet>
+        </ScriptFolder>
+        <ScriptFolder>
+          <NewDataSet>
+            <Table>
+              <FolderID>8</FolderID>
+              <ParentID>0</ParentID>
+              <Name>Maintenance</Name>
+              <GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+            </Table>
+          </NewDataSet>
+        </ScriptFolder>
+      </PackedScript>
+      <ScriptFolder>
+        <NewDataSet>
+          <Table>
+            <FolderID>215</FolderID>
+            <ParentID>8</ParentID>
+            <Name>Powershell</Name>
+            <GUID>302327af-4469-4f04-9a5e-cbae58bb40ed</GUID>
+          </Table>
+        </NewDataSet>
+      </ScriptFolder>
+      <ScriptFolder>
+        <NewDataSet>
+          <Table>
+            <FolderID>8</FolderID>
+            <ParentID>0</ParentID>
+            <Name>Maintenance</Name>
+            <GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+          </Table>
+        </NewDataSet>
+      </ScriptFolder>
+    </PackedScript>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>116</FolderID>
+          <ParentID>8</ParentID>
+          <Name>Active Directory</Name>
+          <GUID>a4a804a8-c72d-4ed1-affe-618687cab9a0</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>8</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Maintenance</Name>
+          <GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

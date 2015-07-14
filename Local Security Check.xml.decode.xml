@@ -1,0 +1,176 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>5963</ScriptId>
+        <FolderId>232</FolderId>
+        <ScriptName>Local Security Check</ScriptName>
+        <ScriptNotes>Written by Mike McGhee</ScriptNotes>
+        <Permission>0,</Permission>
+        <EditPermission>0,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Wednesday, October 22, 2014 2:45:31 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>06fc2870-6459-11e4-9903-00155d007008</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>06fc2870-6459-11e4-9903-00155d007008</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1>checkuser</Param1>
+    <Param2>1</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>9</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>135</FunctionId>
+    <Param1>(get-wmiobject -class "Win32_UserAccount" -namespace "root\CIMV2" -filter "LocalAccount = True AND NOT Name like '%admin%' AND NOT Name like '%intsys%' AND NOT Name like '%$%' AND NOT Name like '%Guest%' AND NOT Name like '%qbdata%' AND NOT Name like '%qbuser%'" | Select -ExpandProperty Name) -join ","</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2>%powershellresult%</Param2>
+    <Param3>localusers</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Local Users: @localusers@</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>3</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>92</FunctionId>
+    <Param1>82041d47-653e-11e4-9903-00155d007008</Param1>
+    <Param2>@localusers@,null</Param2>
+    <Param3>checkuser</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>4</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>06fc2870-6459-11e4-9903-00155d007008</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <PackedScript>
+      <NewDataSet>
+        <Table>
+          <ScriptId>5965</ScriptId>
+          <FolderId>232</FolderId>
+          <ScriptName>Local Security Check - Functions</ScriptName>
+          <ScriptNotes>
+          </ScriptNotes>
+          <Permission>0,</Permission>
+          <EditPermission>0,</EditPermission>
+          <ComputerScript>1</ComputerScript>
+          <LocationScript>0</LocationScript>
+          <MaintenanceScript>0</MaintenanceScript>
+          <FunctionScript>1</FunctionScript>
+          <LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffTefLfNmll2P0hfVZb6Y5HW6c3+U7u3s7qe7O4/27j3afZC+/OLxXe+lx6+ndbFqfzKvm6JaAnr4gX7/+bqYHR3s7ezvzvYfbH96/16+vbub728/fLhzb3tnZ/f+/dnOzoOdnQPzPr/w+K4/pt84+X8AfhQVQuMAAAA=</LicenseData>
+          <ScriptData>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</ScriptData>
+          <ScriptVersion>1</ScriptVersion>
+          <ScriptGuid>82041d47-653e-11e4-9903-00155d007008</ScriptGuid>
+          <ScriptFlags>0</ScriptFlags>
+          <Parameters>
+          </Parameters>
+        </Table>
+      </NewDataSet>
+      <ScriptFolder>
+        <NewDataSet>
+          <Table>
+            <FolderID>232</FolderID>
+            <ParentID>92</ParentID>
+            <Name>GHSE</Name>
+            <GUID>2ba33028-ecde-49d1-bec3-cc44e714fb83</GUID>
+          </Table>
+        </NewDataSet>
+      </ScriptFolder>
+      <ScriptFolder>
+        <NewDataSet>
+          <Table>
+            <FolderID>92</FolderID>
+            <ParentID>0</ParentID>
+            <Name>Client Specific Scripts</Name>
+            <GUID>8d543fe6-ca79-4343-b1cc-8e7f223dbcc2</GUID>
+          </Table>
+        </NewDataSet>
+      </ScriptFolder>
+    </PackedScript>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>232</FolderID>
+          <ParentID>92</ParentID>
+          <Name>GHSE</Name>
+          <GUID>2ba33028-ecde-49d1-bec3-cc44e714fb83</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>92</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Client Specific Scripts</Name>
+          <GUID>8d543fe6-ca79-4343-b1cc-8e7f223dbcc2</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

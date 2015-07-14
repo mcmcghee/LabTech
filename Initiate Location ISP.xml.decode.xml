@@ -1,0 +1,166 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>5968</ScriptId>
+        <FolderId>257</FolderId>
+        <ScriptName>Initiate Location ISP</ScriptName>
+        <ScriptNotes>Written by Mike McGhee</ScriptNotes>
+        <Permission>0,</Permission>
+        <EditPermission>0,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Wednesday, November 12, 2014 3:04:13 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>401dea48-6a82-11e4-9903-00155d007008</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>401dea48-6a82-11e4-9903-00155d007008</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>146</FunctionId>
+    <Param1>SELECT `Client Name`, Locations_Name, `RouterAddress`, MAX(cnt) AS Computers, LocationID FROM (SELECT COUNT(*) AS `cnt`, Clients.Name AS `Client Name`, Locations.`Name` AS `Locations_Name`, Computers.RouterAddress AS `RouterAddress`, Locations.LocationID AS `LocationID` FROM Computers, Clients, Locations WHERE Computers.ClientID = Clients.ClientID AND Locations.LocationID = Computers.LocationID AND Locations.Name NOT LIKE '%home%' AND Locations.Name NOT LIKE '%remote%' GROUP BY RouterAddress,LocationID HAVING cnt &gt; 1) AS rank GROUP BY `LocationID`</Param1>
+    <Param2>bb1a9212-6a83-11e4-9903-00155d007008</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>401dea48-6a82-11e4-9903-00155d007008</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <PackedScript>
+      <NewDataSet>
+        <Table>
+          <ScriptId>5969</ScriptId>
+          <FolderId>257</FolderId>
+          <ScriptName>Get Location ISP</ScriptName>
+          <ScriptNotes>Written by Mike McGhee</ScriptNotes>
+          <Permission>0,</Permission>
+          <EditPermission>0,</EditPermission>
+          <ComputerScript>1</ComputerScript>
+          <LocationScript>0</LocationScript>
+          <MaintenanceScript>0</MaintenanceScript>
+          <FunctionScript>1</FunctionScript>
+          <LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffTefLfNmll2P0hfVZb6Y5HW6uzdK93Z299N7j3b3H93fS19+8fiu987j19O6WLU/mddNUS0BPPxAv/98XcyOJpPd7OHe7t72p9nBve3d3Xx/++HDnXvbOzu79+/PdnYe7OwcmPf5hcd3/SH9xsn/A8h3f7/iAAAA</LicenseData>
+          <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo8lkN3u4t7u3/Wl2cG97dzff3374cOfe9s7O7v37s52dBzs7BwYKv8A46weNP4LXbb6yozietoqA/qafP1sv+e+zGb7z/vIHudsZ9F7n73udv/c7f9/36FHV7dEO4Yuf+tlJtWyL5TrH5/Z3/e7L5nmxKPgV86t+c7ac5cs248HQt/6fPkkcFTaQZW8DWQ52hulytL/36e7004MdzNb+4Gxp44CER79784vK59WUMT57+rtrq72QsNzqVbUmLjuezeq8aUzDe///pfjeJorvDpBz99NPHwzQcFotVqBgMYvR7kba7f5/iXa79zfQ7uTR71u2zTyr89/3TZ0tm/O8/n3fVFXZ/L4vivp1dd7+vlfzqilW4/xdPkDm7TodZMku3Xe+Frn3vmly7/4skvtrservTuSdgn55sy7bIerJt1+LhPe+aRL+bHLsg00kDIjQpaPRrF3KHb/5hdlidfgmTrujR1lrIO4f/cbJMBn3f36T8aqY5dUqX17lzQAbHj26qq5uRcr7P79J+aZY5Ol3s3qZ10OUbKnJld9iM0E//flN0NOsbufPi+XbIXLmaFC6BsPUBBUf/Pym5nFbZjTKafqkrrLZJFsOOEpQndLyVlQ9+PlN1e8Wy1nT1nm2GNSe3Rab6fnw5zc9yY2fZsOmKPx6MyV3dxwp/99Pyt29hxto+eir5dtldbWMU/MDI/Xdbzz4+dn0xnfvbSRUyCHfMKG+8bDlZ5OjNuY0dvcf7O3lB7OftZzGySZBvonO33hs87NJ5xsk99Qa2m+YGb/xyOXnUGpdiPENE+n/UzHJz63EfvfL7349af3/QJjycy+t33j08bMprd+8X/dN5hl2D75pWv5sCvUNms/lqb5hhvv/VCDxs635Nmu+zbnEGwiN7PD/dwj9c6T+9v7/FGL0snjfMK1+FGXc2md5c1POVWk7SOsfRRq3INL/nyKNbs74GybVj+KNW8vuDen9myj9XlHHzzWlf64k9/9TUceNnnKwLPENU+rgm6bUzyY7/dwK7m1Xkm4i+Q8xQvlwkv8cSfC9nW+aL38OJbi3FPYN0+obDzL+/yvDN61b3kTq/0/FKLt7Pzey+40HFz+HsvuzuQB57xsPMH5Wuen+BjqdPPp9y7aZZ3X++76ps2Vznte/75uqKpvf90VRv67O29/3al41xWqcv8sHBHi7TiHDr6p1m9fHsxnlW5vfPf2Z9JxENv3oy/oiWxY/4HF9NCDcO19Ppr/x2OVnk12RdhtWn13SGt1IVJ+CrJzCHtKN64DV35OI33hY8rNJxN0HuxuoiERUlEN/T6XQ7zlAwEdx0tlp2Q9JeNSsyqINqX4/pOr/t+KYjVT9dIioPhUGKHuTXj36PZf5lTC3gdAh5MH/lwj5zblIIalv5yL1afmequAbj2/2fhZp/XMU3+zvfNNE+tlkyBt8pJ81Iv1/KrDZzEnGN/mGKXRDPPL+FLoFG5m/n2ZtdvQbJ/8PKo+KHWQ4AAA=</ScriptData>
+          <ScriptVersion>1</ScriptVersion>
+          <ScriptGuid>bb1a9212-6a83-11e4-9903-00155d007008</ScriptGuid>
+          <ScriptFlags>0</ScriptFlags>
+          <Parameters>
+          </Parameters>
+        </Table>
+      </NewDataSet>
+      <ExtraDataField>
+        <NewDataSet>
+          <Table>
+            <ID>996</ID>
+            <Form>2</Form>
+            <Name>Router Address</Name>
+            <Sort>0</Sort>
+            <NoBreak>0</NoBreak>
+            <FType>0</FType>
+            <Section>ISP Information</Section>
+            <UnEditable>0</UnEditable>
+            <Collapsed>0</Collapsed>
+            <Fill>
+            </Fill>
+            <LtGuid>4261c680-6a84-11e4-9903-00155d007008</LtGuid>
+            <IsPassword>false</IsPassword>
+            <IsEncrypted>false</IsEncrypted>
+            <IsHidden>false</IsHidden>
+            <IsRestricted>false</IsRestricted>
+          </Table>
+        </NewDataSet>
+      </ExtraDataField>
+      <ExtraDataField>
+        <NewDataSet>
+          <Table>
+            <ID>995</ID>
+            <Form>2</Form>
+            <Name>Internet Provider</Name>
+            <Sort>0</Sort>
+            <NoBreak>0</NoBreak>
+            <FType>2</FType>
+            <Section>ISP Information</Section>
+            <UnEditable>0</UnEditable>
+            <Collapsed>0</Collapsed>
+            <Fill>Comcast~WOW~AT&amp;T~Time Warner~EarthLink~Atlantic Broadband~Windstream</Fill>
+            <LtGuid>14722e8d-6a84-11e4-9903-00155d007008</LtGuid>
+            <IsPassword>false</IsPassword>
+            <IsEncrypted>false</IsEncrypted>
+            <IsHidden>false</IsHidden>
+            <IsRestricted>false</IsRestricted>
+          </Table>
+        </NewDataSet>
+      </ExtraDataField>
+      <ScriptFolder>
+        <NewDataSet>
+          <Table>
+            <FolderID>257</FolderID>
+            <ParentID>109</ParentID>
+            <Name>Documentation</Name>
+            <GUID>5b010fee-cb13-43c0-92ee-799131fa0c66</GUID>
+          </Table>
+        </NewDataSet>
+      </ScriptFolder>
+      <ScriptFolder>
+        <NewDataSet>
+          <Table>
+            <FolderID>109</FolderID>
+            <ParentID>0</ParentID>
+            <Name>_System Automation</Name>
+            <GUID>68c423ca-41a6-4fae-a052-08a4fd27ea53</GUID>
+          </Table>
+        </NewDataSet>
+      </ScriptFolder>
+    </PackedScript>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>257</FolderID>
+          <ParentID>109</ParentID>
+          <Name>Documentation</Name>
+          <GUID>5b010fee-cb13-43c0-92ee-799131fa0c66</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>109</FolderID>
+          <ParentID>0</ParentID>
+          <Name>_System Automation</Name>
+          <GUID>68c423ca-41a6-4fae-a052-08a4fd27ea53</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

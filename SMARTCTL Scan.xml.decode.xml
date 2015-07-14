@@ -1,0 +1,570 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>5389</ScriptId>
+        <FolderId>118</FolderId>
+        <ScriptName>SMARTCTL Scan</ScriptName>
+        <ScriptNotes>Written by Mike McGhee</ScriptNotes>
+        <Permission>2,4,</Permission>
+        <EditPermission>1,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Thursday, February 14, 2013 9:13:25 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>f0da667a-b7ec-11e2-b867-00155d007008</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>f0da667a-b7ec-11e2-b867-00155d007008</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>95</FunctionId>
+    <Param1>61de271a-a2ef-11e3-bedc-00155d007008</Param1>
+    <Param2>%clientid%</Param2>
+    <Param3>3</Param3>
+    <Param4>1</Param4>
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>31</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>28</FunctionId>
+    <Param1>Scripts\Hardware\smartctl.exe</Param1>
+    <Param2>%ltsvcdir%\smartctl.exe</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>FOR /F "tokens=2 delims=/ " %G IN ('"%ltsvcdir%\smartctl.exe --scan"') DO %ltsvcdir%\smartctl.exe -i -A -H /dev/%G &gt; %ltsvcdir%\smartctl-%G.txt</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>114</FunctionId>
+    <Param1>%ltsvcdir%\smartctl-sda.txt</Param1>
+    <Param2>0</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>3</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3>sda</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>4</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>5</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>7</Param1>
+    <Param2>%ltsvcdir%\smartctl-sda.txt</Param2>
+    <Param3>sda</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>6</Sort>
+    <Continue>1</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>114</FunctionId>
+    <Param1>%ltsvcdir%\smartctl-sdb.txt</Param1>
+    <Param2>0</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>7</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3>sdb</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>8</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>9</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>7</Param1>
+    <Param2>%ltsvcdir%\smartctl-sdb.txt</Param2>
+    <Param3>sdb</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>10</Sort>
+    <Continue>1</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>114</FunctionId>
+    <Param1>%ltsvcdir%\smartctl-sdc.txt</Param1>
+    <Param2>0</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>11</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3>sdc</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>12</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>13</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>7</Param1>
+    <Param2>%ltsvcdir%\smartctl-sdc.txt</Param2>
+    <Param3>sdc</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>14</Sort>
+    <Continue>1</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>114</FunctionId>
+    <Param1>%ltsvcdir%\smartctl-sdd.txt</Param1>
+    <Param2>0</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>15</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3>sdd</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>16</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>17</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>7</Param1>
+    <Param2>%ltsvcdir%\smartctl-sdd.txt</Param2>
+    <Param3>sdd</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>18</Sort>
+    <Continue>1</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>114</FunctionId>
+    <Param1>%ltsvcdir%\smartctl-csmi0,0.txt</Param1>
+    <Param2>0</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>19</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3>csmi00</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>20</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>21</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>7</Param1>
+    <Param2>%ltsvcdir%\smartctl-csmi0,0.txt</Param2>
+    <Param3>csmi00</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>22</Sort>
+    <Continue>1</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>114</FunctionId>
+    <Param1>%ltsvcdir%\smartctl-csmi0,1.txt</Param1>
+    <Param2>0</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>23</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3>csmi01</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>24</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>25</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>7</Param1>
+    <Param2>%ltsvcdir%\smartctl-csmi0,1.txt</Param2>
+    <Param3>csmi01</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>26</Sort>
+    <Continue>1</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>90</FunctionId>
+    <Param1>%ltsvcdir%\smartresults.txt</Param1>
+    <Param2>&lt;pre&gt;@sda@@sdb@@sdc@@sdd@@csmi00@@csmi01@&lt;/pre&gt;</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>27</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>findstr /x /c:"SMART overall-health self-assessment test result: FAILED!" %ltsvcdir%\smartresults.txt</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>28</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>18</FunctionId>
+    <Param1>%ltsvcdir%\smartresults.txt</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>29</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2>%shellresult%</Param2>
+    <Param3>checkfailed</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>30</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>checkfailed</Param1>
+    <Param2>9</Param2>
+    <Param3>FAILED!</Param3>
+    <Param4>1</Param4>
+    <Param5 />
+    <Sort>31</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>24</FunctionId>
+    <Param1>mikem@intellisystems.com</Param1>
+    <Param2>SMART Test Failed on %computername% at %clientname%</Param2>
+    <Param3>%uploadedfile%</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>32</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2>1667</Param2>
+    <Param3>computerid</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>33</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>del C:\inetpub\wwwroot\LabTech\Reports\SMARTCTL\%computername%(%computerid%)-smart.html</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>34</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>34</FunctionId>
+    <Param1>%uploadedfile%</Param1>
+    <Param2>C:\inetpub\wwwroot\LabTech\Reports\SMARTCTL\%computername%(%computerid%)-smart.html</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>35</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>36</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>f0da667a-b7ec-11e2-b867-00155d007008</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <ExtraDataField>
+      <NewDataSet>
+        <Table>
+          <ID>916</ID>
+          <Form>3</Form>
+          <Name>Disable SmartCTL</Name>
+          <Sort>0</Sort>
+          <NoBreak>0</NoBreak>
+          <FType>1</FType>
+          <Section>Hardware</Section>
+          <UnEditable>0</UnEditable>
+          <Collapsed>0</Collapsed>
+          <Fill>
+          </Fill>
+          <LtGuid>61de271a-a2ef-11e3-bedc-00155d007008</LtGuid>
+          <IsPassword>false</IsPassword>
+          <IsEncrypted>false</IsEncrypted>
+          <IsHidden>false</IsHidden>
+          <IsRestricted>false</IsRestricted>
+        </Table>
+      </NewDataSet>
+    </ExtraDataField>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>118</FolderID>
+          <ParentID>114</ParentID>
+          <Name>Hardware</Name>
+          <GUID>e82ac5d5-ba0d-419f-8414-0c264cdde180</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>114</FolderID>
+          <ParentID>0</ParentID>
+          <Name>NOC</Name>
+          <GUID>102c0cd7-aca9-4b74-be81-1aec0b327823</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

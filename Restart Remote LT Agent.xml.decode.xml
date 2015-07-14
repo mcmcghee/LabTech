@@ -1,0 +1,138 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>5782</ScriptId>
+        <FolderId>3</FolderId>
+        <ScriptName>Restart Remote LT Agent</ScriptName>
+        <ScriptNotes>
+        </ScriptNotes>
+        <Permission>2,4,</Permission>
+        <EditPermission>1,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Thursday, February 06, 2014 2:42:11 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>cb5ad5e1-8f40-11e3-bedc-00155d007008</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters>computername</Parameters>
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>cb5ad5e1-8f40-11e3-bedc-00155d007008</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>28</FunctionId>
+    <Param1>Software\SysinternalsSuite\pskill.exe</Param1>
+    <Param2>%ltsvcdir%\pskill.exe</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>126</FunctionId>
+    <Param1>%ltsvcdir%\pskill.exe -t \\@computername@ -u %computeruserdomain% -p %computerpassword% LTService -accepteula</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>126</FunctionId>
+    <Param1>%ltsvcdir%\pskill.exe -t \\@computername@ -u %computeruserdomain% -p %computerpassword% LTSvcMon -accepteula</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>28</FunctionId>
+    <Param1>Software\SysinternalsSuite\PsService.exe</Param1>
+    <Param2>%ltsvcdir%\PsService.exe</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>3</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>126</FunctionId>
+    <Param1>%ltsvcdir%\PsService.exe \\@computername@ -u %computeruserdomain% -p %computerpassword% restart LTService -accepteula</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>4</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>126</FunctionId>
+    <Param1>%ltsvcdir%\PsService.exe \\@computername@ -u %computeruserdomain% -p %computerpassword% restart LTSvcMon -accepteula</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>5</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>cb5ad5e1-8f40-11e3-bedc-00155d007008</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters>computername</Parameters></Table>
+    </NewDataSet>
+    <File Name="L:\Transfer\Software\SysinternalsSuite\pskill.exe" Bytes="This value has been replaced and the file extracted to the Transfer folder" />
+    <File Name="L:\Transfer\Software\SysinternalsSuite\PsService.exe" Bytes="This value has been replaced and the file extracted to the Transfer folder" />
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>3</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Actions</Name>
+          <GUID>62da1b4f-7ca5-465c-ae8e-49f96763c80e</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

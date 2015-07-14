@@ -1,0 +1,228 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>5666</ScriptId>
+        <FolderId>196</FolderId>
+        <ScriptName>Run SYDI</ScriptName>
+        <ScriptNotes>Written by Mike McGhee</ScriptNotes>
+        <Permission>2,4,</Permission>
+        <EditPermission>1,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Friday, November 01, 2013 5:38:11 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>01df53cb-4322-11e3-b14b-00155d007008</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>01df53cb-4322-11e3-b14b-00155d007008</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>31</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>17</FunctionId>
+    <Param1>24086075-4321-11e3-b14b-00155d007008</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>126</FunctionId>
+    <Param1>cscript %ltsvcdir%\sydi-server\sydi-server.vbs -o%ltsvcdir%\sydi-server\%computername%-sydi.xml -ex -sh -tlocalhost</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>126</FunctionId>
+    <Param1>cscript %ltsvcdir%\sydi-server\sydi-transform.vbs -x%ltsvcdir%\sydi-server\%computername%-sydi.xml -s%ltsvcdir%\sydi-server\Serverhtml.xsl -o%ltsvcdir%\sydi-server\%computername%-sydi.html</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>3</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>18</FunctionId>
+    <Param1>%ltsvcdir%\sydi-server\%computername%-sydi.html</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>4</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2>1667</Param2>
+    <Param3>computerid</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>5</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>del C:\inetpub\wwwroot\LabTech\Reports\SYDI\%computername%(%computerid%)-sydi.html</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>6</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>34</FunctionId>
+    <Param1>%uploadedfile%</Param1>
+    <Param2>C:\inetpub\wwwroot\LabTech\Reports\SYDI\%computername%(%computerid%)-sydi.html</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>7</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>8</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>01df53cb-4322-11e3-b14b-00155d007008</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <PackedScript>
+      <NewDataSet>
+        <Table>
+          <ScriptId>5665</ScriptId>
+          <FolderId>196</FolderId>
+          <ScriptName>Deploy SYDI</ScriptName>
+          <ScriptNotes>
+          </ScriptNotes>
+          <Permission>2,4,</Permission>
+          <EditPermission>1,</EditPermission>
+          <ComputerScript>1</ComputerScript>
+          <LocationScript>0</LocationScript>
+          <MaintenanceScript>0</MaintenanceScript>
+          <FunctionScript>1</FunctionScript>
+          <LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfPauLWXY9Sl9Ul/liktfp7ijd29m9l95/dO/g0e5u+vKLx3e99o9fT+ti1f5kXjdFtQTg8AP9/vN1MTva2985+HTnwf3t/Xt7u9u7u/m97cnu/mR7Z2f3/v3Zzs6DnZ0D8z6/8PiuP5zfOPl/ACKGwkXeAAAA</LicenseData>
+          <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo739nYNPdx7c396/t7e7vbub39ue7O5Ptnd2du/fn+3sPNjZOTBQ+AXGWT9o/BG8bvOVHcXxtFUE9Df9/Nl6yX+fzfCd95c/yN3OoPc6f9/r/L3f+fu+R4+qbo92CF/81M9OqmVbLNc5Pre/63dfNs+LRcGvmF/1m7PlLF+2GQ+GvvX/9EniqLCBLHubyLK7P0yYo9+9bJvL6ayof/fft7meFdtNXl/mtf/7+HLSPL6rzQMqAm39LaCm/fze/3+punewgajKzD4Vt/fG98Y/KFYDlIxPQ+elDpmVfLcl7+7/b8j7pqrK5vddL4ky4/xdfjNJu00/jJB73zQh934WCfl1pP8GXh2S+r2vJfX3vmlq7v4sUnPv4QZiPq2ulmWVzdJnWVHms3H6RfY2TzMaw2VRr5u750WdX2Vlmc6zJp3k+TKdVsvz4mJd57N0VVervC6vx3GibzBYtyHy/jdN5J9Vlt1E5W/Ykt///xRhPr2dKFt1l26W73R7NtDi9/1Z4cJPv2li38ICmb/VPf5/AONaAmEtCwAA</ScriptData>
+          <ScriptVersion>1</ScriptVersion>
+          <ScriptGuid>24086075-4321-11e3-b14b-00155d007008</ScriptGuid>
+          <ScriptFlags>0</ScriptFlags>
+          <Parameters>
+          </Parameters>
+        </Table>
+      </NewDataSet>
+      <ScriptFolder>
+        <NewDataSet>
+          <Table>
+            <FolderID>196</FolderID>
+            <ParentID>114</ParentID>
+            <Name>SYDI</Name>
+            <GUID>367bf7dd-376d-47fb-a16b-9b18bc2f1c36</GUID>
+          </Table>
+        </NewDataSet>
+      </ScriptFolder>
+      <ScriptFolder>
+        <NewDataSet>
+          <Table>
+            <FolderID>114</FolderID>
+            <ParentID>0</ParentID>
+            <Name>NOC</Name>
+            <GUID>102c0cd7-aca9-4b74-be81-1aec0b327823</GUID>
+          </Table>
+        </NewDataSet>
+      </ScriptFolder>
+    </PackedScript>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>196</FolderID>
+          <ParentID>114</ParentID>
+          <Name>SYDI</Name>
+          <GUID>367bf7dd-376d-47fb-a16b-9b18bc2f1c36</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>114</FolderID>
+          <ParentID>0</ParentID>
+          <Name>NOC</Name>
+          <GUID>102c0cd7-aca9-4b74-be81-1aec0b327823</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>
