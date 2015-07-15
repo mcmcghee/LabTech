@@ -1,0 +1,500 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>6098</ScriptId>
+        <FolderId>296</FolderId>
+        <ScriptName>ShadowProtect SPX Install or Upgrade</ScriptName>
+        <ScriptNotes>Written by Mike McGhee</ScriptNotes>
+        <Permission>0,</Permission>
+        <EditPermission>0,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Wednesday, October 05, 2011 8:07:47 AM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>ae8a2ee5-2b09-11e5-bd63-00155d007008</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1312293899</ScriptVersion>
+    <ScriptGuid>ae8a2ee5-2b09-11e5-bd63-00155d007008</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>***** If not a Windows OS, Exit Script</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>16</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>16</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>54</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:Win2000Check</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>3</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Detected that %computername% is running Windows 2000. This OS is not compatible for installation, exiting script.</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>4</Sort>
+    <Continue>0</Continue>
+    <OsLimit>1</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>5</Sort>
+    <Continue>0</Continue>
+    <OsLimit>1</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>120</FunctionId>
+    <Param1>%ShadowProtect%</Param1>
+    <Param2>!:DownloadInstaller</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>6</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Detected that a version of ShadowProtect is already installed. Checking the version to see if it can be upgraded.</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>7</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>11</Param1>
+    <Param2>SELECT VERSION FROM software WHERE computerid = @computerid@ AND NAME LIKE '%shadowprotect%'</Param2>
+    <Param3>ShadowProtectVersionVar</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>8</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>@ShadowProtectVersionVar@</Param1>
+    <Param2>9</Param2>
+    <Param3>6.0.8</Param3>
+    <Param4>:DownloadInstaller</Param4>
+    <Param5 />
+    <Sort>9</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:LOG</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>10</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Detected that a version of ShadowProtect, @ShadowProtectVersionVar@, that cannot be upgraded is already installed. Exiting script.</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>11</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>12</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:DownloadInstaller</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>13</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>19</FunctionId>
+    <Param1>http://downloads.storagecraft.com/SP_Files/ShadowProtect_SPX-en-US-6.0.8-3.win64.msi</Param1>
+    <Param2>%ltsvcdir%\packages\shadowprotect\ShadowProtect.msi</Param2>
+    <Param3>0</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>14</Sort>
+    <Continue>1</Continue>
+    <OsLimit>8</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>19</FunctionId>
+    <Param1>http://downloads.storagecraft.com/SP_Files/ShadowProtect_SPX-en-US-6.0.8-3.win32.msi</Param1>
+    <Param2>%ltsvcdir%\packages\shadowprotect\ShadowProtect.msi</Param2>
+    <Param3>0</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>15</Sort>
+    <Continue>1</Continue>
+    <OsLimit>7</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>114</FunctionId>
+    <Param1>%ltsvcdir%\packages\shadowprotect\ShadowProtect.msi</Param1>
+    <Param2>0</Param2>
+    <Param3>:Install</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>16</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Shadow Protect install on %ComputerName% at %ClientName% failed! %ltsvcdir%\packages\shadowprotect\ShadowProtect.msi was not found.</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>17</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>215</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>18</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:Install</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>19</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>17</FunctionId>
+    <Param1>e79bf22e-b629-11e4-9268-00155d007008</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>20</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>msiexec /qn /package %ltsvcdir%\packages\shadowprotect\ShadowProtect.msi /Lime "%ltsvcdir%\packages\shadowprotect\install.txt" IACCEPT=STORAGECRAFT.EULA </Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>21</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:VerifyInstall</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>22</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>54</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>23</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>120</FunctionId>
+    <Param1>%ShadowProtect%</Param1>
+    <Param2>:Success</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>24</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:Failed</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>25</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>There was a problem installing ShadowProtect SPX. Check the %ltsvcdir%\packages\shadowprotect\install.txt file for more information.</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>26</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>215</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>27</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:Success</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>28</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>ShadowProtect SPX successfully installed.</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>29</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1312293899</ScriptVersion><ScriptGuid>ae8a2ee5-2b09-11e5-bd63-00155d007008</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <PackedScript>
+      <NewDataSet>
+        <Table>
+          <ScriptId>6015</ScriptId>
+          <FolderId>296</FolderId>
+          <ScriptName>Backup ShadowProtect Jobs</ScriptName>
+          <ScriptNotes>Written by Mike McGhee</ScriptNotes>
+          <Permission>0,</Permission>
+          <EditPermission>0,</EditPermission>
+          <ComputerScript>1</ComputerScript>
+          <LocationScript>0</LocationScript>
+          <MaintenanceScript>0</MaintenanceScript>
+          <FunctionScript>0</FunctionScript>
+          <LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffVEtZ9n1KH2WT+p1Vl+nu5+O0r2d3fvpw0f36X/30pdfPL7rvfD49bQuVu1P5nVTVEtADj/Q7z9fF7Oj/MHDyfneXr49+XTv4fbubr6//XDv04PtHYJ/f7az82Bn58C8zy88vuuP5zdO/h+NlrTE3wAAAA==</LicenseData>
+          <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo/zBw8n53l6+Pfl07+H27m6+v/1w79OD7Z2d3fv3Zzs7D3Z2DgwUfoFx1g8afwSv23xlR3E8bRUB/U0/f7Ze8t9nM3zn/eUPcrcz6L3O3/c6f+93/r7v0aOq26Mdwhc/9bOTatkWy3WOz+3v+t2XzfNiUfAr5lf95mw5y5dtxoOhb/0/fZI4Kmwgy94msnw6TJejOr9I83crGkz67d/r9Pf5/Z9/eXL8/Pf/4vjk22cvTn/f17/P6zenX/y+J+u6JtwwtLoqX+ft79vk9WUxzZvf9/U8m1VXL+uqzaft68vp7+sx1e9ets3ldFbUv/vv26x+upo0Y+rt8V3t+efvfBxsmI+vQbOvSbPdnwOamb9VV/0/T70AHroEAAA=</ScriptData>
+          <ScriptVersion>1</ScriptVersion>
+          <ScriptGuid>e79bf22e-b629-11e4-9268-00155d007008</ScriptGuid>
+          <ScriptFlags>0</ScriptFlags>
+          <Parameters>
+          </Parameters>
+        </Table>
+      </NewDataSet>
+      <ScriptFolder>
+        <NewDataSet>
+          <Table>
+            <FolderID>296</FolderID>
+            <ParentID>35</ParentID>
+            <Name>ShadowProtect</Name>
+            <GUID>d6c9ebba-f0c4-437b-bcaa-3f3453005e2c</GUID>
+          </Table>
+        </NewDataSet>
+      </ScriptFolder>
+      <ScriptFolder>
+        <NewDataSet>
+          <Table>
+            <FolderID>35</FolderID>
+            <ParentID>0</ParentID>
+            <Name>Backup and Recovery</Name>
+            <GUID>87cb4405-82fb-4f8a-a70b-275765a2d676</GUID>
+          </Table>
+        </NewDataSet>
+      </ScriptFolder>
+    </PackedScript>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>296</FolderID>
+          <ParentID>35</ParentID>
+          <Name>ShadowProtect</Name>
+          <GUID>d6c9ebba-f0c4-437b-bcaa-3f3453005e2c</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>35</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Backup and Recovery</Name>
+          <GUID>87cb4405-82fb-4f8a-a70b-275765a2d676</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

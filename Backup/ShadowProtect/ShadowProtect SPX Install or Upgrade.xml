@@ -1,0 +1,89 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6098</ScriptId>
+				<FolderId>296</FolderId>
+				<ScriptName>ShadowProtect SPX Install or Upgrade</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffTefLfNmll2P0i+nbTXJ63Tn/ijd29ndTQ8e7Tx4tP8gPf7i8V3vlcevp3Wxan8yr5uiWgJ2+IF+//m6mB1l+UG2l+f3t/cmOw+3d3fpt8ns03vbOzu79+/PdnYe7OwcmPf5hcd3/RH9xsn/A0ggJFvhAAAA</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7v3dvf2Ht47ePjw8d3wm6D55+tidpTlB9lent/f3pvsPNze3aXfJrNP723v7Ozevz/b2Xmws3NgoPALjLx+0PhDed3mKzuc42nLmDy+q7/p58/WS/77bIbvvL/80e52Rr/X+fte5+/9zt/3PcJUdXu0Q/jip352Ui3bYrnO8bn9Xb/7snleLAp+xfyq35wtZ/myzXgw9K3/p08SR4UNZNnbRJZ7D4cJc/QtPOnZebqs2jRLv1ssZ9VVk375epSevivaVPp8fFeb/xxTcffTnzsy7m0g4zfMX7u3oMz7UWb3Z5Ey9/d/aITZe3/C/L9V8B6RqO3t7OyczPPp258V+br3/yVibZKuo6dkrqZtPkvbedamv/u0WqzWZMCWZMd+97Ro0nq9XBbLC6u9QNdx+mZeQJGhAZQb3iLEJ2Wenld1WiybNitLHsoozUnXAULDyI9/VuZj//3nY3d4PoSeP2vzsVHdAeWfBQLd//8WgXY2EOh3fz3PiBVf1hU493ePk+vod330tLpallU2OxNuzGttufdBhPz0/Qn5/wnJz9JL8TvT6jwNKAwhz8o6z2bXRrLz2Thl5Qq5bue5fbet0ibP0+I8Jf9mmi3TSZ6uVxd1NqNXflYY+8E3PR+7j+/+7M3HJr7e3R1g5denz09P3qQ/efrq9dmXL9Jnr778Im2q8/Yqq/P0u98+fXWaGrVdzNLP0t/T/fV7pscvnqYvjr84TZ+f/V6n6ce/e8NTu1Lh+TguE0cBA2hA8pOZkaB77zVDB/9fmqEHm2bo9xwgy+85MHEPB6j76XhnfBCn5dGg2trfSOSH/18i8g3e2/MvP/9ZURW7O7ck0q2J9P963T1KB3l2JO+SkoYH5+npAX1/+kNw46ACv1k2/tl1U36IYes3Hp79rFJms4APqbhvmJm+dpD2cyHuu5soNm/b1aO7d2dKt2bctFWdXeTTOjtvx2Tu775++fs/K8q8uRuI++//+uXvvZ0vt796vc02Z/ve+KpYfro/XjTFgM363cu2uZzOivp3/31X2fQtddL8voHP8PsGPXiQulZu52t5C7tDodzuMKMf/NxZsh/erN3b+3/zrA3Flxtm7cHP3aztbkirHf3u5delZXdWDC27NH6kiu/rkfobj0B/Nkm90YsROqY2zhSqpOTH/O4nGsK84DwUMlMnZUEoyt/nGUnN7HdNvwbbp1eZ5KzOq/XyZykm3f3Gg9KfTWO9B+H9YbkxB/9foMwt3ZhQir9hFvrGA7qfVeflwQY65Q8eTs739vLtyad7vGq5v/1w79ODzqrlzwINkW35Zmn4s6kpodcHaUiKK3+XT9O7v2iZ3lVVl34d7XeXxpanH938qirjcfuu/Sg9Oz45OX355rPXb758dfz56cmr42dvxqdfPT9Of3Ym7hsPA99v4t5z4jZrCQq5i/Prn01dsfeNx4Y/m7rih7mk+Y1HgD+rfPQNrHo8er2eTvOm+UaWOva+xqrazyH5NovhM3YZbyd/70unr7G49nMnfxs98jfznNYU4CJnKVkCWtBdGLccub9wXYjCVF0G4jWg97Ip6Xmhi8WLinoslvTrgkf7s+OS7/1/K2r6Ibrke994sPKzSZkbpDxUf1+XhQYIdfBNE+rnTMx7cpw2QrjzdVn6Wf+fHUJ+47HNLTjO/P00a7Oj3zj5fwC6D8Z54ykAAA==</ScriptData>
+				<ScriptVersion>1312293899</ScriptVersion>
+				<ScriptGuid>ae8a2ee5-2b09-11e5-bd63-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<PackedScript>
+			<NewDataSet>
+				<Table>
+					<ScriptId>6015</ScriptId>
+					<FolderId>296</FolderId>
+					<ScriptName>Backup ShadowProtect Jobs</ScriptName>
+					<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+					<Permission>0,</Permission>
+					<EditPermission>0,</EditPermission>
+					<ComputerScript>1</ComputerScript>
+					<LocationScript>0</LocationScript>
+					<MaintenanceScript>0</MaintenanceScript>
+					<FunctionScript>0</FunctionScript>
+					<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffVEtZ9n1KH2WT+p1Vl+nu5+O0r2d3fvpw0f36X/30pdfPL7rvfD49bQuVu1P5nVTVEtADj/Q7z9fF7Oj/MHDyfneXr49+XTv4fbubr6//XDv04PtHYJ/f7az82Bn58C8zy88vuuP5zdO/h+NlrTE3wAAAA==</LicenseData>
+					<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo/zBw8n53l6+Pfl07+H27m6+v/1w79OD7Z2d3fv3Zzs7D3Z2DgwUfoFx1g8afwSv23xlR3E8bRUB/U0/f7Ze8t9nM3zn/eUPcrcz6L3O3/c6f+93/r7v0aOq26Mdwhc/9bOTatkWy3WOz+3v+t2XzfNiUfAr5lf95mw5y5dtxoOhb/0/fZI4Kmwgy94msnw6TJejOr9I83crGkz67d/r9Pf5/Z9/eXL8/Pf/4vjk22cvTn/f17/P6zenX/y+J+u6JtwwtLoqX+ft79vk9WUxzZvf9/U8m1VXL+uqzaft68vp7+sx1e9ets3ldFbUv/vv26x+upo0Y+rt8V3t+efvfBxsmI+vQbOvSbPdnwOamb9VV/0/T70AHroEAAA=</ScriptData>
+					<ScriptVersion>1</ScriptVersion>
+					<ScriptGuid>e79bf22e-b629-11e4-9268-00155d007008</ScriptGuid>
+					<ScriptFlags>0</ScriptFlags>
+					<Parameters></Parameters>
+				</Table>
+			</NewDataSet>
+			<ScriptFolder>
+				<NewDataSet>
+					<Table>
+						<FolderID>296</FolderID>
+						<ParentID>35</ParentID>
+						<Name>ShadowProtect</Name>
+						<GUID>d6c9ebba-f0c4-437b-bcaa-3f3453005e2c</GUID>
+					</Table>
+				</NewDataSet>
+			</ScriptFolder>
+			<ScriptFolder>
+				<NewDataSet>
+					<Table>
+						<FolderID>35</FolderID>
+						<ParentID>0</ParentID>
+						<Name>Backup and Recovery</Name>
+						<GUID>87cb4405-82fb-4f8a-a70b-275765a2d676</GUID>
+					</Table>
+				</NewDataSet>
+			</ScriptFolder>
+		</PackedScript>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>296</FolderID>
+					<ParentID>35</ParentID>
+					<Name>ShadowProtect</Name>
+					<GUID>d6c9ebba-f0c4-437b-bcaa-3f3453005e2c</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>35</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Backup and Recovery</Name>
+					<GUID>87cb4405-82fb-4f8a-a70b-275765a2d676</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>
