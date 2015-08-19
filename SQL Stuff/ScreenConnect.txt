@@ -1,0 +1,7 @@
+# Find computers with duplicate ScreenConnect SessionGUIDs
+SELECT SessionGUID, COUNT(*) c FROM plugin_screenconnect_scinstalled GROUP BY SessionGUID HAVING c > 1;
+
+# Find computers with specific ScreenConnect SessionGUID
+SELECT DISTINCT Computers.ComputerID, Clients.Name AS `Client Name`, Computers.Name AS ComputerName, Computers.Domain, Computers.UserName, plugin_screenconnect_scinstalled.IsSCInstalled, plugin_screenconnect_scinstalled.SessionGUID	 
+FROM Computers, Clients, plugin_screenconnect_scinstalled
+WHERE Computers.ClientID = Clients.ClientID AND plugin_screenconnect_scinstalled.ComputerID = Computers.ComputerID AND (plugin_screenconnect_scinstalled.SessionGUID = '7e6bf718-0647-4d14-a8eb-af9f69a8e30d');
