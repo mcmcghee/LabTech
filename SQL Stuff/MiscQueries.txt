@@ -81,3 +81,6 @@ SELECT c.name AS ClientName, b.name AS ComputerName, d.Letter AS DriveLetter, d.
 
 **OS/Agent breakdown by client***
 SELECT clients.name AS CLIENT, COUNT(*) AS Total, SUM(IF(computers.OS LIKE '%Server%',1,0)) AS Servers, SUM(IF(computers.OS LIKE '%Server%',0,1)) AS Workstations FROM computers, clients WHERE computers.clientid=clients.clientid GROUP BY CLIENT;
+
+***ComputerIDs of windows workstations without patching info***
+SELECT computerid FROM computers WHERE computerid NOT IN (SELECT computerid FROM hotfix) AND os LIKE '%windows%' AND os NOT LIKE '%server%'
