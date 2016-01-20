@@ -1,0 +1,83 @@
+***Windows Update Statistics - includes custom EDFS***
+
+SELECT computers.computerid
+   ,computers.NAME AS computerName
+   ,locations.NAME AS locationName
+   ,clients.NAME AS clientName
+   ,computers.os AS OS
+   ,IFNULL(s1.installed, 0) AS installed
+   ,IFNULL(s2.missing, 0) AS missing
+   ,IFNULL(s3.total, 0) AS total
+   ,IFNULL(s1.installed / s3.total * 100, 0) AS percent_installed
+   ,IF(((Computers.Flags & 1024) = 1024),1,0) AS rebootneeded
+   ,v_extradatalocations.`Enable Patching Workstations` AS patchingenabled
+   ,v_extradatacomputers.`Windows Update Agent Version` AS WUAVersion
+   ,v_extradatacomputers.`Microsoft Update Enabled` AS MSEnabled
+   ,v_extradatacomputers.`Wake Task Created` AS schtask
+   ,computers.LastContact AS LastContact
+FROM computers
+JOIN clients ON computers.clientid = clients.clientid
+JOIN locations ON computers.locationid = locations.locationid
+JOIN v_extradatalocations ON computers.locationid = v_extradatalocations.locationid
+JOIN v_extradatacomputers ON computers.computerid = v_extradatacomputers.computerid
+LEFT JOIN (
+   SELECT COUNT(hotfix.computerid) AS installed
+      ,hotfix.computerid
+   FROM hotfix
+   WHERE hotfix.approved = 1
+      AND hotfix.installed = 1
+   GROUP BY hotfix.computerid
+   ) AS s1 ON computers.computerid = s1.computerid
+LEFT JOIN (
+   SELECT COUNT(hotfix.computerid) AS missing
+      ,hotfix.computerid
+   FROM hotfix
+   WHERE hotfix.approved = 1
+      AND hotfix.installed = 0
+   GROUP BY hotfix.computerid
+   ) AS s2 ON computers.computerid = s2.computerid
+LEFT JOIN (
+   SELECT COUNT(hotfix.computerid) AS total
+      ,hotfix.computerid
+   FROM hotfix
+   WHERE hotfix.approved = 1
+   GROUP BY hotfix.computerid
+   ) AS s3 ON computers.computerid = s3.computerid
+   WHERE computers.os NOT LIKE '%server%' AND v_extradatacomputers.`Disable Automated Patch Install` != 1
+HAVING 1
+
+ORDER BY percent_installed ASC LIMIT 0
+   ,5000
+
+***Client Health Scores***
+SELECT
+  clients.clientid AS 'ClientID',
+  clients.name AS 'Client Name',
+  ROUND(AVG(IF((LENGTH(`Stat15`) < 1),NULL,ROUND((LEFT(`Stat15`,4) * 100),0))),1) AS `AVHealth`,
+  ROUND(AVG(IF((LENGTH(`Stat16`) < 1),NULL,ROUND((LEFT(`Stat16`,4) * 100),0))),1) AS `DiskHealth`,
+  ROUND(AVG(IF((LENGTH(`Stat17`) < 1),NULL,ROUND((LEFT(`Stat17`,4) * 100),0))),1) AS `IntrusionHealth`,
+  ROUND(AVG(IF((LENGTH(`Stat18`) < 1),NULL,ROUND((LEFT(`Stat18`,4) * 100),0))),1) AS `UsabilityHealth`,
+  ROUND(AVG(IF((LENGTH(`Stat19`) < 1),NULL,ROUND((LEFT(`Stat19`,4) * 100),0))),1) AS `ServiceHealth`,
+  ROUND(AVG(IF((LENGTH(`Stat20`) < 1),NULL,ROUND((LEFT(`Stat20`,4) * 100),0))),1) AS `UpdateHealth`,
+  ROUND(AVG(IF((LENGTH(`Stat14`) < 1),NULL,ROUND((LEFT(`Stat14`,4) * 100),0))),1) AS `EventHealth`,
+  ROUND(((ROUND(AVG(IF((LENGTH(`Stat15`) < 1),NULL,ROUND((LEFT(`Stat15`,4) * 100),0))),1)+ROUND(AVG(IF((LENGTH(`Stat16`) < 1),NULL,ROUND((LEFT(`Stat16`,4) * 100),0))),1)+ROUND(AVG(IF((LENGTH(`Stat17`) < 1),NULL,ROUND((LEFT(`Stat17`,4) * 100),0))),1)+ROUND(AVG(IF((LENGTH(`Stat18`) < 1),NULL,ROUND((LEFT(`Stat18`,4) * 100),0))),1)+ROUND(AVG(IF((LENGTH(`Stat19`) < 1),NULL,ROUND((LEFT(`Stat19`,4) * 100),0))),1)+ROUND(AVG(IF((LENGTH(`Stat20`) < 1),NULL,ROUND((LEFT(`Stat20`,4) * 100),0))),1)+ROUND(AVG(IF((LENGTH(`Stat14`) < 1),NULL,ROUND((LEFT(`Stat14`,4) * 100),0))),1))/7),1) AS 'Avg Score'
+FROM v_ltcr_h_extrastats
+ JOIN computers USING (computerid)
+  LEFT JOIN clients USING (clientid) 
+    WHERE (`Stat14` <> '-1') AND eventdate > DATE_ADD(NOW(),INTERVAL -1 MONTH)
+     GROUP BY clients.name;
+	 
+***Reset Windows Update Pushed Status***
+UPDATE hotfix SET pushed='0' WHERE installed=0 AND pushed=1 AND approved=1
+
+***Labtech Table Stats***
+SELECT SQL_NO_CACHE CONCAT(table_schema, '.', table_name) AS 'TABLE', CONCAT(ROUND(table_rows / 1000000, 2), 'M') AS 'ROWS', CONCAT(ROUND(data_length / ( 1024 * 1024 * 1024 ), 2), 'G') AS 'DATA', CONCAT(ROUND(index_length / ( 1024 * 1024 * 1024 ), 2), 'G') AS 'idx', CONCAT(ROUND(( data_length + index_length ) / ( 1024 * 1024 * 1024 ), 2), 'G') AS 'total_size', ROUND(index_length / data_length, 2) AS 'idxfrac' FROM information_schema.TABLES ORDER BY data_length + index_length DESC;
+
+***SMART HDD Stats 5,187,188,197,198 https://www.backblaze.com/blog/hard-drive-smart-stats/ ***
+SELECT computers.Name AS ComputerName, vs.computerID AS ComputerID, vs.DriveID AS DriveID, drives.model AS Model, vs2.RawValue AS Power_On_Hours, drives.Letter AS Drive_Letter, drives.VolumeName AS Volume_Name, MAX(CASE vs.attributeid WHEN 187 THEN vs.rawvalue ELSE 0 END)  AS 187_Reported_Uncorrectable_Errors, MAX(CASE vs.attributeid WHEN 188 THEN vs.rawvalue ELSE 0 END)  AS 188_Command_Timeout, MAX(CASE vs.attributeid WHEN 197 THEN vs.rawvalue ELSE 0 END)  AS 197_Current_Pending_Sector_Count, MAX(CASE vs.attributeid WHEN 198 THEN vs.rawvalue ELSE 0 END)  AS 198_Offline_Uncorrectable, MAX(CASE vs.attributeid WHEN 5 THEN vs.rawvalue ELSE 0 END)  AS 5_Reallocated_Sector_Count, computers.os AS OS, inv_operatingsystem.installdate AS OS_Install_Date, inv_chassis.Manufacturer AS Manufacturer FROM   v_smartattributes vs,   v_smartattributes vs2,   computers,   drives,   clients, inv_chassis, inv_operatingsystem WHERE   vs.DriveID = vs2.DriveID AND inv_chassis.computerid = computers.computerid AND inv_operatingsystem.computerid = computers.computerid AND vs.ComputerID = computers.ComputerID    AND drives.ComputerID = vs.ComputerID AND clients.ClientID = computers.ClientID AND vs.AttributeID IN (5,187,188,197,198) AND vs2.AttributeID IN (9) AND vs.RawValue >= 1 AND drives.SSD = 0 AND drives.INTERNAL = 1 AND drives.VolumeName NOT LIKE '%recovery%' AND drives.Size > 20000 GROUP BY drives.driveid ORDER BY computers.Name
+
+***Mapped Drives for Client***
+SELECT c.name AS ClientName, b.name AS ComputerName, d.Letter AS DriveLetter, d.model as Drive, d.user FROM networkdrives d LEFT JOIN Computers b INNER JOIN clients c ON c.clientid = b.clientid ON (b.computerid = d.computerid) where b.clientid = %clientid%;
+
+**OS/Agent breakdown by client***
+SELECT clients.name AS CLIENT, COUNT(*) AS Total, SUM(IF(computers.OS LIKE '%Server%',1,0)) AS Servers, SUM(IF(computers.OS LIKE '%Server%',0,1)) AS Workstations FROM computers, clients WHERE computers.clientid=clients.clientid GROUP BY CLIENT;
