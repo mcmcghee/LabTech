@@ -1,0 +1,159 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>6107</ScriptId>
+        <FolderId>233</FolderId>
+        <ScriptName>Install Powerchute Personal Edition</ScriptName>
+        <ScriptNotes>Written by Mike McGhee</ScriptNotes>
+        <Permission>0,</Permission>
+        <EditPermission>0,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Friday, May 30, 2014 1:01:18 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>5c4710fb-e7fb-11e3-a8c7-00155d007008</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>5c4710fb-e7fb-11e3-a8c7-00155d007008</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>31</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>28</FunctionId>
+    <Param1>Software\APC\PCPE_3.0.1.msi</Param1>
+    <Param2>%ltsvcdir%\PCPE_3.0.1.msi</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>msiexec /i %ltsvcdir%\PCPE_3.0.1.msi LicenseAccepted=1 LAUNCHURLONEXIT=0 /qn /norestart</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>214</FunctionId>
+    <Param1>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\APC\PowerChute Personal Edition\3.02.00\Settings</Param1>
+    <Param2>Notification sounds enabled=-lt-i0|EnableSystray=-lt-i0|IsCostBalloonDisplayed=-lt-i0|IsTurnOnBalloonDisplayed=-lt-i0|Application Data Collection=-lt-i0</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>3</Sort>
+    <Continue>0</Continue>
+    <OsLimit>8</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>214</FunctionId>
+    <Param1>HKEY_LOCAL_MACHINE\SOFTWARE\APC\PowerChute Personal Edition\3.02.00\Settings</Param1>
+    <Param2>Notification sounds enabled=-lt-i0|EnableSystray=-lt-i0|IsCostBalloonDisplayed=-lt-i0|IsTurnOnBalloonDisplayed=-lt-i0|Application Data Collection=-lt-i0</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>4</Sort>
+    <Continue>0</Continue>
+    <OsLimit>7</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>54</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>5</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>148</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>6</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>5c4710fb-e7fb-11e3-a8c7-00155d007008</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <File Name="L:\Transfer\Software\APC\PCPE_3.0.1.msi" Bytes="This value has been replaced and the file extracted to the Transfer folder" />
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>233</FolderID>
+          <ParentID>1</ParentID>
+          <Name>APC</Name>
+          <GUID>ff227aeb-9e75-4cf6-bbd9-b84228a6fe67</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>1</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Software</Name>
+          <GUID>31866f37-8f0a-47b9-b1fd-11bd855f8391</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

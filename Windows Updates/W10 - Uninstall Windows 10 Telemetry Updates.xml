@@ -1,0 +1,47 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6115</ScriptId>
+				<FolderId>98</FolderId>
+				<ScriptName>W10 - Uninstall Windows 10 Telemetry Updates</ScriptName>
+				<ScriptNotes>-Mike McGhee</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffVEtZ9n1KH1RXeaLSV6nu5+O0r2d3fvpwaOde492dtOXXzy+673w+PW0LlbtT+Z1U1RLQA4/0O8/Xxezo73z7MHB7Hx3+2D6cLa9u5vf384OHtzb3iH492c7Ow93dh6Y9/mFx3f98fzGyf8DHGI+Rd8AAAA=</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo73z7MHB7Hx3+2D6cLa9u5vf384OHtzb3tnZvX9/trPzcGfngYHCLzDO+kHjj+B1m6/sKI6nrSKgv+nnz9ZL/vtshu+8v/xB7nYGvdf5+17n7/3O3/c9elR1e7RD+OKnfnZSLdtiuc7xuf1dv/uyeV4sCn7F/KrfnC1n+bLNeDD0rf+nTxJHhQ1k2dtElr2Hw4RBz/rbzzGBdh/+vKLQ7vtT6F6cQD8MAt3bRKCTarGiTidFWbTX6Xo1y9o8Pa/q9LvFclZdNemDdKto0ixtptlymdd3flYIuvf+BP05lMlPN9Dzat1k6d31slg2bVaW6d23k0d7Dx88eHD/YXr3F62LvE3vLqs6p2/r9meFlvf+P0XLD2TOnxUK7v/wKPgNUPD9ufH+3qef7v+QuPH+/6do+WHceDDeTbPlzP39s0LRT/8/RdH3584Hnz58cPBD4s4HP9e0fC9abuTOr4Qf23nWpvkym5R5k15X67StiFUv6mxGvFpXC8+u0zdZWtJLdXopEUFanZvvf1bIffD/KXK/P+s+3Nnb/WEp1of/n6LlZsW6btpqQWx4+m6V10W+nOasR58W2cWyatpimr7Jy5zC3fp6u87BsjPVvz87fLq788Mi7jdC3Pdl1Hs7e3v39u//kBh192tESz+HnPr+xPz04MHOD8tg7f7/O1K6t3Ows7v/w4qUdn/uQ6WfXWLu7T7cffDDIub/t6KmjQbpeEap1taYnHRVFcu2gb80rZYNITTO3+VpsRx0/H92wtLd/2/FUu/Prg/u7/3wZP//HWHUzx4xd3+YxPz/URz10edELyPIuzsfpcvs4oJ8003inr5+ufuzQ9j/f0dM93bu3b9/cO+HxaX/LwyZvi6XnnKEH4/swZ5kqxwP/6xQc+//7zHS/v69Bz+sYH7v/1sx0kbWfJo3DLWQfFI7z2O5UgC/ZNwotp/Ol1VZXRQ/S+H83v97g6ZvglUfPtjduffDUqJ7/9+KmW7LqU26rNo0u8yKEop1ZFj2KmvS1bosKeE0uU6/KKZ11VTnP0uk/f9WBPW+bLpH2dGHOz+scHTv/xvB0tcnJqXw9n5o5un/U8HS3r37G6i5F6fQ0avTL9IbV/gepFtFQ6smzTRbLvP6zm+cvNd6/2+c/NiP/cbJ7XoaAj2wePsbJ7cE3FukHBxDfB3OjeGrb3bFaQiPgUUVO+APWDyIdzmYHh9qPpAAHmrupzhv0XwgiWfG/8G5qqF+B7IxQ80H8g0Gza8bVg91NxA4mu7eKz4a6mMgAjB9fJCjG+9zyJWLdPmeHsuQdA3Y5KHmm63O3mYrA62vvwXW5oigrEsD5H5oeoZSS7vDpmebFMaD/YN7n+4f/JwZIRKHYSPkCPPNmOefiyyR+ftp1mZHv3Hy/wBxUtvtySwAAA==</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>2fa78df1-8c9d-11e5-a873-00155d009007</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>98</FolderID>
+					<ParentID>8</ParentID>
+					<Name>Patching</Name>
+					<GUID>f02d0b91-7ac2-4418-99d7-dee28c818140</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>8</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Maintenance</Name>
+					<GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

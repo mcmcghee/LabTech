@@ -1,0 +1,41 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6139</ScriptId>
+				<FolderId>3</FolderId>
+				<ScriptName>Deploy Windows 7 SP1 PreReq Updates</ScriptName>
+				<ScriptNotes>Prerequisite updates for Windows 7 SP1.
+
+http://www.labtechgeek.com/forum/viewtopic.php?f=7&amp;t=2210
+
+-Mike McGhee</ScriptNotes>
+				<Permission>1,2,3,4,5,6,7,9,</Permission>
+				<EditPermission>1,2,3,4,5,6,7,9,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>1</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffVEtZ9n1KH1RXeaLSV6n93ZG6d7O7v3000f37z3ae5C+/OLxXe+Fx6+ndbFqfzKvm6JaAnL4gX7/+bqYHT24fy9/cG8223744OG97d3d/P52dvDg3vYOwb8/29l5uLPzwLzPLzy+64/nN07+H4IBMEDfAAAA</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezowf37+UP7s1m2w8fPLy3vbub39/ODh7c297Z2b1/f7az83Bn54GBwi8wzvpB44/gdZuv7CiOp60ioL/p58/WS/77bHa0S196f/qj3D16ffr89ORN+vTs9ZuzF/RL1aTPXn35RTqtFqs10+C73z59dWr/LmbpZ+nv7v763Q8f31VQPuC9owP9fC/4/N7Rd4vlrLpq0gf6/b3g+/3ONNz3KF7V7dEOUQQ/9bOTatkWy3WOz+3v+t2XzfNiUfAr5lf95mw5y5dtxuSib/0/faI7Om8g/N4mwj/cQPh5266aR3fvEjGWZZXNxotiWldNdd6Oibr247tP7z6h/z998vTTvb1P723vfbr3YHv/4cmT7SefPri/fXy8++nO7umT050nT+8qaT8d727/Xk/29u/vH+x9un25t/3u0/3xolkPTNTvfkWvFfXv/vu+yRer33cAhvd+d0J3flgTefB+E/n/tom8f/f07v7d+6f7O/v3HhxsPzy+/3R7f/f4yfbxsyfH27vHJzv7z+492TvevTc8kQef/r9uInfffyIf/NxN5KcbJvJq3WTj/F2e3pqQ6d1ftC7yNr27rOq8abO6jU9Nh4T3On/fROK99yfx7t7PHY2/CWHZvfvs7oO7u88e7H367OnB9j0Sme39vf3T7YPd+wfb+6cPP6XvTk7v7512hOU+Nf30U6i8rykpAuAbF5N77z+H/x/Xdwd3H9J/Bw8fko67t7f95NnJQ5q4k9PtJ3sPTrZP7z94+PDp/ScP6JOBKfzayu5naQr3338K/7+s6RwVf0hq7v7703eTmvvZJvA3ISNP7n5Kiu7Jp88e3n+yu7N98OTBPqm5ZyQt9x8cb++d3L//8On+vScnewc9Gbl3//6HeHYC4BuXkU/ffw7/P6/mdu6e3D3YOTl5svcpzdnep2Spdo4fbB8fPDzY3n26R3Zq796940+PB6bwA9Tcz8oUPnj/Kfx/pZq7tZozVPwhqbmD96fvz6Wau783LCSdkX4oZR7+XFDG/K15ov8HfbZjRTYSAAA=</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>753e73dd-9793-11e5-a873-00155d009007</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>3</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Actions</Name>
+					<GUID>62da1b4f-7ca5-465c-ae8e-49f96763c80e</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

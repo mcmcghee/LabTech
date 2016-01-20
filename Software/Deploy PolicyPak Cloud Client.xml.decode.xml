@@ -1,0 +1,280 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>6037</ScriptId>
+        <FolderId>300</FolderId>
+        <ScriptName>Deploy PolicyPak Cloud Client</ScriptName>
+        <ScriptNotes>
+        </ScriptNotes>
+        <Permission>0,</Permission>
+        <EditPermission>0,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Thursday, March 19, 2015 9:07:20 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>52d22184-ce7d-11e4-83bc-00155d007008</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>52d22184-ce7d-11e4-83bc-00155d007008</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>17</FunctionId>
+    <Param1>2217380b-a0e5-11e4-9268-00155d007008</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>taskkill /IM msiexec.exe /F</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>28</FunctionId>
+    <Param1>Software\PolicyPak\PolicyPak_x64.msi</Param1>
+    <Param2>%ltsvcdir%\PolicyPak.msi</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>8</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>28</FunctionId>
+    <Param1>Software\PolicyPak\PolicyPak_x86.msi</Param1>
+    <Param2>%ltsvcdir%\PolicyPak.msi</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>3</Sort>
+    <Continue>0</Continue>
+    <OsLimit>7</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>msiexec /i "%ltsvcdir%\PolicyPak.msi" /qn /norestart /L*v %ltsvcdir%\PolicyPak.txt</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>4</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>54</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>5</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>120</FunctionId>
+    <Param1>PolicyPak Cloud Client</Param1>
+    <Param2>:Success</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>6</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>7</Param1>
+    <Param2>%ltsvcdir%\PolicyPak.txt</Param2>
+    <Param3>result</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>7</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>24</FunctionId>
+    <Param1>mikem@intellisystems.com</Param1>
+    <Param2>PolicyPak Failed on %computername% at %clientname%</Param2>
+    <Param3>&lt;pre&gt;@result@&lt;/pre&gt;</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>8</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>9</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:Success</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>10</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>80</FunctionId>
+    <Param1>a2ba9df2-f35e-11e4-aeff-00155d007008</Param1>
+    <Param2>@computerid@</Param2>
+    <Param3>1</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>11</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>52d22184-ce7d-11e4-83bc-00155d007008</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <PackedScript>
+      <NewDataSet>
+        <Table>
+          <ScriptId>6001</ScriptId>
+          <FolderId>208</FolderId>
+          <ScriptName>Install .NET 4</ScriptName>
+          <ScriptNotes>
+          </ScriptNotes>
+          <Permission>2,4,</Permission>
+          <EditPermission>1,</EditPermission>
+          <ComputerScript>1</ComputerScript>
+          <LocationScript>0</LocationScript>
+          <MaintenanceScript>0</MaintenanceScript>
+          <FunctionScript>0</FunctionScript>
+          <LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvc7adT3Lrkfp03yaLyZ5ne7sjtK9nd29dHfv0c7Bo53d9PiLx3e9dx6/ntbFqv3JvG6Kagng4Qf6/efrYna0t7f74N7BzmQ728nvb+/u5vvbD/c+Pdje2dm9f3+2s/NgZ+fAvM8vPL7rD+k3Tv4fKyIfk+IAAAA=</LicenseData>
+          <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNcnK5uirJq/Pnn62KN7mi9HTapEVy8+KZZuXZdFcN22+aMbTavH4rmmvr0vXP0kgi2p5tPv4bvhB0OrzdTE72tvbfXDvYGeyne3k97d3d/P97Yd7nx5s7+zs3r8/29l5sLNzYKDwCzxC/aDxx/u6zVcWj+Npqwjob/r5s/WS/z6bHX269/iu96dPk92jL4ppXTXVeZuOX5y+SZ+BUFdV/Tbd/90f39U2/ht7R7/782qaMaynpsle0OTe0Z5+fi/4fB9Y6m/+5/fdpLyu6vZoh0aNn/rZSbVsi+U6x+f2d/3uy+Z5sSj4FfOrfnO2nOXLlvHEt/6fPmEdLTcQ994G4u7ee7iBuo+eVlfLsspmL4pl0eZxinb49F7n7/3O3//fJtfu/gZy/e5XxXJW1L/77/v8zevL6e8rRNMfXy7zcf5ugITAOcqJj163Wd1+tZpllvodpryBurv/n6LupxuIu3hLpE2jJP5Z4cu9b5pyuz+LlNvbJMWv8mZdtml1ngoNyR4ssuXsUfq7N3OyEzV/PaAuP5CI975pIu79bBLxYAMRX5ONucpqI863kuoOs254syP370nl/W+ayj+brPr/ORV6/5um7s8qD29SBLcgbnpelHl6lTXpsmrT82q9nI1/VjTDp980Ve/9LFJ1dyNZDefdRKD3I9CDb5pA9382CbTZjeyL4DdLq4NvmlY/m17Ow533FtFqOamyejaeZO3XNzXp3SYv82mbfsSh0v5H6d2sLNcNh5VLCoqmc2ozK5psUubZuq3WPGH0GqmEpen4wyzVw/8vTdRGd/RrTNQ3wOi7O980AX9WTf1GtfnodZnnq58VfbD7jYc9P5s2+ybl+bNHpm88xvnZFMe93Q1Uurfzs2OFd7/BCOZnX+Dub3CtOwP9YMJ840HHzybvYBr/36bKv/G44meVgD8HHvDuNx4j3IJC5u+nkqX/fwDKxKNdtBcAAA==</ScriptData>
+          <ScriptVersion>1</ScriptVersion>
+          <ScriptGuid>2217380b-a0e5-11e4-9268-00155d007008</ScriptGuid>
+          <ScriptFlags>0</ScriptFlags>
+          <Parameters>
+          </Parameters>
+        </Table>
+      </NewDataSet>
+      <ScriptFolder>
+        <NewDataSet>
+          <Table>
+            <FolderID>208</FolderID>
+            <ParentID>1</ParentID>
+            <Name>Ninite Installers</Name>
+            <GUID>125e1767-ea03-4a94-86dc-855b408b8901</GUID>
+          </Table>
+        </NewDataSet>
+      </ScriptFolder>
+      <ScriptFolder>
+        <NewDataSet>
+          <Table>
+            <FolderID>1</FolderID>
+            <ParentID>0</ParentID>
+            <Name>Software</Name>
+            <GUID>31866f37-8f0a-47b9-b1fd-11bd855f8391</GUID>
+          </Table>
+        </NewDataSet>
+      </ScriptFolder>
+    </PackedScript>
+    <ExtraDataField>
+      <NewDataSet>
+        <Table>
+          <ID>1014</ID>
+          <Form>1</Form>
+          <Name>PolicyPak Installed</Name>
+          <Sort>0</Sort>
+          <NoBreak>0</NoBreak>
+          <FType>1</FType>
+          <Section>Tools</Section>
+          <UnEditable>0</UnEditable>
+          <Collapsed>0</Collapsed>
+          <Fill>
+          </Fill>
+          <LtGuid>a2ba9df2-f35e-11e4-aeff-00155d007008</LtGuid>
+          <IsPassword>false</IsPassword>
+          <IsEncrypted>false</IsEncrypted>
+          <IsHidden>false</IsHidden>
+          <IsRestricted>false</IsRestricted>
+        </Table>
+      </NewDataSet>
+    </ExtraDataField>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>300</FolderID>
+          <ParentID>0</ParentID>
+          <Name>PolicyPak</Name>
+          <GUID>6aeaf4e3-37ed-4309-b750-dc9444ebb2e6</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

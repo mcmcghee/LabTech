@@ -1,0 +1,351 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>5986</ScriptId>
+        <FolderId>97</FolderId>
+        <ScriptName>Sysinternals Suite</ScriptName>
+        <ScriptNotes>Deploy sysinternals suite.
+
+-Mike McGhee</ScriptNotes>
+        <Permission>1,2,4,5,</Permission>
+        <EditPermission>1,4,5,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Tuesday, October 18, 2011 11:34:54 AM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>b1104a57-6b0e-11e5-a158-00155d009007</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1299168124</ScriptVersion>
+    <ScriptGuid>b1104a57-6b0e-11e5-a158-00155d009007</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>7</FunctionId>
+    <Param1>%windir%\System32\movefile.exe</Param1>
+    <Param2>1</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>***** If not a Windows OS, Exit Script</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>16</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>16</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>114</FunctionId>
+    <Param1>%Windir%\Ltsvc\Packages\SysinternalsSuite.exe</Param1>
+    <Param2>0</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>md %windir%\LTSVC\Packages</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>3</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>28</FunctionId>
+    <Param1>Tools\SysinternalsSuite.exe</Param1>
+    <Param2>%Windir%\Ltsvc\Packages\SysinternalsSuite.exe</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>4</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>%windir%\Ltsvc\Packages\SysinternalsSuite.exe -y -o%windir%\temp\</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>5</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>copy %windir%\temp\source\*.* %windir%\system32</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>6</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>rd /s /q %windir%\temp\source\</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>7</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>235</FunctionId>
+    <Param1>2</Param1>
+    <Param2>reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\AccessChk" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\AccessEnum" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\AdExplorer" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\AdInsight" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\AdRestore" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Autologon" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Autoruns" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\BgInfo" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\BlueScreen" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\CacheSet" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\ClockRes" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Contig" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Coreinfo" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Ctrl2cap" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\DebugView" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Desktops" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Disk Usage" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Disk2vhd" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\DiskExt" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Diskmon" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\DiskView" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\EFSDump" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Handle" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Hex2dec" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Junction" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\LDMDump" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\ListDLLs" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\LiveKd" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\LoadOrder" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\LogonSessions" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\MoveFile" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\NTFSInfo" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PageDefrag" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PendMoves" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PipeList" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PortMon" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\ProcDump" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Process Explorer" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Process Monitor" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\ProcFeatures" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PsExec" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PsFile" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PsGetSid" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PsInfo" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PsKill" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PsList" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PsLoggedOn" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PsLogList" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PsPasswd" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PsService" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PsShutdown" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PsSuspend" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\PsTools" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\RAMMap" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\RegDelNull" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\RegJump" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\RootkitRevealer" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\SDelete" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\ShareEnum" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\ShellRunas" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Sigcheck" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Streams" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Strings" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Sync" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\TCPView" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\VMMap" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\VolumeId" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\Whois" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\WinObj" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKU\.DEFAULT\Software\Sysinternals\ZoomIt" /v EulaAccepted /t REG_DWORD /d 1 /f</Param2>
+    <Param3 />
+    <Param4>0</Param4>
+    <Param5>sysreg</Param5>
+    <Sort>8</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>235</FunctionId>
+    <Param1>2</Param1>
+    <Param2>reg.exe ADD "HKCU\Software\Sysinternals\AccessChk" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\AccessEnum" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\AdExplorer" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\AdInsight" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\AdRestore" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Autologon" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Autoruns" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\BgInfo" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\BlueScreen" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\CacheSet" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\ClockRes" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Contig" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Coreinfo" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Ctrl2cap" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\DebugView" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Desktops" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Disk Usage" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Disk2vhd" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\DiskExt" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Diskmon" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\DiskView" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\EFSDump" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Handle" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Hex2dec" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Junction" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\LDMDump" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\ListDLLs" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\LiveKd" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\LoadOrder" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\LogonSessions" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\MoveFile" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\NTFSInfo" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PageDefrag" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PendMoves" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PipeList" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PortMon" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\ProcDump" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Process Explorer" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Process Monitor" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\ProcFeatures" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PsExec" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PsFile" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PsGetSid" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PsInfo" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PsKill" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PsList" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PsLoggedOn" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PsLogList" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PsPasswd" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PsService" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PsShutdown" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PsSuspend" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\PsTools" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\RAMMap" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\RegDelNull" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\RegJump" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\RootkitRevealer" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\SDelete" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\ShareEnum" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\ShellRunas" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Sigcheck" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Streams" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Strings" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Sync" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\TCPView" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\VMMap" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\VolumeId" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\Whois" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\WinObj" /v EulaAccepted /t REG_DWORD /d 1 /f
+reg.exe ADD "HKCU\Software\Sysinternals\ZoomIt" /v EulaAccepted /t REG_DWORD /d 1 /f</Param2>
+    <Param3 />
+    <Param4>1</Param4>
+    <Param5>adminreg</Param5>
+    <Sort>9</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Installed Sysinternals Suite on %computername%-%computerid%</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>10</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1299168124</ScriptVersion><ScriptGuid>b1104a57-6b0e-11e5-a158-00155d009007</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <File Name="L:\Transfer\Tools\SysinternalsSuite.exe" Bytes="This value has been replaced and the file extracted to the Transfer folder" />
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>97</FolderID>
+          <ParentID>1</ParentID>
+          <Name>Tools and Utilites</Name>
+          <GUID>c6b0b1fc-15d6-41fe-864c-ff517c50c363</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>1</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Software</Name>
+          <GUID>31866f37-8f0a-47b9-b1fd-11bd855f8391</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

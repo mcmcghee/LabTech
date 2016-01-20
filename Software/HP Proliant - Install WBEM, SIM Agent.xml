@@ -1,0 +1,46 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6194</ScriptId>
+				<FolderId>244</FolderId>
+				<ScriptName>HP Proliant - Install WBEM, SIM Agent</ScriptName>
+				<ScriptNotes>-Mike McGhee</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvZmv62aWXY/S72TLdVZfp7v7o3RvZ/fT9MGj/f1HO/vpyy8e3/XeePx6Wher9ifzuimqJUCHH+j3n6+L2dHuwb0HD/fu39+eZOcPtnd38/vbB/n5p9s7O7v37892dh7u7Dww7/MLj+/6A/qNk/8HZgKKiuAAAAA=</LicenseData>
+				<ScriptData>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</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>18379255-baf7-11e5-8ef6-00155d009007</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>244</FolderID>
+					<ParentID>1</ParentID>
+					<Name>HP</Name>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>1</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Software</Name>
+					<GUID>31866f37-8f0a-47b9-b1fd-11bd855f8391</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

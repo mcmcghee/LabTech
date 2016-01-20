@@ -1,0 +1,227 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>6130</ScriptId>
+        <FolderId>98</FolderId>
+        <ScriptName>W10 - Deny Windows 10 Telemetry Locally</ScriptName>
+        <ScriptNotes>-Mike McGhee</ScriptNotes>
+        <Permission>2,4,</Permission>
+        <EditPermission>1,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Thursday, November 10, 2011 1:38:16 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>3f8edce5-91fd-11e5-a873-00155d009007</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1320432304</ScriptVersion>
+    <ScriptGuid>3f8edce5-91fd-11e5-a873-00155d009007</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>19</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>3</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>90</FunctionId>
+    <Param1>%ltsvcdir%\block_windows_updates.vbs</Param1>
+    <Param2>'// Inspired by Opmet and Colin Bowern: http://serverfault.com/a/341318
+'// Taken from BlockWindows project ( https://github.com/WindowsLies/BlockWindows ) by /u/vocatus and modified for use in the Tron project ( reddit.com/r/TronScript ) 
+If Wscript.Arguments.Count &lt; 1 Then
+    WScript.Echo "Syntax: block_windows_updates.vbs [Hotfix Article ID]" &amp; vbCRLF &amp; _
+        " - Examples: block_windows_updates.vbs 2990214" &amp; vbCRLF &amp; _
+        " - Examples: block_windows_updates.vbs 3022345 3035583"
+    WScript.Quit 1
+End If
+
+Dim objArgs
+Set objArgs = Wscript.Arguments
+Dim updateSession, updateSearcher
+Set updateSession = CreateObject("Microsoft.Update.Session")
+Set updateSearcher = updateSession.CreateUpdateSearcher()
+
+Wscript.Stdout.Write " Searching for updates..." 
+Wscript.Stdout.Write " This takes a LONG time, often more than 30 minutes." 
+Wscript.Stdout.Write " DO NOT CANCEL THIS OPERATION!!" 
+Dim searchResult
+Set searchResult = updateSearcher.Search("IsInstalled=0")
+
+Dim update, kbArticleId, index, index2
+WScript.Echo CStr(searchResult.Updates.Count) &amp; " found."
+For index = 0 To searchResult.Updates.Count - 1
+    Set update = searchResult.Updates.Item(index)
+    For index2 = 0 To update.KBArticleIDs.Count - 1
+        kbArticleId = update.KBArticleIDs(index2)
+
+        For Each hotfixId in objArgs
+            If kbArticleId = hotfixId Then
+                If update.IsHidden = False Then
+                    WScript.Echo "Hiding update: " &amp; update.Title
+                    update.IsHidden = True
+                Else
+                    WScript.Echo "Already hidden: " &amp; update.Title
+                End If          
+            End If
+        Next
+
+    Next
+Next
+'// EOF</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>cscript //nologo %ltsvcdir%\block_windows_updates.vbs 2977759 2952664 2976978 2990214 3022345 3068708 3080149 3021917 3075249 3015249 3035583 3044374 971033 2902907 2922324</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>3</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>235</FunctionId>
+    <Param1>1</Param1>
+    <Param2>'// Inspired by Opmet and Colin Bowern: http://serverfault.com/a/341318
+'// Taken from BlockWindows project ( https://github.com/WindowsLies/BlockWindows ) by /u/vocatus and modified for use in the Tron project ( reddit.com/r/TronScript ) 
+If Wscript.Arguments.Count &lt; 1 Then
+    WScript.Echo "Syntax: block_windows_updates.vbs [Hotfix Article ID]" &amp; vbCRLF &amp; _
+        " - Examples: block_windows_updates.vbs 2990214" &amp; vbCRLF &amp; _
+        " - Examples: block_windows_updates.vbs 3022345 3035583"
+    WScript.Quit 1
+End If
+
+Dim objArgs
+Set objArgs = Wscript.Arguments
+Dim updateSession, updateSearcher
+Set updateSession = CreateObject("Microsoft.Update.Session")
+Set updateSearcher = updateSession.CreateUpdateSearcher()
+
+Wscript.Stdout.Write " Searching for updates..." 
+Wscript.Stdout.Write " This takes a LONG time, often more than 30 minutes." 
+Wscript.Stdout.Write " DO NOT CANCEL THIS OPERATION!!" 
+Dim searchResult
+Set searchResult = updateSearcher.Search("IsInstalled=0")
+
+Dim update, kbArticleId, index, index2
+WScript.Echo CStr(searchResult.Updates.Count) &amp; " found."
+For index = 0 To searchResult.Updates.Count - 1
+    Set update = searchResult.Updates.Item(index)
+    For index2 = 0 To update.KBArticleIDs.Count - 1
+        kbArticleId = update.KBArticleIDs(index2)
+
+        For Each hotfixId in objArgs
+            If kbArticleId = hotfixId Then
+                If update.IsHidden = False Then
+                    WScript.Echo "Hiding update: " &amp; update.Title
+                    update.IsHidden = True
+                Else
+                    WScript.Echo "Already hidden: " &amp; update.Title
+                End If          
+            End If
+        Next
+
+    Next
+Next
+'// EOF</Param2>
+    <Param3>2977759 2952664 2976978 2990214 3022345 3068708 3080149 3021917 3075249 3015249 3035583 3044374 971033 2902907 2922324</Param3>
+    <Param4>0</Param4>
+    <Param5>result</Param5>
+    <Sort>4</Sort>
+    <Continue>0</Continue>
+    <OsLimit>-2147483648</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>@result@</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>5</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1320432304</ScriptVersion><ScriptGuid>3f8edce5-91fd-11e5-a873-00155d009007</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>98</FolderID>
+          <ParentID>8</ParentID>
+          <Name>Patching</Name>
+          <GUID>f02d0b91-7ac2-4418-99d7-dee28c818140</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>8</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Maintenance</Name>
+          <GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

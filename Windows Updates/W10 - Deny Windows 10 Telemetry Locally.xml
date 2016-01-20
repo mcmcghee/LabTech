@@ -1,0 +1,47 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6130</ScriptId>
+				<FolderId>98</FolderId>
+				<ScriptName>W10 - Deny Windows 10 Telemetry Locally</ScriptName>
+				<ScriptNotes>-Mike McGhee</ScriptNotes>
+				<Permission>2,4,</Permission>
+				<EditPermission>1,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvZmv62aWXY/SF9Vlvpjkdbq7M0r3dnZ3091H9w4e7X6avvzi8V3vlcevp3Wxan8yr5uiWgJ2+IF+//m6mB3dOz/IZ9P8/vbD3fPZ9u4u/ZYdPLi3vbOze//+bGfn4c7OA/M+v/D4rj+i3zj5fwAlhmUp4QAAAA==</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7v39nb27+3d29l/fDf8Jmj++bqYHd07P8hn0/z+9sPd89n27i79lh08uLe9s7N7//5sZ+fhzs4DA4VfYOT1g8Yfyus2X9nhHE9bxuTxXf1NP3+2XvLfZzN85/3lj3a3M/q9zt/3On/vd/6+7xGmqtujHcIXP/Wzk2rZFst1js/t7/rdl83zYlHwK+ZX/eZsOcuXbcaDoW/9P32SOCpsIMveJrLsPRwmDHrW336OCbT78OcVhXbfn0L3AgL9MAn0cGcDfX73sm0up7Oi/t1/30lZTd/+/lfFclZdNb//ejXL2rwZX06aOAmPPr57Nz1bNquizmfp5Dr9ckWKKc2Ws/SkKotl+qS6yuvlo3TetqtHd+82eX2Z1+fZumzH02pxN7t7b3/33u7Bb5wA0Jvsbb5Mz+tqkT4BHt8VNNJVXf10Pm3TLQbTEJyLop2vJwxCGz0v8uZu8NYd4HN3ffeymmbtumGkFtWsOC8I1fOqTtdNnhKK7TxP39TV0uuGBjMrBMP6Lr4TohPI3zg5O0+/2/Cf4+P6Yr2g+WrGJ9V62aa/sGwP0930zTxfCpW+K++NT6fzKv3o9TVN7btH6SCN0+99u2rPi3fpcd0W0zJPz55+/6P0F2aL1WF6OTl59fyZ/vH7C3g8H6Xb6ek7+rTMm02g9x4+3Nnb3f+mwN3b2du7t3+fft67f//g3kfheH9iXbTp7m+cnBLJz85/4+Q3Tp4Wi7Sa/DRRrPmNk9fEIvpH+lmfmtJaenudN7BSI/tnVk/neS0wgiYE6aTO6e8vJ5jFrY++KKZ11VTn7fgrbjfWhh/dCd8WiPR6AG4swL4KGm3dwVgMwq/bWbVux9+tizYnwkmjYnkhzKXEGo8/Sgde+Yg4pWjSlrieuDN9/uWLz9O2WOSjlJAmQVhUdU7cmS2JyumC9AngbYD29Mv0xZdv0pPjFyenz9M33z57nX758vTV8ZuzL1/8rr8rXgRdG0bzVd6QDAoh/E88MsiQx/LL1kdnDcl5m5VlPvts5yMmhJumUfp2okx7NhuRVM3yd/pjj/D1xeDkdVtv+V3q9KgQ3VGe/IiouF7OxsRZz4icDIqQ20nfVAHC4dvEvbvCim6G6a3oC2dtvthiuHfkFdvPnulIAIx/rydmbE97/eDxxm7pF7wk3ewx0cxL6O00m87TOcs8vUq6yIqIaYWHNE7Yg33DaZpOe8XhrPl2MSOLQu88I+cwH3gBT6iq6DUwsoB5lBqtoWDfFG2Zx8H0O35TryNtTwmb2yByXJIYzq7TOYO7LSaid9zfYQujlczfL/J3rZkZ+V3+hUk6/fKZWr69D3IW9iLOwv97/c1PNzgLU1E+6d27y6qsLqr0Nt4DmZ8HDx7cf0g/7+99+uk+/v704YMDY5Y8e/LpwYOdA/p5sLO7/xCf7z7cfUA/H9zf47939SfbHfq5v3/vwX768MHuzr17BG6H/veAfhK4vf2fFb/v3v+XpnLv3v0Nc7n7I6/u59Cr+wbcsB95dT/y6n7k1f1/1Kv7kVf3/zqv7ujn1E+5F/ohNm+1H/ojRzWzvH55P3BO9t/fOdmmcT3YP7j36f7Bz52bsil993vKeH/PnxVv7v77E+yDvTn922T+/x/gviX/CBgAAA==</ScriptData>
+				<ScriptVersion>1320432304</ScriptVersion>
+				<ScriptGuid>3f8edce5-91fd-11e5-a873-00155d009007</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>98</FolderID>
+					<ParentID>8</ParentID>
+					<Name>Patching</Name>
+					<GUID>f02d0b91-7ac2-4418-99d7-dee28c818140</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>8</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Maintenance</Name>
+					<GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

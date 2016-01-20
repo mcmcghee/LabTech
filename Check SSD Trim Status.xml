@@ -1,0 +1,60 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6181</ScriptId>
+				<FolderId>3</FolderId>
+				<ScriptName>Check SSD Trim Status</ScriptName>
+				<ScriptNotes>-Mike McGhee</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvZmv62aWXY/S72TLdVZfpzsPRunezu6n6YNHO3uP9vbSl188vuu98fj1tC5W7U/mdVNUS4AOP9DvP18Xs6PpvfP797PZwfbk/kG2vbub398+yM8/3d7Z2b1/f7az83Bn54F5n194fNcf0G+c/D+MWpH34AAAAA==</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo+m98/v3s9nB9uT+Qba9u5vf3z7Izz/d3tnZvX9/trPzcGfngYHCLzDO+kHjj+B1m6/sKI6nrSKgv+nnz9ZL/vtshu+8v/xB7nYGvdf5+17n7/3O3/c9elR1e7RD+OKnfnZSLdtiuc7xuf1dv/uyeV4sCn7F/KrfnC1n+bLNeDD0rf+nTxJHhQ1k2dtElp2Hw4Q5Om/WbVGmk3yeXRZVnf6idV5fp7OiySZlPstL4o9l1Rbn14/v6hsbCXl0mZXrXNve+/8xUR9s4Lajvb04tY5+TybP76nf7nVo91mcbmBs/S2g39Eyv7rMSkvu+wE5d///Q85Ph6hpCDBA0Juk+qiti0WUeHv/XyLeg50NtPOG2CWfYdIuG+4MsKH5vMOGHTG+9/8l0h1sIt3eZO/+weTezvb9/fvn2/u7O9n2ZJZ/uj2bTj69t3v+YPrg/MEQZ06rxWpNprWYDQm7Eer3U5L7fer+rFPX/K0exv8DATspLXAIAAA=</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>c3f55ad8-b58a-11e5-8ef6-00155d009007</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ExtraDataField>
+			<NewDataSet>
+				<Table>
+					<ID>785</ID>
+					<Form>1</Form>
+					<Name>SSD - Trim Enabled</Name>
+					<Sort>0</Sort>
+					<NoBreak>0</NoBreak>
+					<FType>1</FType>
+					<Section>Hardware</Section>
+					<UnEditable>0</UnEditable>
+					<Collapsed>0</Collapsed>
+					<Fill></Fill>
+					<LtGuid>2b258b30-545f-410a-bde6-dcb631f7c7f7</LtGuid>
+					<IsPassword>false</IsPassword>
+					<IsEncrypted>false</IsEncrypted>
+					<IsHidden>false</IsHidden>
+					<IsRestricted>false</IsRestricted>
+					<ViewPermissions></ViewPermissions>
+					<EditPermissions></EditPermissions>
+				</Table>
+			</NewDataSet>
+		</ExtraDataField>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>3</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Actions</Name>
+					<GUID>62da1b4f-7ca5-465c-ae8e-49f96763c80e</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

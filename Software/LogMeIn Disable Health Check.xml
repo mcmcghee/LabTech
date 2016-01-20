@@ -1,0 +1,49 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6160</ScriptId>
+				<FolderId>64</FolderId>
+				<ScriptName>LogMeIn Disable Health Check</ScriptName>
+				<ScriptNotes>Interferes with LabTech's patching.
+
+-Mike McGhee</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffTefLfNmll2P0qf5NF9M8jrd/XSU7u3s3k/vP7r/4NHug/TlF4/veu88fj2ti1X7k3ndFNUSwMMP9PvP18XsaHrv04P93Qefbmf7u/n27m5+fzs7eHBve4fg35/t7Dzc2Xlg3ucXHt/1h/QbJ/8Px010b+IAAAA=</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo+m9Tw/2dx98up3t7+bbu7v5/e3s4MG97Z2d3fv3Zzs7D3d2Hhgo/ALjrB80/ghet/nKjuJ42ioC+pt+/my95L/PZvjO+8sf5G5n0Hudv+91/t7v/H3fo0dVt0c7hC9+6mcn1bItluscn9vf9bsvm+fFouBXzK/6zdlyli/bjAdD3/p/+iRxVNhAlr0NZLn36TBdjp5/cfb5OqtnRbZ8fTl9fFc//mEQa3eYWLsP/l9Krerii/xs+bNCpt2vS6b/F5Lpi7MvsmLZ/qzQae//U3Ta293fQKhv/16nv8/v//zLk+Pnv/8XxyffPntx+vu+/vLZm+8evzr9fZXXft+fvP/7vsza6fyLi8UAQY+eFk02KfPvfnX81WqWtfln22W7Xez+DH3wmga1buSDnZ/5opjWVVOdt367nZ+x8E+XgDPTz7W3vQ+arnv/n5que/d/bnXl/teg1v9bqfWzqCvv//+ITD+buvLT/0/RaffevQ2EMurom6XQg//vU8hS6MHPCoUO/r9Foft7P7Qo4OH7U2ab/IEH+wf3Pt0/+FASmb817vt/AIUJAc4GDgAA</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>c3684176-a41e-11e5-a873-00155d009007</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>64</FolderID>
+					<ParentID>1</ParentID>
+					<Name>LogMeIn</Name>
+					<GUID>08def1b0-6d35-4217-9b1e-497e2d50b366</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>1</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Software</Name>
+					<GUID>31866f37-8f0a-47b9-b1fd-11bd855f8391</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>
