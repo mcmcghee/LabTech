@@ -1,9 +1,9 @@
-<LabTech_Expansion Version="1" Name="LabTech Script Expansion" Type="PackedScript">
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
   <PackedScript>
     <NewDataSet>
       <Table>
         <ScriptId>6189</ScriptId>
-        <FolderId>0</FolderId>
+        <FolderId>98</FolderId>
         <ScriptName>PS - Install Windows Updates Silently</ScriptName>
         <ScriptNotes>
         </ScriptNotes>
@@ -70,7 +70,7 @@
   <ScriptSteps>
     <Action>2</Action>
     <FunctionId>139</FunctionId>
-    <Param1>If Reboot Needed or script already running/scheduled, Exit Script</Param1>
+    <Param1>Check if Reboot is needed, script already running/scheduled, or if patch commands are already running.</Param1>
     <Param2 />
     <Param3 />
     <Param4 />
@@ -95,13 +95,52 @@
   </ScriptSteps>
   <ScriptSteps>
     <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Computer flagged for reboot. Exiting script.</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>4</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>117</FunctionId>
+    <Param1>SELECT COUNT(*) FROM commands WHERE computerid=@computerid@ AND command=100 AND STATUS &lt; 3</Param1>
+    <Param2>3</Param2>
+    <Param3>0</Param3>
+    <Param4>0</Param4>
+    <Param5 />
+    <Sort>5</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Patch commands currently running. Exiting script.</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>6</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
     <FunctionId>117</FunctionId>
     <Param1>SELECT COUNT(scriptid) FROM scheduledscripts JOIN lt_scripts USING (scriptid) WHERE lt_scripts.scriptguid='bf9be052-b96a-11e5-8ef6-00155d009007' AND (NOW() &lt; DATE_ADD(scheduledscripts.NextRun, INTERVAL 55 MINUTE)) AND computerid=@computerid@</Param1>
     <Param2>6</Param2>
     <Param3>1</Param3>
     <Param4>0</Param4>
     <Param5 />
-    <Sort>4</Sort>
+    <Sort>7</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>1</Indentation>
@@ -114,7 +153,7 @@
     <Param3>1</Param3>
     <Param4>0</Param4>
     <Param5 />
-    <Sort>5</Sort>
+    <Sort>8</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>1</Indentation>
@@ -127,10 +166,23 @@
     <Param3>1</Param3>
     <Param4>0</Param4>
     <Param5 />
-    <Sort>6</Sort>
+    <Sort>9</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Script already running/scheduled/pending. Exiting script.</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>10</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>2</Indentation>
   </ScriptSteps>
   <ScriptSteps>
     <Action>2</Action>
@@ -140,7 +192,7 @@
     <Param3 />
     <Param4 />
     <Param5 />
-    <Sort>7</Sort>
+    <Sort>11</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>0</Indentation>
@@ -153,7 +205,7 @@
     <Param3 />
     <Param4 />
     <Param5 />
-    <Sort>8</Sort>
+    <Sort>12</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>1</Indentation>
@@ -166,7 +218,7 @@
     <Param3 />
     <Param4 />
     <Param5 />
-    <Sort>9</Sort>
+    <Sort>13</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>0</Indentation>
@@ -179,7 +231,7 @@
     <Param3>excludedpatches</Param3>
     <Param4 />
     <Param5 />
-    <Sort>10</Sort>
+    <Sort>14</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>1</Indentation>
@@ -192,7 +244,7 @@
     <Param3>ExcludeList</Param3>
     <Param4 />
     <Param5 />
-    <Sort>11</Sort>
+    <Sort>15</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>2</Indentation>
@@ -205,7 +257,7 @@
     <Param3 />
     <Param4 />
     <Param5 />
-    <Sort>12</Sort>
+    <Sort>16</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>0</Indentation>
@@ -219,7 +271,7 @@
     <Param3>installpatches</Param3>
     <Param4 />
     <Param5 />
-    <Sort>13</Sort>
+    <Sort>17</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>1</Indentation>
@@ -232,7 +284,7 @@
     <Param3>KBList</Param3>
     <Param4 />
     <Param5 />
-    <Sort>14</Sort>
+    <Sort>18</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>2</Indentation>
@@ -245,7 +297,7 @@
     <Param3 />
     <Param4 />
     <Param5 />
-    <Sort>15</Sort>
+    <Sort>19</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>0</Indentation>
@@ -258,7 +310,7 @@
     <Param3 />
     <Param4>0</Param4>
     <Param5>enableservice</Param5>
-    <Sort>16</Sort>
+    <Sort>20</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>1</Indentation>
@@ -271,7 +323,7 @@
     <Param3 />
     <Param4 />
     <Param5 />
-    <Sort>17</Sort>
+    <Sort>21</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>2</Indentation>
@@ -284,7 +336,7 @@
     <Param3 />
     <Param4 />
     <Param5 />
-    <Sort>18</Sort>
+    <Sort>22</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>0</Indentation>
@@ -297,7 +349,7 @@
     <Param3 />
     <Param4 />
     <Param5 />
-    <Sort>19</Sort>
+    <Sort>23</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>1</Indentation>
@@ -310,7 +362,7 @@
     <Param3 />
     <Param4>0</Param4>
     <Param5>updates</Param5>
-    <Sort>20</Sort>
+    <Sort>24</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>1</Indentation>
@@ -323,7 +375,7 @@
     <Param3 />
     <Param4 />
     <Param5 />
-    <Sort>21</Sort>
+    <Sort>25</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>2</Indentation>
@@ -336,7 +388,7 @@
     <Param3 />
     <Param4 />
     <Param5 />
-    <Sort>22</Sort>
+    <Sort>26</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>0</Indentation>
@@ -349,7 +401,7 @@
     <Param3>propTicketDefaultEmail</Param3>
     <Param4 />
     <Param5 />
-    <Sort>23</Sort>
+    <Sort>27</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>0</Indentation>
@@ -362,7 +414,7 @@
     <Param3>@propTicketDefaultEmail@</Param3>
     <Param4>Installed Windows Updates for %computername% - PS</Param4>
     <Param5>Windows Updates are being installed with Powershell.</Param5>
-    <Sort>24</Sort>
+    <Sort>28</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>1</Indentation>
@@ -375,7 +427,7 @@
     <Param3>total</Param3>
     <Param4 />
     <Param5 />
-    <Sort>25</Sort>
+    <Sort>29</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>2</Indentation>
@@ -388,7 +440,7 @@
     <Param3>@updates@</Param3>
     <Param4>@total@</Param4>
     <Param5>1</Param5>
-    <Sort>26</Sort>
+    <Sort>30</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>2</Indentation>
@@ -401,7 +453,7 @@
     <Param3>Windows Updates finished.</Param3>
     <Param4 />
     <Param5 />
-    <Sort>27</Sort>
+    <Sort>31</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>1</Indentation>
@@ -414,7 +466,7 @@
     <Param3 />
     <Param4 />
     <Param5 />
-    <Sort>28</Sort>
+    <Sort>32</Sort>
     <Continue>1</Continue>
     <OsLimit>0</OsLimit>
     <Indentation>0</Indentation>
@@ -426,10 +478,11 @@
       <NewDataSet>
         <Table>
           <ScriptId>6183</ScriptId>
-          <FolderId>0</FolderId>
+          <FolderId>98</FolderId>
           <ScriptName>PS - Deploy Windows Update Powershell Module</ScriptName>
-          <ScriptNotes>
-          </ScriptNotes>
+          <ScriptNotes>https://gallery.technet.microsoft.com/scriptcenter/2d191bcd-3308-4edd-9de2-88dff796b0bc
+
+-Mike McGhee</ScriptNotes>
           <Permission>0,</Permission>
           <EditPermission>0,</EditPermission>
           <ComputerScript>1</ComputerScript>

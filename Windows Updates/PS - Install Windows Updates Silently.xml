@@ -1,12 +1,12 @@
 ﻿<LabTech_Expansion
-	Version="1"
+	Version="100.332"
 	Name="LabTech Script Expansion"
 	Type="PackedScript">
 	<PackedScript>
 		<NewDataSet>
 			<Table>
 				<ScriptId>6189</ScriptId>
-				<FolderId>0</FolderId>
+				<FolderId>98</FolderId>
 				<ScriptName>PS - Install Windows Updates Silently</ScriptName>
 				<ScriptNotes></ScriptNotes>
 				<Permission>0,</Permission>
@@ -16,7 +16,7 @@
 				<MaintenanceScript>0</MaintenanceScript>
 				<FunctionScript>0</FunctionScript>
 				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffVEtZ9n1KP1Otlxn9XW6uztK93Z2P00fPNrbe3T/fvryi8d3vfaPX0/rYtX+ZF43RbUE4PAD/f7zdTE7mpw/nOQ79/e2Jw8/zbZ3d/P72wf5+afbOzu79+/PdnYe7uw8MO/zC4/v+sP5jZP/B9uenaLeAAAA</LicenseData>
-				<ScriptData>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</ScriptData>
+				<ScriptData>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</ScriptData>
 				<ScriptVersion>1</ScriptVersion>
 				<ScriptGuid>bf9be052-b96a-11e5-8ef6-00155d009007</ScriptGuid>
 				<ScriptFlags>0</ScriptFlags>
@@ -27,9 +27,11 @@
 			<NewDataSet>
 				<Table>
 					<ScriptId>6183</ScriptId>
-					<FolderId>0</FolderId>
+					<FolderId>98</FolderId>
 					<ScriptName>PS - Deploy Windows Update Powershell Module</ScriptName>
-					<ScriptNotes></ScriptNotes>
+					<ScriptNotes>https://gallery.technet.microsoft.com/scriptcenter/2d191bcd-3308-4edd-9de2-88dff796b0bc
+
+-Mike McGhee</ScriptNotes>
 					<Permission>0,</Permission>
 					<EditPermission>0,</EditPermission>
 					<ComputerScript>1</ComputerScript>
