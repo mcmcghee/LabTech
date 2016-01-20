@@ -1,0 +1,47 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6022</ScriptId>
+				<FolderId>43</FolderId>
+				<ScriptName>Backup ShadowProtect Jobs</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffVEtZ9n1KH2WT+p1Vl+nu5+O0r2d3fvpw0f36X/30pdfPL7rvfD49bQuVu1P5nVTVEtADj/Q7z9fF7Oj/MHDyfneXr49+XTv4fbubr6//XDv04PtHYJ/f7az82Bn58C8zy88vuuP5zdO/h+NlrTE3wAAAA==</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo/zBw8n53l6+Pfl07+H27m6+v/1w79OD7Z2d3fv3Zzs7D3Z2DgwUfoFx1g8afwSv23xlR3E8bRUB/U0/f7Ze8t9nM3zn/eUPcrcz6L3O3/c6f+93/r7v0aOq26Mdwhc/9bOTatkWy3WOz+3v+t2XzfNiUfAr5lf95mw5y5dtxoOhb/0/fZI4Kmwgy94msnw6TJejOr9I83crGkz67d/r9Pf5/Z9/eXL8/Pf/4vjk22cvTn/f17/P6zenX/y+J+u6JtwwtLoqX+ft79vk9WUxzZvf9/U8m1VXL+uqzaft68vp7+sx1e9ets3ldFbUv/vv26x+upo0Y+rt8V3t+efvfBxsmI+vQbOvSbPdnwOamb9VV/0/T70AHroEAAA=</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>e79bf22e-b629-11e4-9268-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>43</FolderID>
+					<ParentID>35</ParentID>
+					<Name>StorageCraft</Name>
+					<GUID>493f6c87-cc8e-4650-8588-0a575cce8f66</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>35</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Backup and Recovery</Name>
+					<GUID>87cb4405-82fb-4f8a-a70b-275765a2d676</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>
