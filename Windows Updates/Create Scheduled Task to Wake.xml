@@ -1,0 +1,60 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6132</ScriptId>
+				<FolderId>201</FolderId>
+				<ScriptName>Create Scheduled Task to Wake</ScriptName>
+				<ScriptNotes></ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffVEtZ9n1KH1RXeaLSV6ne/dG6d7O7v30waP9/Uc7++nLLx7f9V54/HpaF6v2J/O6KaolIIcf6Pefr4vZ0f79vf3pzsPd7Yd7u5Pt3d38/nZ28ODe9g7Bvz/b2Xm4s/PAvM8vPL7rj+c3Tv4fGaEYmd8AAAA=</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo/37e/vTnYe72w/3difbu7v5/e3s4MG97Z2d3fv3Zzs7D3d2Hhgo/ALjrB80/ghet/nKjuJ42ioC+pt+/my95L/PZvjO+8sf5G5n0Hudv+91/t7v/H3fo0dVt0c7hC9+6mcn1bItluscn9vf9bsvm+fFouBXzK/6zdlyli/bjAdD3/p/+iRxVNhAlr1NZPl0mC5HzXTeZs1bmvBpnWdtnt598yL96GzZ5mVZvL5u2nzRpF9kBX2wzJbT/KP07uuT9Onx2fPfh357k+7sPLpP1HnzKv1oVSwvxvm7PN399OF4F/+l28v0052ddLtI6ferdHdnZ4cAvPoq/ej17/P6zekXHz2+q3j8vJ2dhzsbZuf1dJ7P1mU+e0Nz9Dpvv5u9zd9Ur9bL8eWkMbQLaXf0cZq+ILF+hM82vv8bJ9T0eN3Oq5obf5G17Ty/Sp9U17N0q5jQj/Eyb+9wO9IfAnJ35+7uvbt7O7s7/PnLdb2qGvnqdJlNyrxJqzqdFY38ThDTj9At/zatFqs1KZy0rdJ6vaTPCmpCuH2UNnlLM3ORVsv0u8VyVl016U8WTZul2XJmP3mQNsKSY+5cnrOWXgabtvOsTYsl9T+TLmaV9NCsp9O8ac7XZXk9SidVO0czIPT5V2dA97LItCXP4QhfAS1GmCZ9UpRFe+31uahmebpYN206yYE6evtob0zcTdDyspHhmjFd5G2T1vllXrf5TFD/qskuhGpT6ZMlZ+N8pR99lH4vZxqnP2Mo/H2GdvouW6zK94b3xbVrkb7haRD43kjfyLQtMA3ZpLrM06tqXc540LeaWPpEgGLk6W+cfLkCqxPKq7KYFi1/RmJJpHxz/Pr3+v2/evn0+M1p+ln6C2lIh9/eD758+uWLN7//8dOnv//LV2cvTs5eHj///Y9PXGPwJEF7Wix4NBCDkXKlHfkorSY/LeSoL4tpzn+/qqr2WVUS29iv+Zen+XmxLIAvAz47T7+r1D2uL9YL0gjN+KRaL9v0F5btISk5ohaantb1+FVWEBvsjqBNL7OymFkylsUyTzMD4Hf96DdOTolj6DWDNA2o388Z8f3WDknjKYE4O2eEuBXmejon/sPrKvsfCUUsxJtx32Pc04+JS7okwxS29TpPJ9fpLD/P1iWJ2bnO6l1lxPQqa9JlRbK4yqfFeSHT3YX0GQOiL64CzEU7PkpPXxw/eX6afnwzX32sVKNhfXWSNfnWAMF279yhTj8SwB+Z+fkmeh8cm05mvI+nZ68/sJPzjOF7XIApC5mamp2wOf9y8tP5tN36yIj5WBt8RHwUvkK8sFxSWwvOyQRB67T9PNevtj76fQHKw0Aau5fRlj9H0w5X3vHRd7Lm+hv7AhgS9GRd1zTNqSPNa9G2jvlPXrf1VgB5rG2asX3tzhDgE1/194EPwA3e6oLe3t7+iOm+ESMafmfWB9/h3iyOn6V73NIj/qv8goxoXoOYHoENeUVDBsBHgRoma7ZJ845S/Bci97IultNilZXj59VFtXxzvcr/v8SlHm+Gk/eCXKNbMFuHbW/DcYD8DXCb+oN7H+Q77/5/yXfeGNm8hx8kcU4Y5oh1+1mJT/a+WRr/7NL4YFN88vB8d3Y+m063Pz04393en+zsb092Zjvbs4c7D7JsL892dvYGwpTf09i9YvZ7xjkXvKi/vQ917/0cUNf8rTmY/wfabeP0khEAAA==</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>4524c091-921b-11e5-a873-00155d009007</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ExtraDataField>
+			<NewDataSet>
+				<Table>
+					<ID>778</ID>
+					<Form>1</Form>
+					<Name>Wake Task Created</Name>
+					<Sort>0</Sort>
+					<NoBreak>0</NoBreak>
+					<FType>1</FType>
+					<Section></Section>
+					<UnEditable>0</UnEditable>
+					<Collapsed>0</Collapsed>
+					<Fill></Fill>
+					<LtGuid>9f1dfdcc-68f1-4b04-b0d0-d907aa2ea002</LtGuid>
+					<IsPassword>false</IsPassword>
+					<IsEncrypted>false</IsEncrypted>
+					<IsHidden>false</IsHidden>
+					<IsRestricted>false</IsRestricted>
+					<ViewPermissions></ViewPermissions>
+					<EditPermissions></EditPermissions>
+				</Table>
+			</NewDataSet>
+		</ExtraDataField>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>201</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Tweaks</Name>
+					<GUID>11bb8b6b-8a54-4670-bfb0-1c6944c7ff0d</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

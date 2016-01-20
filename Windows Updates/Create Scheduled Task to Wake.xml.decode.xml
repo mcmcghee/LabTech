@@ -1,0 +1,190 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>6132</ScriptId>
+        <FolderId>201</FolderId>
+        <ScriptName>Create Scheduled Task to Wake</ScriptName>
+        <ScriptNotes>
+        </ScriptNotes>
+        <Permission>0,</Permission>
+        <EditPermission>0,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Monday, November 23, 2015 7:44:04 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>4524c091-921b-11e5-a873-00155d009007</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>4524c091-921b-11e5-a873-00155d009007</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>schtasks /create /TN "IntelliSystems Maintenance" /SC DAILY /ST 00:55 /TR "ping.exe 169.1.1.1 -n 600 -i 1 -w 1000" /RU "SYSTEM"</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>90</FunctionId>
+    <Param1>ScheduledTaskSetWakeToRun.vbs</Param1>
+    <Param2>'  Name:    ScheduledTaskSetWakeToRun.vbs
+'  Author:    Matthew Boyd (iboyd.net)
+'  Date:    10/13/2010
+'  Purpose:    Enables or disables the "Wake the computer to run this task" setting on Windows Vista and Windows 7 systems.
+'        It seems that in order to do this successfully, both in the GUI or via this script,the task compatibility
+'        mode must be set to "2.0" or else the setting gets reverted.
+'  Usage:    cscript.exe ScheduledTaskSetWakeToRun.vbs "" [enable | disable]
+'  Example:    cscript.exe ScheduledTaskSetWakeToRun.vbs "My Scheduled Task" enable
+'        The command above would set "Wake the computer to run this task" to enabled.
+ 
+Option Explicit
+ 
+Const TASK_UPDATE = &amp;H4
+Const TASK_DONT_ADD_PRINCIPAL_ACE = &amp;H10
+ 
+Dim TaskName, EnableWakeToRun, objTaskService, objRootFolder, objTask, objDefinition
+ 
+If Wscript.Arguments.Count &lt; 1 Then
+ Err.Raise 1, "Invalid command line arguments!"
+Else
+ TaskName = Wscript.Arguments.Item(0)
+End If
+ 
+Wscript.echo "Task Name: " &amp; TaskName
+If Wscript.Arguments.Count &lt; 2 Then 'Set EnableWakeToRun to true by default if enable/disable was not specified.
+ EnableWakeToRun = true
+ wscript.echo "Action: ENABLE 'Wake the computer to run this task'"
+ElseIf UCase(Wscript.Arguments.Item(1)) = "ENABLE" Then
+ wscript.echo "Action: ENABLE 'Wake the computer to run this task'"
+ EnableWakeToRun = true
+Else
+ wscript.echo "Action: DISABLE 'Wake the computer to run this task'"
+ EnableWakeToRun = false
+End If
+ 
+Set objTaskService = CreateObject("Schedule.Service")
+objTaskService.Connect
+Set objRootFolder = objTaskService.GetFolder("\")
+Set objTask = objRootFolder.GetTask ("\" &amp; TaskName)
+ 
+Set objDefinition = objTask.Definition
+wscript.echo "Current WakeToRun Setting: " &amp; CStr(objDefinition.Settings.WakeToRun)
+wscript.echo "Current Compatibility Setting: " &amp; objDefinition.Settings.Compatibility
+wscript.echo "---"
+objDefinition.Settings.WakeToRun = EnableWakeToRun
+objDefinition.Settings.Compatibility = 2
+objRootFolder.RegisterTaskDefinition objTask.Name, objDefinition, TASK_UPDATE or  TASK_DONT_ADD_PRINCIPAL_ACE, , , objDefinition.Principal.LogonType
+ 
+Set objTaskService = CreateObject("Schedule.Service")
+objTaskService.Connect
+Set objRootFolder = objTaskService.GetFolder("\")
+Set objTask = objRootFolder.GetTask (TaskName)
+wscript.echo "New WakeToRun Setting: " &amp; CStr(objTask.Definition.Settings.WakeToRun)
+wscript.echo "New Compatibility Setting: " &amp; objDefinition.Settings.Compatibility</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>cscript.exe ScheduledTaskSetWakeToRun.vbs "System Maintenance" enable</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>80</FunctionId>
+    <Param1>9f1dfdcc-68f1-4b04-b0d0-d907aa2ea002</Param1>
+    <Param2>@computerid@</Param2>
+    <Param3>1</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>3</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>4524c091-921b-11e5-a873-00155d009007</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <ExtraDataField>
+      <NewDataSet>
+        <Table>
+          <ID>778</ID>
+          <Form>1</Form>
+          <Name>Wake Task Created</Name>
+          <Sort>0</Sort>
+          <NoBreak>0</NoBreak>
+          <FType>1</FType>
+          <Section>
+          </Section>
+          <UnEditable>0</UnEditable>
+          <Collapsed>0</Collapsed>
+          <Fill>
+          </Fill>
+          <LtGuid>9f1dfdcc-68f1-4b04-b0d0-d907aa2ea002</LtGuid>
+          <IsPassword>false</IsPassword>
+          <IsEncrypted>false</IsEncrypted>
+          <IsHidden>false</IsHidden>
+          <IsRestricted>false</IsRestricted>
+          <ViewPermissions>
+          </ViewPermissions>
+          <EditPermissions>
+          </EditPermissions>
+        </Table>
+      </NewDataSet>
+    </ExtraDataField>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>201</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Tweaks</Name>
+          <GUID>11bb8b6b-8a54-4670-bfb0-1c6944c7ff0d</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

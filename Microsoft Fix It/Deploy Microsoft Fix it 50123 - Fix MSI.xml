@@ -1,0 +1,51 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6153</ScriptId>
+				<FolderId>240</FolderId>
+				<ScriptName>Deploy Microsoft Fix it 50123 - Fix MSI</ScriptName>
+				<ScriptNotes>Fix MSI software update registration corruption issues
+
+https://support.microsoft.com/en-us/kb/976982
+
+-Mike McGhee</ScriptNotes>
+				<Permission>1,2,3,4,5,6,7,9,</Permission>
+				<EditPermission>1,2,3,4,5,6,7,9,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>1</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffVEtZ9n1KH1RXeaLSV6n93ZG6d7O7v3000f37z3ae5C+/OLxXe+Fx6+ndbFqfzKvm6JaAnL4gX7/+bqYHd3fyT6d5dPpdrb3YH97dze/v50dPLi3vUPw7892dh7u7Dww7/MLj+/64/mNk/8Hbh4yy98AAAA=</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo/s72aezfDrdzvYe7G/v7ub3t7ODB/e2d3Z279+f7ew83Nl5YKDwC4yzftD4I3jd5is7iuNpqwjob/r5s/WS/z6b4TvvL3+Qu0evT5+fnrxJn569fnP2gn6pmvTZqy+/SKfVYrVmEnz326evTu3fxSz9LP3d3V+/++HjuwrKB7x3dKCf7wWf3zv6brGcVVdN+kC/vxd8v9+Zhfsewau6PdohguCnfnZSLdtiuc7xuf1dv/uyeV4sCn7F/KrfnC1n+bLNmFr0rf+nT3NH5g1039tE94cbCD9v29Wju3eJFsuyymbjRTGtq6Y6b8dEXPvx3Yd3d+/eu/tw996TnQcPH2w/u3e8v72/e+/+9sOTZwfbp58+e3p//+D03snTg7tfGAjPindFe39nd+/eeNEUA/Pzu1/RRBT17/77vskXq99387vdOdz5Yc3d7t4HTN4HTt6nGyaPSJO/y6fp3SK9FR3Tu79omd5dVnXetFndxqekQ757nb9vIu/uzwV5zd+qZP8fudut5HMFAAA=</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>50a6decc-a274-11e5-a873-00155d009007</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>240</FolderID>
+					<ParentID>3</ParentID>
+					<Name>MS Fixit</Name>
+					<GUID>0423dd4f-15e5-44e0-924d-5fcf03031d27</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>3</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Actions</Name>
+					<GUID>62da1b4f-7ca5-465c-ae8e-49f96763c80e</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

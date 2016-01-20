@@ -1,0 +1,97 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>6180</ScriptId>
+        <FolderId>240</FolderId>
+        <ScriptName>Deploy Microsoft Fix it 50470 - Change SATA Mode</ScriptName>
+        <ScriptNotes>Error message occurs after you change the SATA mode of the boot drive
+
+https://support.microsoft.com/en-us/kb/922976
+
+-Mike McGhee</ScriptNotes>
+        <Permission>1,2,3,4,5,6,7,9,</Permission>
+        <EditPermission>1,2,3,4,5,6,7,9,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>1</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Monday, November 30, 2015 6:53:27 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>0e96d690-b574-11e5-8ef6-00155d009007</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>0e96d690-b574-11e5-8ef6-00155d009007</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1>SELECT DISTINCT os FROM computers WHERE computerid = %computerid%;</Param1>
+    <Param2>8</Param2>
+    <Param3>Windows 7</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>19</FunctionId>
+    <Param1>http://download.microsoft.com/download/4/4/8/44839D4F-B210-4241-8C3F-374B71A39C29/MicrosoftFixit50470.msi</Param1>
+    <Param2>%windir%\Temp\MicrosoftFixit50470.msi</Param2>
+    <Param3>0</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>12</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>msiexec /i %windir%\Temp\MicrosoftFixit50470.msi /qn /norestart</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>12</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>0e96d690-b574-11e5-8ef6-00155d009007</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>240</FolderID>
+          <ParentID>3</ParentID>
+          <Name>MS Fixit</Name>
+          <GUID>0423dd4f-15e5-44e0-924d-5fcf03031d27</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>3</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Actions</Name>
+          <GUID>62da1b4f-7ca5-465c-ae8e-49f96763c80e</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

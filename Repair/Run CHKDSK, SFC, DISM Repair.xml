@@ -1,0 +1,47 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6108</ScriptId>
+				<FolderId>98</FolderId>
+				<ScriptName>Run CHKDSK, SFC, DISM Repair</ScriptName>
+				<ScriptNotes>Written by Mike McGhee</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>1</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvV4vZ9n1KH1RXeaLSV6nu/dH6d7O7v1079Hup4/2P02Pv3h813vh8etpXazan8zrpqiWgBx+oN9/vi5mR+c7Ow92ssnO9sHkXr69u5vf384OHtzb3iH492c7Ow/pe/M+v/D4rj+e3zj5fwBNe0Sk3wAAAA==</LicenseData>
+				<ScriptData>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</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>f0070ab0-8b3e-11e5-a873-00155d009007</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters>RunCHKDSK,RunSFC,RunDISM</Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>98</FolderID>
+					<ParentID>8</ParentID>
+					<Name>Patching</Name>
+					<GUID>f02d0b91-7ac2-4418-99d7-dee28c818140</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>8</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Maintenance</Name>
+					<GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

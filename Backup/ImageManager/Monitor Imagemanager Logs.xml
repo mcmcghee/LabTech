@@ -1,0 +1,83 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6042</ScriptId>
+				<FolderId>194</FolderId>
+				<ScriptName>Monitor Imagemanager Logs</ScriptName>
+				<ScriptNotes>ImageManager does not create an error in the event logs when a migration file is in the chain. Migration files will stop the consolidation of the chain.
+
+-Written by Mike McGhee</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffTefLfNmll2P0tf5qs0Xk7xO7+2M0r2d3fvp7qP7Dx7t309ffvH4rvfS49fTuli1P5nXTVEtAT38QL//fF3MjnazfJbfP7i//emDB/n27m5+f/vh/Xy2vUPw7892dh7s7ByY9/mFx3f9Mf3Gyf8DZ3epK+MAAAA=</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo90sn+X3D+5vf/rgQb69u5vf3354P59t7+zs3r8/29l5sLNzYKDwC4yzftD4I3jd5is7iuNpqwjob/r5s/WS/z6b4TvvL3+Qu51B73X+vtf5e7/z932PHlXdHu0Qvvipn51Uy7ZYrnN8bn/X775snheLgl8xv+o3Z8tZvmwzHgx96//pk8RRYQNZ9jaR5cEwXY7Oz/d39h9M723vfXowwWztbk/2dybb92eT6cNsen4vn9Lr2vjnLwnv3d9Aw98tSz9Lz6s63frdCvpt9zCln9tlnj7Ab598cif9xenvNqNvti7ydnuWtfmd8fFs9jS7bra2f7fizvhN9bqti+XF1kez2fYXX3yxfU3PR3cOU7SfzotyVrT5Iv3o5NHv+7KuLqjT9FlR5k269e7g0zu/7+u2qrOL/KTOztvf92xBv36RLenf+vd9Xl00v++3xt/6KP2ZtMnLfNpuN9xT+tHvNot8OJ1nxTKdEv3pZ5MuCuoLQ07PqTuvfTX5afrBSCxJhYyeF8s8/SU02ozaPKvqRdZuPy+a9meFc3bfn3MOfsQ5Ief8fOOZvffnmQc/Zzyzt7OBZXZ79GH6HP3uq+qKbPI8L8s6b9Zl+7trw72QcEfyrX55772oeO/9qbhZZ+/+LFLxwSYqBkTosBq0RZRyzOlxwh09On1HvNvot/sbybj/TZNx72eRjLt7DzfQcednRVrvf9MEuvezSaB7mwgU8sU3S6ZPhUzfHJl+NpXa/iYv9PecVovVmiKRYvZ7Dgjl3oBQfhHYGzKm6+UsJYM0yaZv16tUrBN9+7ubLmB8fvc0a+mTsqCx8t/j9M28aNJVnV/SR01awCLCqDVVWcwUfl0t0nq9XJLZQ3t0VpbVFaygNX8tfRx0DfCP0t9TFI4ZXFd7uEHAPAL9JwLjxFM5m5XKg58DZjB/a+j5/wD08UMriQ4AAA==</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>1aede585-677e-11e5-95ed-00155d007008</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<PackedScript>
+			<NewDataSet>
+				<Table>
+					<ScriptId>5046</ScriptId>
+					<FolderId>66</FolderId>
+					<ScriptName>Powershell Deploy</ScriptName>
+					<ScriptNotes>Verify Powershell/Remote Mgmt Framework PreReqs exist.  Download the correct install package for the target OS, Install, Verify Install completed and set a script state variable to note Powershell is installed.
+***** Agent may need a reboot before Powershell is ready.  May only be an issue of path.
+</ScriptNotes>
+					<Permission>2,4,</Permission>
+					<EditPermission>1,</EditPermission>
+					<ComputerScript>1</ComputerScript>
+					<LocationScript>0</LocationScript>
+					<MaintenanceScript>0</MaintenanceScript>
+					<FunctionScript>0</FunctionScript>
+					<LicenseData>H4sIAAAAAAAEAFWPTwuCQBTE70HfYT+Ay+7zT6Y8FiKjS11Kurvrk/bQKqtCfvtQCuw0zAy/gcGLNeR6KqqhUlhOHSlAsSjeRndsRzeQVxLFyuHp3Vk/M6TK5+j7upoCVpChlybPIAlYKAEYhDnEuczY4YpixeDdeNsND/K9bd08/h98+/Noa9U0sYxTE/Fwt9ccgIDrWGqe1NpklWkiMumPXwAU60vbzQcSFe/I4gAAAA==</LicenseData>
+					<ScriptData>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</ScriptData>
+					<ScriptVersion>1</ScriptVersion>
+					<ScriptGuid>ff4047c3-268b-11e1-b40b-5dbc9acf3ec7</ScriptGuid>
+					<ScriptFlags>0</ScriptFlags>
+					<Parameters></Parameters>
+				</Table>
+			</NewDataSet>
+			<ScriptFolder>
+				<NewDataSet>
+					<Table>
+						<FolderID>66</FolderID>
+						<ParentID>47</ParentID>
+						<Name>Onboarding</Name>
+						<GUID>f10c5621-9a95-43c7-8e21-239125c1f227</GUID>
+					</Table>
+				</NewDataSet>
+			</ScriptFolder>
+			<ScriptFolder>
+				<NewDataSet>
+					<Table>
+						<FolderID>47</FolderID>
+						<ParentID>0</ParentID>
+						<Name>_System Automation</Name>
+						<GUID>68c423ca-41a6-4fae-a052-08a4fd27ea53</GUID>
+					</Table>
+				</NewDataSet>
+			</ScriptFolder>
+		</PackedScript>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>194</FolderID>
+					<ParentID>0</ParentID>
+					<Name>BDR</Name>
+					<GUID>7190dbf1-e39e-4844-9b4a-8c1b1193a9dd</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>
