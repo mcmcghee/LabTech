@@ -1,0 +1,264 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>5477</ScriptId>
+        <FolderId>155</FolderId>
+        <ScriptName>Disable Windows Security Alerts</ScriptName>
+        <ScriptNotes>Disables Windows Security/Action Center Alerts
+
+Written by Mike McGhee</ScriptNotes>
+        <Permission>2,4,</Permission>
+        <EditPermission>1,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Tuesday, July 09, 2013 1:17:26 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>583d8320-e89c-11e2-b99d-00155d007008</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>583d8320-e89c-11e2-b99d-00155d007008</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>31</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>27</FunctionId>
+    <Param1>HKLM\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\POLICIES\EXPLORER:HIDESCAHEALTH</Param1>
+    <Param2>00000001</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>12</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>111</FunctionId>
+    <Param1>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Security Center\</Param1>
+    <Param2>0</Param2>
+    <Param3 />
+    <Param4>:DisableSecurityCenter</Param4>
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>:RestartService</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>3</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:DisableSecurityCenter</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>4</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>27</FunctionId>
+    <Param1>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Security Center:AntiVirusDisableNotify</Param1>
+    <Param2>00000001</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>5</Sort>
+    <Continue>0</Continue>
+    <OsLimit>18</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>27</FunctionId>
+    <Param1>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Security Center:FirewallDisableNotify</Param1>
+    <Param2>00000001</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>6</Sort>
+    <Continue>0</Continue>
+    <OsLimit>18</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>27</FunctionId>
+    <Param1>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Security Center:UpdatesDisableNotify</Param1>
+    <Param2>00000001</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>7</Sort>
+    <Continue>0</Continue>
+    <OsLimit>18</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>27</FunctionId>
+    <Param1>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Security Center:FirewallDisableNotify</Param1>
+    <Param2>00000001</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>8</Sort>
+    <Continue>0</Continue>
+    <OsLimit>18</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>27</FunctionId>
+    <Param1>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Security Center:FirewallOverride</Param1>
+    <Param2>00000001</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>9</Sort>
+    <Continue>0</Continue>
+    <OsLimit>18</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>27</FunctionId>
+    <Param1>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Security Center:AntiVirusOverride</Param1>
+    <Param2>00000001</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>10</Sort>
+    <Continue>0</Continue>
+    <OsLimit>18</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:RestartService</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>11</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>net stop wscsvc</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>12</Sort>
+    <Continue>0</Continue>
+    <OsLimit>18</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>net start wscsvc</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>13</Sort>
+    <Continue>0</Continue>
+    <OsLimit>18</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>14</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>583d8320-e89c-11e2-b99d-00155d007008</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>155</FolderID>
+          <ParentID>114</ParentID>
+          <Name>Workstations</Name>
+          <GUID>fcae6124-bd45-4782-bbfa-fbbf4ab4f33d</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>114</FolderID>
+          <ParentID>0</ParentID>
+          <Name>NOC</Name>
+          <GUID>102c0cd7-aca9-4b74-be81-1aec0b327823</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>
