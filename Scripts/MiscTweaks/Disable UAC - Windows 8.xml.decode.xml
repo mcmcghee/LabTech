@@ -1,0 +1,107 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>5967</ScriptId>
+        <FolderId>155</FolderId>
+        <ScriptName>Disable UAC - Windows 8</ScriptName>
+        <ScriptNotes>
+        </ScriptNotes>
+        <Permission>2,4,</Permission>
+        <EditPermission>1,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Monday, September 23, 2013 8:10:44 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>9864df69-2495-11e3-b14b-00155d007008</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>9864df69-2495-11e3-b14b-00155d007008</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>31</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>135</FunctionId>
+    <Param1>Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System" -Name "ConsentPromptBehaviorAdmin" -Value "0"</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>22</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>135</FunctionId>
+    <Param1>Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System" -Name "EnableUIADesktopToggle" -Value "1"</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>22</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>9864df69-2495-11e3-b14b-00155d007008</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>155</FolderID>
+          <ParentID>8</ParentID>
+          <Name>Active Directory</Name>
+          <GUID>a4a804a8-c72d-4ed1-affe-618687cab9a0</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>8</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Maintenance</Name>
+          <GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

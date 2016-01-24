@@ -1,0 +1,931 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>6100</ScriptId>
+        <FolderId>98</FolderId>
+        <ScriptName>WU - Update WUA Agent</ScriptName>
+        <ScriptNotes>
+        </ScriptNotes>
+        <Permission>0,</Permission>
+        <EditPermission>0,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Monday, June 08, 2015 10:22:15 AM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>a0dd2736-86ef-11e5-a873-00155d009007</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals>CurrentWUAVersion=7.6.7601.19077,DownloadURLx64=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2F5%2FE%2F3%2F5E37D67D-42E6-4AC4-B199-5B335EE092F6%2FWindows6.1-KB3112343-x64.msu,DownloadURLx86=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2F3%2F0%2FB%2F30B6E9CF-8BD5-4F0D-8759-D42147C990D3%2FWindows6.1-KB3112343-x86.msu</Globals>
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>a0dd2736-86ef-11e5-a873-00155d009007</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>19</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>&gt;&gt; Check if a reboot is needed. If it is, exit the script since there's no point in attempting a repair with the Reboot Needed flag. &lt;&lt;</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>117</FunctionId>
+    <Param1>SELECT (computers.flags &amp; 1024) FROM computers WHERE computers.computerid=%computerid%</Param1>
+    <Param2>3</Param2>
+    <Param3>1024</Param3>
+    <Param4>:BeginAnalysis</Param4>
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>*** Windows Update Repair aborted due to Reboot Needed flag. Please restart %computername% before attempting repair.</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>3</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>4</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>114</FunctionId>
+    <Param1>%ltsvcdir%\rebootwua.txt</Param1>
+    <Param2>0</Param2>
+    <Param3>:NeedsReboot</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>5</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>80</FunctionId>
+    <Param1>f9c26e21-a97e-42f1-a5ab-b2f5da3ee2dc</Param1>
+    <Param2>@computerid@</Param2>
+    <Param3>0</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>6</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>31</FunctionId>
+    <Param1>1</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>7</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:BeginAnalysis</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>8</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>135</FunctionId>
+    <Param1>(get-item C:\Windows\system32\wuaueng.dll).VersionInfo.ProductVersion</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>9</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2>%powershellresult%</Param2>
+    <Param3>WUAVersion</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>10</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>WUAVersion</Param1>
+    <Param2>8</Param2>
+    <Param3>Unhandled Exception</Param3>
+    <Param4>0</Param4>
+    <Param5 />
+    <Sort>11</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>WUAVersion</Param1>
+    <Param2>2</Param2>
+    <Param3>7.6.7600.256</Param3>
+    <Param4>:320</Param4>
+    <Param5 />
+    <Sort>12</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>80</FunctionId>
+    <Param1>be2fa2f9-9905-4cd6-98ec-feda10bd8775</Param1>
+    <Param2>@computerid@</Param2>
+    <Param3>@WUAVersion@</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>13</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>WUAVersion</Param1>
+    <Param2>2</Param2>
+    <Param3>@CurrentWUAVersion@</Param3>
+    <Param4>0</Param4>
+    <Param5 />
+    <Sort>14</Sort>
+    <Continue>0</Continue>
+    <OsLimit>12</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>WUAVersion</Param1>
+    <Param2>2</Param2>
+    <Param3>@CurrentWUAVersion@</Param3>
+    <Param4>0</Param4>
+    <Param5 />
+    <Sort>15</Sort>
+    <Continue>0</Continue>
+    <OsLimit>25</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Updating Windows Update Agent</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>16</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>117</FunctionId>
+    <Param1>SELECT version FROM computers WHERE computers.computerid='%computerid%'</Param1>
+    <Param2>3</Param2>
+    <Param3>6.1.7601 Service Pack 1</Param3>
+    <Param4>:InstallLabTechWUA</Param4>
+    <Param5 />
+    <Sort>17</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>3</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:Download</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>18</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>attempted</Param1>
+    <Param2>2</Param2>
+    <Param3>1</Param3>
+    <Param4>:CheckMicrosoft</Param4>
+    <Param5 />
+    <Sort>19</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>154</FunctionId>
+    <Param1>%windir%\LTSVC\Packages\wua</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>20</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Downloading wua.exe</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>21</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>19</FunctionId>
+    <Param1>@DownloadURLx86@</Param1>
+    <Param2>%windir%\LTSVC\Packages\wua\wuaagent.msu</Param2>
+    <Param3>0</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>22</Sort>
+    <Continue>1</Continue>
+    <OsLimit>7</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>19</FunctionId>
+    <Param1>@DownloadURLx64@</Param1>
+    <Param2>%windir%\LTSVC\Packages\wua\wuaagent.msu</Param2>
+    <Param3>0</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>23</Sort>
+    <Continue>1</Continue>
+    <OsLimit>8</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Checking file has been downloaded successfully</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>24</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>114</FunctionId>
+    <Param1>%windir%\LTSVC\Packages\wua\wuaagent.msu</Param1>
+    <Param2>0</Param2>
+    <Param3>:Install</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>25</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>wua.exe on %computername% at %clientname% failed to download</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>26</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>4</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>27</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>4</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:Install</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>28</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Download Complete, attempting install</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>29</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>wusa.exe %windir%\LTSVC\Packages\wua\wuaagent.msu /quiet /norestart</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>30</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>1</Param1>
+    <Param2>1</Param2>
+    <Param3>attempted</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>31</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>3</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>133</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>32</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>133</FunctionId>
+    <Param1>7</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>33</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>28</FunctionId>
+    <Param1>Software\SysinternalsSuite\movefile.exe</Param1>
+    <Param2>%ltsvcdir%\movefile.exe</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>34</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>90</FunctionId>
+    <Param1>%ltsvcdir%\rebootwua.txt</Param1>
+    <Param2>Windows Update Agent Needs Reboot</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>35</Sort>
+    <Continue>0</Continue>
+    <OsLimit>18</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>%ltsvcdir%\movefile.exe %ltsvcdir%\rebootwua.txt "" /accepteula</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>36</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>:CheckMicrosoft</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>37</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:InstallLabTechWUA</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>38</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>133</FunctionId>
+    <Param1>8</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>39</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>133</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>40</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>133</FunctionId>
+    <Param1>7</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>41</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:CheckMicrosoft</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>42</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>103</FunctionId>
+    <Param1>5edfdcb4-39e5-4919-b8bc-5101ef9f3f9d</Param1>
+    <Param2>@computerid@</Param2>
+    <Param3>msupdate</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>43</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>70</FunctionId>
+    <Param1>msupdate</Param1>
+    <Param2>2</Param2>
+    <Param3>1</Param3>
+    <Param4>0</Param4>
+    <Param5 />
+    <Sort>44</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>17</FunctionId>
+    <Param1>dedf0e88-5897-11e5-95ed-00155d007008</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>45</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>46</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:NeedsReboot</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>47</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>80</FunctionId>
+    <Param1>f9c26e21-a97e-42f1-a5ab-b2f5da3ee2dc</Param1>
+    <Param2>@computerid@</Param2>
+    <Param3>1</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>48</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>29</FunctionId>
+    <Param1>Update already attempted. Pending Reboot.</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>49</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>50</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:320</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>51</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>19</FunctionId>
+    <Param1>http://download.windowsupdate.com/windowsupdate/redist/standalone/7.6.7600.320/WindowsUpdateAgent-7.6-x86.exe</Param1>
+    <Param2>%windir%\LTSVC\Packages\wua\WindowsUpdateAgent-7.6-x86.exe</Param2>
+    <Param3>0</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>52</Sort>
+    <Continue>1</Continue>
+    <OsLimit>7</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>19</FunctionId>
+    <Param1>http://download.windowsupdate.com/windowsupdate/redist/standalone/7.6.7600.320/WindowsUpdateAgent-7.6-x64.exe</Param1>
+    <Param2>%windir%\LTSVC\Packages\wua\WindowsUpdateAgent-7.6-x86.exe</Param2>
+    <Param3>0</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>53</Sort>
+    <Continue>1</Continue>
+    <OsLimit>8</OsLimit>
+    <Indentation>1</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>%windir%\LTSVC\Packages\wua\WindowsUpdateAgent-7.6-x86.exe /quiet /norestart</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>54</Sort>
+    <Continue>0</Continue>
+    <OsLimit>10</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>a0dd2736-86ef-11e5-a873-00155d009007</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <ExtraDataField>
+      <NewDataSet>
+        <Table>
+          <ID>528</ID>
+          <Form>1</Form>
+          <Name>Windows Update Agent Needs Reboot</Name>
+          <Sort>0</Sort>
+          <NoBreak>0</NoBreak>
+          <FType>1</FType>
+          <Section>Patching</Section>
+          <UnEditable>0</UnEditable>
+          <Collapsed>0</Collapsed>
+          <Fill>
+          </Fill>
+          <LtGuid>f9c26e21-a97e-42f1-a5ab-b2f5da3ee2dc</LtGuid>
+          <IsPassword>false</IsPassword>
+          <IsEncrypted>false</IsEncrypted>
+          <IsHidden>false</IsHidden>
+          <IsRestricted>false</IsRestricted>
+          <ViewPermissions>
+          </ViewPermissions>
+          <EditPermissions>
+          </EditPermissions>
+        </Table>
+      </NewDataSet>
+    </ExtraDataField>
+    <ExtraDataField>
+      <NewDataSet>
+        <Table>
+          <ID>529</ID>
+          <Form>1</Form>
+          <Name>Windows Update Agent Version</Name>
+          <Sort>0</Sort>
+          <NoBreak>0</NoBreak>
+          <FType>0</FType>
+          <Section>Patching</Section>
+          <UnEditable>0</UnEditable>
+          <Collapsed>0</Collapsed>
+          <Fill>
+          </Fill>
+          <LtGuid>be2fa2f9-9905-4cd6-98ec-feda10bd8775</LtGuid>
+          <IsPassword>false</IsPassword>
+          <IsEncrypted>false</IsEncrypted>
+          <IsHidden>false</IsHidden>
+          <IsRestricted>false</IsRestricted>
+          <ViewPermissions>
+          </ViewPermissions>
+          <EditPermissions>
+          </EditPermissions>
+        </Table>
+      </NewDataSet>
+    </ExtraDataField>
+    <ExtraDataField>
+      <NewDataSet>
+        <Table>
+          <ID>530</ID>
+          <Form>1</Form>
+          <Name>Microsoft Update Enabled</Name>
+          <Sort>0</Sort>
+          <NoBreak>0</NoBreak>
+          <FType>1</FType>
+          <Section>Patching</Section>
+          <UnEditable>1</UnEditable>
+          <Collapsed>0</Collapsed>
+          <Fill>
+          </Fill>
+          <LtGuid>5edfdcb4-39e5-4919-b8bc-5101ef9f3f9d</LtGuid>
+          <IsPassword>false</IsPassword>
+          <IsEncrypted>false</IsEncrypted>
+          <IsHidden>false</IsHidden>
+          <IsRestricted>false</IsRestricted>
+          <ViewPermissions>
+          </ViewPermissions>
+          <EditPermissions>
+          </EditPermissions>
+        </Table>
+      </NewDataSet>
+    </ExtraDataField>
+    <PackedScript>
+      <NewDataSet>
+        <Table>
+          <ScriptId>5972</ScriptId>
+          <FolderId>98</FolderId>
+          <ScriptName>WU - Microsoft Update - Check</ScriptName>
+          <ScriptNotes>
+          </ScriptNotes>
+          <Permission>0,</Permission>
+          <EditPermission>0,</EditPermission>
+          <ComputerScript>1</ComputerScript>
+          <LocationScript>0</LocationScript>
+          <MaintenanceScript>0</MaintenanceScript>
+          <FunctionScript>0</FunctionScript>
+          <LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfPauLWXY9Sl/nqzZfTPI63d0dpXs7u/fTe4927j3a+zR9+cXju94bj19P62LV/mReN0W1BOjwA/3+83UxO5rls/Od/OBg+/7Bwwfbu7v5/e2H9/PZ9g7Bvz/b2Xmws3Ng3ucXHt/1B/QbJ/8PROw6jeAAAAA=</LicenseData>
+          <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo1k+O9/JDw627x88fLC9u5vf3354P59t7+zs3r8/29l5sLNzYKDwC4yzftD4I3jd5is7iuNpqwjob/r5s/WS/z6b4TvvL3+Qu51B73X+vtf5e7/z932PHlXdHu0Qvvipn51Uy7ZYrnN8bn/X775snheLgl8xv+o3Z8tZvmwzHgx96//pk8RRYQNZ9jaQZe/hMF2OvlssZ9VVk/7eL9PX102bL9KnxBHTNp+l2+npu4LGcpFKv4/v6js/x5S893NGyd2NpNz5WSHQ7o0E+n8Tge5tItCjk3k+ffuzQqW996fS7s+dRO7ublBVR9/+vZ5/8fu+/vLZm+8evzr9fb8opnXVVOft76ui+vuerOua8FINbD7+ajXL2vz3fZ3Xl8U0b37fp/l5ti5b/TtOdCCpvwXEP3rw8MHu+cPdg+3sYP/B9v7+vZ3th3sPHm7vZ/f3Zrv5eb57MNNX74XzdPTodJlNytx8vb9x2u79f2raDnY2zBqZuPPZdLK/fe8hWbz9h7sPtycHk+n2/d0dItjD83vnDw1NurPwe06rxWpNdriY/Z4DE2J0S4faTM5h8u7/f4q8u/fub6Dv76ac/EW2zC7yOv0sfZFfbX85+WkyVun2SbXQXz+yAjMWkRiHL350mHZAjU/KgkZ0vFqVxZTHdfaUwH/0xXVKn0XaH89m+sneVvrRbWTlo9GD0Ucf3flZUX33v/FJ3v3ZnOQfqT6Ztk+/sWkz87T3szltPweez4P/b1Fos+sTssY3S6iDb5xQP5tq/ufQiu5+LSv68OeCvOZvjer/H6J+X6DkDwAA</ScriptData>
+          <ScriptVersion>1</ScriptVersion>
+          <ScriptGuid>dedf0e88-5897-11e5-95ed-00155d007008</ScriptGuid>
+          <ScriptFlags>0</ScriptFlags>
+          <Parameters>
+          </Parameters>
+        </Table>
+      </NewDataSet>
+      <ExtraDataField>
+        <NewDataSet>
+          <Table>
+            <ID>530</ID>
+            <Form>1</Form>
+            <Name>Microsoft Update Enabled</Name>
+            <Sort>0</Sort>
+            <NoBreak>0</NoBreak>
+            <FType>1</FType>
+            <Section>Patching</Section>
+            <UnEditable>1</UnEditable>
+            <Collapsed>0</Collapsed>
+            <Fill>
+            </Fill>
+            <LtGuid>5edfdcb4-39e5-4919-b8bc-5101ef9f3f9d</LtGuid>
+            <IsPassword>false</IsPassword>
+            <IsEncrypted>false</IsEncrypted>
+            <IsHidden>false</IsHidden>
+            <IsRestricted>false</IsRestricted>
+            <ViewPermissions>
+            </ViewPermissions>
+            <EditPermissions>
+            </EditPermissions>
+          </Table>
+        </NewDataSet>
+      </ExtraDataField>
+      <ScriptFolder>
+        <NewDataSet>
+          <Table>
+            <FolderID>98</FolderID>
+            <ParentID>8</ParentID>
+            <Name>Patching</Name>
+            <GUID>f02d0b91-7ac2-4418-99d7-dee28c818140</GUID>
+          </Table>
+        </NewDataSet>
+      </ScriptFolder>
+      <ScriptFolder>
+        <NewDataSet>
+          <Table>
+            <FolderID>8</FolderID>
+            <ParentID>0</ParentID>
+            <Name>Maintenance</Name>
+            <GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+          </Table>
+        </NewDataSet>
+      </ScriptFolder>
+    </PackedScript>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>98</FolderID>
+          <ParentID>8</ParentID>
+          <Name>Patching</Name>
+          <GUID>f02d0b91-7ac2-4418-99d7-dee28c818140</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>8</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Maintenance</Name>
+          <GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

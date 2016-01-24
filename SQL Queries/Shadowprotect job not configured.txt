@@ -1,0 +1,19 @@
+SELECT DISTINCT `t`.computerid, `c`.name, `c`.os, `t`.name, `acd`.noalerts, `acd`.uptimestart, `acd`.uptimeend
+FROM (SELECT * FROM
+(SELECT Software.ComputerID, Software.Name
+FROM Software
+WHERE NAME = "StorageCraft ShadowProtect"
+) AS `x`
+GROUP BY `x`.ComputerID
+) AS `t`
+INNER JOIN Computers AS `c` ON `t`.computerid = `c`.computerid
+LEFT JOIN SpJobs AS `j` ON `j`.computerid = `j`.computerid
+INNER JOIN AgentComputerData AS `acd` ON `c`.computerid = `acd`.ComputerID
+WHERE `c`.os LIKE "%server%"
+AND `c`.name NOT LIKE "%SHADOWPROTECT%"
+AND `c`.name NOT LIKE "%BDR%"
+AND `c`.name NOT LIKE "%HV%"
+AND `c`.name IS NOT NULL
+AND `t`.computerid NOT IN (SELECT DISTINCT SpJobs.ComputerID
+FROM SpJobs
+GROUP BY SpJobs.ComputerID)

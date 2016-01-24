@@ -1,0 +1,1 @@
+SELECT computers.computerid,computers.name,computers.os,computers.version,hotfix.hotfixid FROM hotfix,computers WHERE computers.computerid = hotfix.computerid AND (installed=0 AND hotfixid IN ('456197ca-06ff-4bcf-aeae-c5183e3ae72f','5da03162-868e-4567-80a2-d046b3fb1b09','b78b8e95-9e46-4f7a-9d1d-f64477bb7326'))

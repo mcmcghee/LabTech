@@ -1,0 +1,1 @@
+SELECT computers.name,computers.computerid,eventlogs.Logname,COUNT( * ) AS 'Instances' FROM eventlogs,computers WHERE eventlogs.computerid=computers.computerid GROUP BY computerid, Logname ORDER BY COUNT(*) DESC LIMIT 20;

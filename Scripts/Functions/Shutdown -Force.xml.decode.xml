@@ -1,0 +1,97 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>6198</ScriptId>
+        <FolderId>3</FolderId>
+        <ScriptName>Shutdown -Force</ScriptName>
+        <ScriptNotes>
+        </ScriptNotes>
+        <Permission>0,</Permission>
+        <EditPermission>0,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Saturday, January 23, 2016 5:11:30 AM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>b56beec9-c18f-11e5-8ef6-00155d009007</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>b56beec9-c18f-11e5-8ef6-00155d009007</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>shutdown /s /f /t 0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>126</FunctionId>
+    <Param1>shutdown /s /f /t 0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>228</FunctionId>
+    <Param1>%computerid%</Param1>
+    <Param2>2880</Param2>
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>b56beec9-c18f-11e5-8ef6-00155d009007</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>3</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Actions</Name>
+          <GUID>62da1b4f-7ca5-465c-ae8e-49f96763c80e</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

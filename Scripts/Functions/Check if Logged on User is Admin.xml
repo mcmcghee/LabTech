@@ -1,0 +1,37 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6176</ScriptId>
+				<FolderId>3</FolderId>
+				<ScriptName>Check if Logged on User is Admin</ScriptName>
+				<ScriptNotes></ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffTefLfNmll2P0qf5NF9M8jq9tzNK93Z276efPtrbf7RzL335xeO73juPX0/rYtX+ZF43RbUE8PAD/f7zdTE7un++O3147+GD7ex879727m5+f/sgP/90e4fg35/t7Dzc2Xlg3ucXHt/1h/QbJ/8PWHsU9+IAAAA=</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo/vnu9OH9x4+2M7O9+5t7+7m97cP8vNPt3d2du/fn+3sPNzZeWCg8AuMs37Q+CN43eYrO4rjaasI6G/6+bP1kv8+mx0dPL7r/eUPcrcz6L3O3/c6f+93/r7v0aOq26Mdwhc/9bOTatkWy3WOz+3v+t2XzfNiUfAr5lf95mw5y5dtxoOhb/0/fZI4Kmwgy94GsjzcGabL0e9ets3ldFbUv/vvO53n07fZbFEsx5OsfXxXWwR0O/o98+m8Sqvz8984uajaKuWXfv+Xeb0oGjBE8xsnv3HyKPIpgCzzNm1y/iT9hRft4XJdpnv45Rdmi9XhrjQqztPfPa/rqn6eX+bl755+9lm6k27Jd3gYgTf1OpeP7qR52eS9Bs+IiU0LHcre/0+nPDLlu58+3DDnJ49+3+8Wy1l11fy+z9+8vpzebuZ/9ynNY1Xmy/Vikte/+zdC1N3/L8nR3iY52h2iWjPPy7LOm3XZDtDsSL7VL++9FwH3vmkC7v5sEnAjUwp3pV81eZ0WTcrs+Cj9PYU4v2ecvB+oxu9909Tb+1mk3u7Bfpx8TJbNdDragsIcPTprjkHWO6Mt1o+jRy+qVj75RsR5/5um58+mOO9uZMednxWGu/9NE+hnU1x3720ikOGlnxU6ffpN0+lnk5G+ll0wn3dtQdFkHlVvZQws1R5801T7WeWunwPxO/imCfSzqu83i5/R3D8rhHr4TRPq/3XyZxjsm5S/3Z1vmmy3EsCvSbafCwHc/cYd/ltIoPlbEyT/D2YC69MvEQAA</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>5f1c9397-af23-11e5-8ef6-00155d009007</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>3</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Actions</Name>
+					<GUID>62da1b4f-7ca5-465c-ae8e-49f96763c80e</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

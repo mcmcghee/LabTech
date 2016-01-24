@@ -1,0 +1,106 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>5966</ScriptId>
+        <FolderId>155</FolderId>
+        <ScriptName>Disable UAC</ScriptName>
+        <ScriptNotes>Disables the UAC.  VNC requires UAC enabled in order for Ctrl-Alt-Del to be sent and received on remote workstation so you will lose that ability.</ScriptNotes>
+        <Permission>2,4,</Permission>
+        <EditPermission>1,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Thursday, November 10, 2011 1:38:16 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>60c2e723-1f4d-11e0-a943-f83314c9b73a</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1303822138</ScriptVersion>
+    <ScriptGuid>60c2e723-1f4d-11e0-a943-f83314c9b73a</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>4</FunctionId>
+    <Param1>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA</Param1>
+    <Param2>2</Param2>
+    <Param3>0</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>27</FunctionId>
+    <Param1>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA</Param1>
+    <Param2>1</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>27</FunctionId>
+    <Param1>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\ConsentPromptBehaviorAdmin</Param1>
+    <Param2>0</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>27</FunctionId>
+    <Param1>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\PromptOnSecureDesktop</Param1>
+    <Param2>0</Param2>
+    <Param3>2</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1303822138</ScriptVersion><ScriptGuid>60c2e723-1f4d-11e0-a943-f83314c9b73a</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>155</FolderID>
+          <ParentID>8</ParentID>
+          <Name>Active Directory</Name>
+          <GUID>a4a804a8-c72d-4ed1-affe-618687cab9a0</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>8</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Maintenance</Name>
+          <GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

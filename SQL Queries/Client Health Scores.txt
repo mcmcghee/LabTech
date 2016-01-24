@@ -1,0 +1,16 @@
+SELECT
+  clients.clientid AS 'ClientID',
+  clients.name AS 'Client Name',
+  ROUND(AVG(IF((LENGTH(`Stat15`) < 1),NULL,ROUND((LEFT(`Stat15`,4) * 100),0))),1) AS `AVHealth`,
+  ROUND(AVG(IF((LENGTH(`Stat16`) < 1),NULL,ROUND((LEFT(`Stat16`,4) * 100),0))),1) AS `DiskHealth`,
+  ROUND(AVG(IF((LENGTH(`Stat17`) < 1),NULL,ROUND((LEFT(`Stat17`,4) * 100),0))),1) AS `IntrusionHealth`,
+  ROUND(AVG(IF((LENGTH(`Stat18`) < 1),NULL,ROUND((LEFT(`Stat18`,4) * 100),0))),1) AS `UsabilityHealth`,
+  ROUND(AVG(IF((LENGTH(`Stat19`) < 1),NULL,ROUND((LEFT(`Stat19`,4) * 100),0))),1) AS `ServiceHealth`,
+  ROUND(AVG(IF((LENGTH(`Stat20`) < 1),NULL,ROUND((LEFT(`Stat20`,4) * 100),0))),1) AS `UpdateHealth`,
+  ROUND(AVG(IF((LENGTH(`Stat14`) < 1),NULL,ROUND((LEFT(`Stat14`,4) * 100),0))),1) AS `EventHealth`,
+  ROUND(((ROUND(AVG(IF((LENGTH(`Stat15`) < 1),NULL,ROUND((LEFT(`Stat15`,4) * 100),0))),1)+ROUND(AVG(IF((LENGTH(`Stat16`) < 1),NULL,ROUND((LEFT(`Stat16`,4) * 100),0))),1)+ROUND(AVG(IF((LENGTH(`Stat17`) < 1),NULL,ROUND((LEFT(`Stat17`,4) * 100),0))),1)+ROUND(AVG(IF((LENGTH(`Stat18`) < 1),NULL,ROUND((LEFT(`Stat18`,4) * 100),0))),1)+ROUND(AVG(IF((LENGTH(`Stat19`) < 1),NULL,ROUND((LEFT(`Stat19`,4) * 100),0))),1)+ROUND(AVG(IF((LENGTH(`Stat20`) < 1),NULL,ROUND((LEFT(`Stat20`,4) * 100),0))),1)+ROUND(AVG(IF((LENGTH(`Stat14`) < 1),NULL,ROUND((LEFT(`Stat14`,4) * 100),0))),1))/7),1) AS 'Avg Score'
+FROM v_ltcr_h_extrastats
+ JOIN computers USING (computerid)
+  LEFT JOIN clients USING (clientid) 
+    WHERE (`Stat14` <> '-1') AND eventdate > DATE_ADD(NOW(),INTERVAL -1 MONTH)
+     GROUP BY clients.name;

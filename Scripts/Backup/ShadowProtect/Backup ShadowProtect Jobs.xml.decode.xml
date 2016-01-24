@@ -1,0 +1,93 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>6022</ScriptId>
+        <FolderId>43</FolderId>
+        <ScriptName>Backup ShadowProtect Jobs</ScriptName>
+        <ScriptNotes>Written by Mike McGhee</ScriptNotes>
+        <Permission>0,</Permission>
+        <EditPermission>0,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Monday, February 16, 2015 9:59:53 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>e79bf22e-b629-11e4-9268-00155d007008</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>e79bf22e-b629-11e4-9268-00155d007008</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>reg export HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\ShadowProtectSvc\Parameters %ltsvcdir%\spjobs.reg</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>18</FunctionId>
+    <Param1>%ltsvcdir%\spjobs.reg</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>e79bf22e-b629-11e4-9268-00155d007008</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>43</FolderID>
+          <ParentID>35</ParentID>
+          <Name>StorageCraft</Name>
+          <GUID>493f6c87-cc8e-4650-8588-0a575cce8f66</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>35</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Backup and Recovery</Name>
+          <GUID>87cb4405-82fb-4f8a-a70b-275765a2d676</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

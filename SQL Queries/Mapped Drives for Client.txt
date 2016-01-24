@@ -1,0 +1,1 @@
+SELECT c.name AS ClientName, b.name AS ComputerName, d.Letter AS DriveLetter, d.model as Drive, d.user FROM networkdrives d LEFT JOIN Computers b INNER JOIN clients c ON c.clientid = b.clientid ON (b.computerid = d.computerid) where b.clientid = %clientid%;

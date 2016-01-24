@@ -1,0 +1,1 @@
+SELECT clients.name AS CLIENT, COUNT(*) AS Total, SUM(IF(computers.OS LIKE '%Server%',1,0)) AS Servers, SUM(IF(computers.OS LIKE '%Server%',0,1)) AS Workstations FROM computers, clients WHERE computers.clientid=clients.clientid GROUP BY CLIENT;

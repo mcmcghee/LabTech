@@ -1,0 +1,94 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>6123</ScriptId>
+        <FolderId>16</FolderId>
+        <ScriptName>Clean Up the WinSxS Folder</ScriptName>
+        <ScriptNotes>
+        </ScriptNotes>
+        <Permission>0,</Permission>
+        <EditPermission>0,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Thursday, November 19, 2015 1:52:38 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>fa09c8c2-8ec4-11e5-a873-00155d009007</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>fa09c8c2-8ec4-11e5-a873-00155d009007</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>DISM /online /Cleanup-Image /SpSuperseded</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>16</FunctionId>
+    <Param1>Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>0</Continue>
+    <OsLimit>22</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>fa09c8c2-8ec4-11e5-a873-00155d009007</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>16</FolderID>
+          <ParentID>8</ParentID>
+          <Name>Hard Disk Cleanup</Name>
+          <GUID>97c91b10-7ff0-48d5-a499-881ec1003845</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>8</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Maintenance</Name>
+          <GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

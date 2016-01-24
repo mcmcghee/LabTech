@@ -1,0 +1,50 @@
+**This includes custom fields**
+
+SELECT computers.computerid
+   ,computers.NAME AS computerName
+   ,locations.NAME AS locationName
+   ,clients.NAME AS clientName
+   ,computers.os AS OS
+   ,IFNULL(s1.installed, 0) AS installed
+   ,IFNULL(s2.missing, 0) AS missing
+   ,IFNULL(s3.total, 0) AS total
+   ,IFNULL(s1.installed / s3.total * 100, 0) AS percent_installed
+   ,IF(((Computers.Flags & 1024) = 1024),1,0) AS rebootneeded
+   ,v_extradatalocations.`Enable Patching Workstations` AS patchingenabled
+   ,v_extradatacomputers.`Windows Update Agent Version` AS WUAVersion
+   ,v_extradatacomputers.`Microsoft Update Enabled` AS MSEnabled
+   ,v_extradatacomputers.`Wake Task Created` AS schtask
+   ,computers.LastContact AS LastContact
+FROM computers
+JOIN clients ON computers.clientid = clients.clientid
+JOIN locations ON computers.locationid = locations.locationid
+JOIN v_extradatalocations ON computers.locationid = v_extradatalocations.locationid
+JOIN v_extradatacomputers ON computers.computerid = v_extradatacomputers.computerid
+LEFT JOIN (
+   SELECT COUNT(hotfix.computerid) AS installed
+      ,hotfix.computerid
+   FROM hotfix
+   WHERE hotfix.approved = 1
+      AND hotfix.installed = 1
+   GROUP BY hotfix.computerid
+   ) AS s1 ON computers.computerid = s1.computerid
+LEFT JOIN (
+   SELECT COUNT(hotfix.computerid) AS missing
+      ,hotfix.computerid
+   FROM hotfix
+   WHERE hotfix.approved = 1
+      AND hotfix.installed = 0
+   GROUP BY hotfix.computerid
+   ) AS s2 ON computers.computerid = s2.computerid
+LEFT JOIN (
+   SELECT COUNT(hotfix.computerid) AS total
+      ,hotfix.computerid
+   FROM hotfix
+   WHERE hotfix.approved = 1
+   GROUP BY hotfix.computerid
+   ) AS s3 ON computers.computerid = s3.computerid
+   WHERE computers.os NOT LIKE '%server%' AND v_extradatacomputers.`Disable Automated Patch Install` != 1
+HAVING 1
+
+ORDER BY percent_installed ASC LIMIT 0
+   ,5000

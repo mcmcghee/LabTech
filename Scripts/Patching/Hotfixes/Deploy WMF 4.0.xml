@@ -1,0 +1,37 @@
+﻿<LabTech_Expansion
+	Version="100.332"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>6187</ScriptId>
+				<FolderId>3</FolderId>
+				<ScriptName>Deploy WMF 4.0</ScriptName>
+				<ScriptNotes></ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>0</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMfvVnnzSy7HqXfyZbrrL5Od/dG6d7O7qfpvUe7e4/276Uvv3h813vh8etpXazan8zrpqiWgBx+oN9/vi5mR+cHn06y2cH59uThvXx7dze/v32Qn3+6vbOze//+bGfn4c7OA/M+v/D4rj+e3zj5fwBKqrcb3wAAAA==</LicenseData>
+				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5rX32edlNclK7wMB9pPUqKiWR7uP74YfBK0+Xxezo/ODTyfZ7OB8e/LwXr69u5vf3z7Izz/d3tnZvX9/trPzcGfngYHCLzDO+kHjj+B1m6/sKI6nrSKgv+nnz9ZL/vtshu+8v/xB7nYGvdf5+17n7/3O3/c9elR1e7RD+OKnfnZSLdtiuc7xuf1dv/uyeV4sCn7F/KrfnC1n+bLNeDD0rf+nTxJHhQ1k2dtElofDdDmat+2qeXT37qy6WpZVNhsvimldNdV5O55WC/vx3Xt3n9799O69p5/uPt37dG/74P7+w+39B58+3D7+9NOd7b17O08+fXC6e//J3v273y2W9Frz6Xh3+/d6snew+/DB/v3tdwefbn+xLtvi5duL8aJZP76rCATTcvS7l21zOZ0V9e/++77Mpm+zi7z5fWPwPBB74UyClPrbz/KMPvh/yYz+XM3op/v/r57R3fef0YOfuxn9dIOMXq2bbJy/y9P3oWV69xeti7xN7y6rOm/arG7jE/SBmnBvgMq7X1cT7t1MZfO3Wrz/B1MLRn0ABwAA</ScriptData>
+				<ScriptVersion>1</ScriptVersion>
+				<ScriptGuid>f86bad8f-b93e-11e5-8ef6-00155d009007</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ScriptFolder>
+			<NewDataSet>
+				<Table>
+					<FolderID>3</FolderID>
+					<ParentID>0</ParentID>
+					<Name>Actions</Name>
+					<GUID>62da1b4f-7ca5-465c-ae8e-49f96763c80e</GUID>
+				</Table>
+			</NewDataSet>
+		</ScriptFolder>
+	</PackedScript>
+</LabTech_Expansion>

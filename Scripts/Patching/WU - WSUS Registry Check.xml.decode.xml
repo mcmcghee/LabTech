@@ -1,0 +1,207 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>6152</ScriptId>
+        <FolderId>98</FolderId>
+        <ScriptName>WU - WSUS Registry Check</ScriptName>
+        <ScriptNotes>
+        </ScriptNotes>
+        <Permission>0,</Permission>
+        <EditPermission>0,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Friday, December 11, 2015 9:14:02 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>231db737-a04c-11e5-a873-00155d009007</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>231db737-a04c-11e5-a873-00155d009007</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>111</FunctionId>
+    <Param1>HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate\WUServer</Param1>
+    <Param2>1</Param2>
+    <Param3 />
+    <Param4>0</Param4>
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>0</Param1>
+    <Param2>HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate\WUServer</Param2>
+    <Param3>reg</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>80</FunctionId>
+    <Param1>5d4b67a9-605e-11e4-b8cd-125a940cd84a</Param1>
+    <Param2>@computerid@</Param2>
+    <Param3>@reg@</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>46</FunctionId>
+    <Param1>%ClientID%</Param1>
+    <Param2>%ComputerID%</Param2>
+    <Param3>%ContactEmail%</Param3>
+    <Param4>WSUS Registry Entry Found on %ComputerName%</Param4>
+    <Param5>Detected that WSUS registry entries exist on %ComputerName% at %clientname%. This script should have removed the entry, but it could show back up if it's in a policy. Remove WSUS policy for domain if we are doing patching with LT. </Param5>
+    <Sort>3</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>14</FunctionId>
+    <Param1>HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate\WUServer</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>4</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>14</FunctionId>
+    <Param1>HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate\WUStatus Server</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>5</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>55</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>6</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>133</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>7</Sort>
+    <Continue>1</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>133</FunctionId>
+    <Param1>7</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>8</Sort>
+    <Continue>0</Continue>
+    <OsLimit>17</OsLimit>
+    <Indentation>2</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>231db737-a04c-11e5-a873-00155d009007</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <ExtraDataField>
+      <NewDataSet>
+        <Table>
+          <ID>764</ID>
+          <Form>1</Form>
+          <Name>WSUS Management Detected</Name>
+          <Sort>4</Sort>
+          <NoBreak>0</NoBreak>
+          <FType>0</FType>
+          <Section>Patching</Section>
+          <UnEditable>1</UnEditable>
+          <Collapsed>0</Collapsed>
+          <Fill>
+          </Fill>
+          <LtGuid>5d4b67a9-605e-11e4-b8cd-125a940cd84a</LtGuid>
+          <IsPassword>false</IsPassword>
+          <IsEncrypted>false</IsEncrypted>
+          <IsHidden>false</IsHidden>
+          <IsRestricted>false</IsRestricted>
+        </Table>
+      </NewDataSet>
+    </ExtraDataField>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>98</FolderID>
+          <ParentID>8</ParentID>
+          <Name>Patching</Name>
+          <GUID>f02d0b91-7ac2-4418-99d7-dee28c818140</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>8</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Maintenance</Name>
+          <GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

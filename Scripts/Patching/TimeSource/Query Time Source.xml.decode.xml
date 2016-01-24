@@ -1,0 +1,173 @@
+<LabTech_Expansion Version="100.332" Name="LabTech Script Expansion" Type="PackedScript">
+  <PackedScript>
+    <NewDataSet>
+      <Table>
+        <ScriptId>6155</ScriptId>
+        <FolderId>18</FolderId>
+        <ScriptName>Query Time Source</ScriptName>
+        <ScriptNotes>
+        </ScriptNotes>
+        <Permission>0,</Permission>
+        <EditPermission>0,</EditPermission>
+        <ComputerScript>1</ComputerScript>
+        <LocationScript>0</LocationScript>
+        <MaintenanceScript>0</MaintenanceScript>
+        <FunctionScript>0</FunctionScript>
+        <LicenseData>
+          <Type>1</Type>
+          <RunCounter>0</RunCounter>
+          <ExpireDate>Monday, December 14, 2015 4:23:11 PM</ExpireDate>
+          <ScriptVersion>0</ScriptVersion>
+          <ScriptGuid>a9f9115c-a27e-11e5-a873-00155d009007</ScriptGuid>
+        </LicenseData>
+<ScriptData>
+  <Scripts>
+    <ExtraDataFields />
+    <Parameters />
+    <Globals />
+    <ScriptVersion>1</ScriptVersion>
+    <ScriptGuid>a9f9115c-a27e-11e5-a873-00155d009007</ScriptGuid>
+  </Scripts>
+  <ScriptSteps>
+    <Action>1</Action>
+    <FunctionId>1</FunctionId>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>0</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>:2003</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>0</Sort>
+    <Continue>1</Continue>
+    <OsLimit>9</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>109</FunctionId>
+    <Param1>w32tm /query /source</Param1>
+    <Param2 />
+    <Param3>source</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>1</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>139</FunctionId>
+    <Param1>:2003</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>2</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>20</FunctionId>
+    <Param1>0</Param1>
+    <Param2>HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters:NtpServer</Param2>
+    <Param3>source</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>3</Sort>
+    <Continue>1</Continue>
+    <OsLimit>9</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>80</FunctionId>
+    <Param1>e0495823-a805-4619-aa12-3e6c9146c816</Param1>
+    <Param2>%computerid%</Param2>
+    <Param3>@source@</Param3>
+    <Param4 />
+    <Param5 />
+    <Sort>4</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+  <ScriptSteps>
+    <Action>2</Action>
+    <FunctionId>129</FunctionId>
+    <Param1>0</Param1>
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+    <Sort>5</Sort>
+    <Continue>1</Continue>
+    <OsLimit>0</OsLimit>
+    <Indentation>0</Indentation>
+  </ScriptSteps>
+</ScriptData>
+<ScriptVersion>1</ScriptVersion><ScriptGuid>a9f9115c-a27e-11e5-a873-00155d009007</ScriptGuid><ScriptFlags>0</ScriptFlags><Parameters></Parameters></Table>
+    </NewDataSet>
+    <ExtraDataField>
+      <NewDataSet>
+        <Table>
+          <ID>784</ID>
+          <Form>1</Form>
+          <Name>Time Source</Name>
+          <Sort>0</Sort>
+          <NoBreak>0</NoBreak>
+          <FType>0</FType>
+          <Section>
+          </Section>
+          <UnEditable>0</UnEditable>
+          <Collapsed>0</Collapsed>
+          <Fill>
+          </Fill>
+          <LtGuid>e0495823-a805-4619-aa12-3e6c9146c816</LtGuid>
+          <IsPassword>false</IsPassword>
+          <IsEncrypted>false</IsEncrypted>
+          <IsHidden>false</IsHidden>
+          <IsRestricted>false</IsRestricted>
+          <ViewPermissions>
+          </ViewPermissions>
+          <EditPermissions>
+          </EditPermissions>
+        </Table>
+      </NewDataSet>
+    </ExtraDataField>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>18</FolderID>
+          <ParentID>8</ParentID>
+          <Name>Policy Management</Name>
+          <GUID>aecdbab7-a338-41ab-a8ca-32beca5723b5</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+    <ScriptFolder>
+      <NewDataSet>
+        <Table>
+          <FolderID>8</FolderID>
+          <ParentID>0</ParentID>
+          <Name>Maintenance</Name>
+          <GUID>064548fa-1133-4823-a069-4197f8256f3e</GUID>
+        </Table>
+      </NewDataSet>
+    </ScriptFolder>
+  </PackedScript>
+</LabTech_Expansion>

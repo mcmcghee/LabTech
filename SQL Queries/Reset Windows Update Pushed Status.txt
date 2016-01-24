@@ -1,0 +1,1 @@
+UPDATE hotfix SET pushed='0' WHERE installed=0 AND pushed=1 AND approved=1
