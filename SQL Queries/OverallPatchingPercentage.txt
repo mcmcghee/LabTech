@@ -1,0 +1,10 @@
+SELECT ROUND((r.installed / o.total * 100),2) AS PatchingPercentage
+FROM (SELECT COUNT(*) AS installed
+   FROM hotfix
+   WHERE hotfix.approved = 1
+      AND hotfix.installed = 1
+     ) r CROSS JOIN
+     (SELECT COUNT(*) AS total
+   FROM hotfix
+   WHERE hotfix.approved = 1
+    ) o;
