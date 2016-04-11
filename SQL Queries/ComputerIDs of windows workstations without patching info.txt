@@ -1,1 +1,0 @@
-SELECT computerid FROM computers WHERE computerid NOT IN (SELECT computerid FROM hotfix) AND os LIKE '%windows%' AND os NOT LIKE '%server%'

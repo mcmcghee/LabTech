@@ -1,0 +1,28 @@
+SELECT ROUND((r.installed / o.total * 100),2) AS `Overall Patching Percentage`
+FROM (SELECT COUNT(*) AS installed
+   FROM hotfix
+   WHERE hotfix.approved = 1
+      AND hotfix.installed = 1 AND hotfix.computerid IN (  
+ SELECT computers.computerid
+   FROM computers,locations,v_extradatalocations,v_extradatacomputers
+   WHERE
+   v_extradatalocations.LocationID = Computers.LocationID 
+   AND v_extradatacomputers.ComputerID = Computers.ComputerID 
+   AND ((v_extradatalocations.`Enable Patching Workstations` = 1) 
+   AND (v_extradatacomputers.`Disable Automated Patch Install` <> 1) 
+   AND (Computers.OS NOT LIKE '%server%') 
+   AND (v_extradatacomputers.`Enable Offline Alerting` <> 1)) GROUP BY computers.computerid)
+     ) r CROSS JOIN
+     (SELECT COUNT(*) AS total
+   FROM hotfix
+   WHERE hotfix.approved = 1 AND hotfix.computerid IN (  
+ SELECT computers.computerid
+   FROM computers,locations,v_extradatalocations,v_extradatacomputers
+   WHERE
+   v_extradatalocations.LocationID = Computers.LocationID 
+   AND v_extradatacomputers.ComputerID = Computers.ComputerID 
+   AND ((v_extradatalocations.`Enable Patching Workstations` = 1) 
+   AND (v_extradatacomputers.`Disable Automated Patch Install` <> 1) 
+   AND (Computers.OS NOT LIKE '%server%') 
+   AND (v_extradatacomputers.`Enable Offline Alerting` <> 1)) GROUP BY computers.computerid)
+    ) o;

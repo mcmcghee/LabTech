@@ -1,0 +1,15 @@
+SELECT DISTINCT Clients.Name AS `Client Name`, Locations.Name AS `Location`, Computers.Name AS ComputerName, Computers.UserName as UserName, s1.missing AS Missing,IF((computers.BiosFlash LIKE '%Portable%'),'Portable','Desktop') AS Type,computers.lastcontact AS `Last Contact`
+FROM Computers
+JOIN clients ON computers.clientid = clients.clientid
+JOIN locations ON computers.locationid = locations.locationid
+JOIN v_extradatalocations ON computers.locationid = v_extradatalocations.locationid
+JOIN v_extradatacomputers ON computers.computerid = v_extradatacomputers.computerid
+LEFT JOIN (
+   SELECT COUNT(hotfix.computerid) AS missing
+      ,hotfix.computerid
+   FROM hotfix
+   WHERE hotfix.approved = 1
+      AND hotfix.installed = 0
+   GROUP BY hotfix.computerid
+   ) AS s1 ON computers.computerid = s1.computerid
+WHERE ((v_extradatalocations.`Enable Patching Workstations` = 1) AND (v_extradatacomputers.`Disable Automated Patch Install` <> 1) AND (Computers.OS NOT LIKE '%server%') AND (v_extradatacomputers.`Enable Offline Alerting` <> 1)) AND s1.missing > 0 ORDER BY s1.missing DESC

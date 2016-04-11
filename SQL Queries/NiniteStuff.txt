@@ -1,0 +1,26 @@
+***Table Creation***
+CREATE TABLE `labtech`.`plugin_ninite_versions`(  
+  `NiniteID` INT(11) NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(150) NOT NULL DEFAULT '',
+  `Version` VARCHAR(50) NOT NULL,
+  `Parameter` VARCHAR(150) NOT NULL,
+  `Last_date` TIMESTAMP NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`NiniteID`)
+);
+ALTER TABLE plugin_ninite_versions
+ADD CONSTRAINT AppName UNIQUE (NAME)
+
+ALTER TABLE plugin_ninite_versions
+  MODIFY COLUMN Last_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+
+***SQL to insert/update app versions***
+INSERT INTO plugin_ninite_versions (`Name`, `Version`) VALUES('@app@', '@version@') ON DUPLICATE KEY UPDATE `Name`='@app@', `Version`='@version@'
+
+***SQL to check for out-of-date software***
+SELECT a.name AS `Ninite Name`,a.version AS `Ninite Version`,b.name AS `Installed Name`,b.version AS `Installed Version`
+	FROM plugin_ninite_versions a
+	JOIN software b ON b.name LIKE CONCAT('%', a.name, '%')
+	WHERE a.version > b.version AND b.computerid = '%computerid%'
+	
+***Powershell to parse ninite /list***
+$string=get-content "C:\Windows\LTSvc\niniteversions.txt"  | ? { $_ -match ': ' }; $string -replace " : ", "," -join ","
